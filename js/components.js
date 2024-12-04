@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load header and footer
     loadComponent('header', 'components/header.html');
     loadComponent('footer', 'components/footer.html');
+    loadComponent('pathway', 'components/pathway.html', initializePathway);
+    
 
     // Function to load components
     function loadComponent(id, url) {
@@ -63,5 +65,43 @@ document.addEventListener('DOMContentLoaded', function() {
                 hasNested.forEach(item => item.classList.remove('active'));
             }
         });
+
+        
     }
+
+     // Initialize pathway functionality
+     function initializePathway() {
+        const navButtons = document.querySelectorAll('.pathway-nav-button');
+        const contentCards = document.querySelectorAll('.content-card');
+
+        function setActiveSection(sectionId) {
+            // Remove active classes
+            navButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if(btn.getAttribute('data-section') === sectionId) {
+                    btn.classList.add('active');
+                }
+            });
+
+            contentCards.forEach(card => {
+                card.classList.remove('active');
+                if(card.id === sectionId) {
+                    card.classList.add('active');
+                }
+            });
+        }
+
+        // Set initial active section
+        setActiveSection('research');
+
+        // Add click handlers
+        navButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const sectionId = button.getAttribute('data-section');
+                setActiveSection(sectionId);
+            });
+        });
+    }
+
+
 });
