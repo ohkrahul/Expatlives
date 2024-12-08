@@ -815,143 +815,9 @@
 
 <body>
   <header>
-    <nav>
-      <a href="index.html" class="logo">
-        <i class="fas fa-globe-americas"></i>
-        <span>Expat Life</span>
-      </a>
-      <button class="hamburger">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a href="#" class="nav-link">Coaching ▾</a>
-          <div class="dropdown-content">
-            <a href="ielts.html">IELTS</a>
-            <a href="pte.html">PTE</a>
-            <div class="has-nested">
-              <a href="#">Foreign languages ▸</a>
-              <div class="nested-dropdown">
-                <a href="french.html">French</a>
-                <a href="german.html">German</a>
-                <a href="spaniish.html">Spanish</a>
-                <a href="japanese.html">Japanese</a>
-                <a href="chinese.html">Chinese(mandarin)</a>
-                <a href="polish.html">Polish</a>
-              </div>
-            </div>
-            <a href="campustocorporat.html">Campus to corporate</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a href="visa.html" class="nav-link">Visas</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link">Study In ▾</a>
-          <div class="dropdown-content">
-            <a href="uk.html">UK</a>
-            <a href="usa.html">USA</a>
-            <a href="germany.html">Germany</a>
-            <a href="australia.html">Australia</a>
-            <a href="newzealand.html">New Zealand</a>
-            <a href="ireland.html">Ireland</a>
-            <a href="canada.html">Canada</a>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a href="consulting.html" class="nav-link">Consulting</a>
-        </li>
-        <li class="nav-item">
-          <a href="aboutus.html" class="nav-link">About us</a>
-        </li>
-      </ul>
-    </nav>
+    <script src="js/components.js"></script>
+    <div id="header"></div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        const hamburger = document.querySelector('.hamburger');
-        const navList = document.querySelector('.nav-list');
-        const navItems = document.querySelectorAll('.nav-item');
-        const hasNested = document.querySelectorAll('.has-nested');
-
-        hamburger.addEventListener('click', function () {
-          navList.classList.toggle('active');
-          hamburger.classList.toggle('active');
-        });
-
-        navItems.forEach(item => {
-          if (item.querySelector('.dropdown-content')) {
-            item.querySelector('.nav-link').addEventListener('click', function (e) {
-              if (window.innerWidth <= 1024) {
-                e.preventDefault();
-                item.classList.toggle('active');
-
-                navItems.forEach(otherItem => {
-                  if (otherItem !== item) {
-                    otherItem.classList.remove('active');
-                  }
-                });
-              }
-            });
-          }
-        });
-
-        hasNested.forEach(item => {
-          item.querySelector('a').addEventListener('click', function (e) {
-            if (window.innerWidth <= 1024) {
-              e.preventDefault();
-              item.classList.toggle('active');
-
-              hasNested.forEach(otherItem => {
-                if (otherItem !== item) {
-                  otherItem.classList.remove('active');
-                }
-              });
-            }
-          });
-        });
-
-        document.addEventListener('click', function (e) {
-          if (!navList.contains(e.target) && !hamburger.contains(e.target)) {
-            navList.classList.remove('active');
-            hamburger.classList.remove('active');
-          }
-        });
-
-        window.addEventListener('resize', function () {
-          if (window.innerWidth > 1024) {
-            navList.classList.remove('active');
-            hamburger.classList.remove('active');
-            navItems.forEach(item => item.classList.remove('active'));
-            hasNested.forEach(item => item.classList.remove('active'));
-          }
-        });
-      });
-    </script>
-
-    <script>
-      // Mobile menu toggle
-      const menuToggle = document.querySelector('.menu-toggle');
-      const navLinks = document.querySelector('.nav-links');
-
-      menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-      });
-
-      // Smooth scrolling for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-          });
-          // Close mobile menu after clicking
-          navLinks.classList.remove('active');
-        });
-      });
-    </script>
 
     <!-- Hero Section -->
     <div class="container mx-auto px-4 py-12 lg:py-20">
@@ -972,10 +838,6 @@
                 class="inline-block px-6 py-3 bg-blue-800 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center">
                 Free Expert Consultation
               </a>
-              <a href="#"
-                class="inline-block px-6 py-3 bg-blue-800 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center">
-                View & Download Brochure
-              </a>
             </div>
           </div>
         </div>
@@ -983,7 +845,7 @@
         <!-- Right Image -->
         <div class="lg:w-1/2 relative">
           <div class="relative">
-            <img src="/www.hsmvisa.com/images/study-abrd-uk (2).png" alt="Student with UK flag"
+            <img src="Uploads/study in canada.png" alt="Student with UK flag"
               class="rounded-lg w-full max-w-md mx-auto object-cover" />
 
             <!-- Decorative Elements -->
@@ -1059,16 +921,14 @@
               </div>
               <div>
                 <h3 class="text-xl font-bold mb-2">
-                  GLOBAL EDGE
+                  WORLD-CLASS EDUCATION
                 </h3>
                 <p class="text-gray-600  font-semibold">
-                  The Canada has a plethora of institutions of higher education and research, much more than any other
-                  country. Despite the number of universities in Canada, it is the qualitative standards of education
-                  that matters which is respected worldwide.
+                  Canada is home to numerous world-renowned institutions of higher education and research. Canadian universities are known for their high academic standards and rigorous quality controls, ensuring that you receive a top-quality education that's respected worldwide.
                 </p>
               </div>
             </div>
-
+          
             <!-- Feature 2 -->
             <div class="flex gap-6 items-start">
               <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
@@ -1078,15 +938,13 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-xl font-bold mb-2">CHOICE</h3>
+                <h3 class="text-xl font-bold mb-2">DIVERSE PROGRAM CHOICES</h3>
                 <p class="text-gray-600  font-semibold">
-                  More than 4000 accredited institutions offer undergraduate, postgraduate, and doctorate degrees.
-                  Overall, the universities in Canada have a variety of academic programs that offer you leading edge
-                  careers.
+                  With over 100 universities and 200 colleges, Canada offers a wide array of programs at undergraduate, postgraduate, and doctorate levels. From traditional academic fields to innovative, interdisciplinary programs, you'll find options that cater to your interests and career goals.
                 </p>
               </div>
             </div>
-
+          
             <!-- Feature 3 -->
             <div class="flex gap-6 items-start">
               <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
@@ -1097,16 +955,14 @@
               </div>
               <div>
                 <h3 class="text-xl font-bold mb-2">
-                  TWENTY-FIVE OF THE WORLD'S TOP 100 UNIVERSITIES
+                  GLOBALLY RANKED INSTITUTIONS
                 </h3>
                 <p class="text-gray-600  font-semibold">
-                  The Canada is home to twenty-five universities that rank amongst the top 100 universities in the world
-                  according to the QS World Ranking. The universities in the Canada offer a diverse range of programs
-                  and cutting-edge research opportunities that attract students from around the globe.
+                  Canada boasts several universities that consistently rank among the top 100 globally. Institutions like the University of Toronto, McGill University, and the University of British Columbia are recognized worldwide for their academic excellence and research output, attracting students from across the globe.
                 </p>
               </div>
             </div>
-
+          
             <!-- Feature 4 -->
             <div class="flex gap-6 items-start">
               <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
@@ -1116,15 +972,13 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-xl font-bold mb-2">FINANCIAL ASSISTANCE</h3>
+                <h3 class="text-xl font-bold mb-2">AFFORDABLE EDUCATION</h3>
                 <p class="text-gray-600  font-semibold">
-                  The decision to study in Canada is a wise investment for the future. With various options on tuition
-                  fees, accommodation choices, and financial support like scholarships and fee waivers, it is affordable
-                  and convenient.
+                  Studying in Canada is a cost-effective choice compared to many other English-speaking countries. With competitive tuition fees, various scholarship opportunities, and the option to work part-time during your studies, Canada offers an affordable path to world-class education.
                 </p>
               </div>
             </div>
-
+          
             <!-- Feature 5 -->
             <div class="flex gap-6 items-start">
               <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
@@ -1134,15 +988,13 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-xl font-bold mb-2">FLEXIBILITY</h3>
+                <h3 class="text-xl font-bold mb-2">MULTICULTURAL ENVIRONMENT</h3>
                 <p class="text-gray-600  font-semibold">
-                  The US education system excels for its flexibility in course selection and institution transfer. This
-                  unique feature allows students to switch courses, colleges or universities seamlessly, setting it
-                  apart from other countries.
+                  Canada is known for its diverse, inclusive society. Studying here exposes you to a rich multicultural environment, helping you develop a global perspective and intercultural skills highly valued in today's interconnected world.
                 </p>
               </div>
             </div>
-
+          
             <!-- Feature 6 -->
             <div class="flex gap-6 items-start">
               <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
@@ -1152,15 +1004,13 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-xl font-bold mb-2">AFFORDABLE</h3>
+                <h3 class="text-xl font-bold mb-2">WORK OPPORTUNITIES</h3>
                 <p class="text-gray-600">
-                  Education in the Canada becomes more feasible with financial aid, scholarships, and assistantships.
-                  Students can work up to 20 hours a week during their courses (on campus only), easing the financial
-                  burden.
+                  International students in Canada can work up to 20 hours per week during regular school sessions and full-time during scheduled breaks. This allows you to gain valuable Canadian work experience and offset some of your expenses while studying.
                 </p>
               </div>
             </div>
-
+          
             <!-- Feature 7 -->
             <div class="flex gap-6 items-start">
               <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
@@ -1170,12 +1020,10 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-xl font-bold mb-2">TECHNOLOGY & RESEARCH</h3>
+                <h3 class="text-xl font-bold mb-2">INNOVATION AND RESEARCH</h3>
                 <p class="text-gray-600">
-                  The Canada is renowned for its cutting-edge technologies and progressive advancements in various
-                  technical fields, making it a hub of innovation. Students who study a Master’s degree from the Canada
-                  benefit from the first-hand knowledge and excellent research opportunities, fostering their growth in
-                  their respective faculties. </p>
+                  Canada is a leader in scientific research and development, particularly in fields like biotechnology, digital media, and aerospace engineering. As a student in Canada, you'll have access to cutting-edge research facilities and opportunities to work on groundbreaking projects, setting a strong foundation for your future career.
+                </p>
               </div>
             </div>
           </div>
@@ -1196,12 +1044,6 @@
                 class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
               <input type="text" placeholder="Preferred Course"
                 class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-              <select class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <option>Select Month</option>
-              </select>
-              <select class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <option>Select Year</option>
-              </select>
               <button type="submit"
                 class="w-full bg-blue-800 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors">
                 Submit
@@ -1226,222 +1068,161 @@
         <!-- Slider Section -->
         <div class="swiper universitySwiper">
           <div class="swiper-wrapper mb-10">
-            <!-- University 1 -->
+            <!-- University of Toronto -->
             <div class="swiper-slide">
               <div class="university-card">
                 <div class="flex items-center gap-4 mb-6">
-                  <img src="/www.hsmvisa.com/images/1.jpg" alt="University of Cambridge" class="w-12 h-12" />
-                  <h3 class="text-xl font-bold">University of Cambridge</h3>
+                  <h3 class="text-xl font-bold">University of Toronto</h3>
                 </div>
                 <div class="space-y-4">
                   <div class="flex items-center gap-3">
                     <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138" />
                     </svg>
-                    <p>Popular For Sciences & Engineering</p>
-                  </div>
-                  <div class="flex items-center gap-3">
-                    <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138" />
-                    </svg>
-                    <p>QS World Ranking 2</p>
+                    <p>QS World Ranking 21</p>
                   </div>
                 </div>
               </div>
             </div>
-
-            <!-- University 2 -->
+        
+            <!-- McGill University -->
             <div class="swiper-slide">
               <div class="university-card">
                 <div class="flex items-center gap-4 mb-6">
-                  <img src="/www.hsmvisa.com/images/2.jpg" alt="University of Oxford" class="w-12 h-12" />
-                  <h3 class="text-xl font-bold">University of Oxford</h3>
+                  <h3 class="text-xl font-bold">McGill University</h3>
                 </div>
                 <div class="space-y-4">
-                  <div class="flex items-center gap-3">
-                    <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                    </svg>
-                    <p>Popular For Humanities & Sciences</p>
-                  </div>
                   <div class="flex items-center gap-3">
                     <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
                     </svg>
-                    <p>QS World Ranking 3</p>
+                    <p>QS World Ranking 31</p>
                   </div>
                 </div>
               </div>
             </div>
-
+        
+            <!-- University of British Columbia -->
             <div class="swiper-slide">
               <div class="university-card">
                 <div class="flex items-center gap-4 mb-6">
-                  <img src="/www.hsmvisa.com/images/3.jpg" alt="University of Oxford" class="w-12 h-12" />
-                  <h3 class="text-xl font-bold">University of Oxford</h3>
+                  <h3 class="text-xl font-bold">University of British Columbia</h3>
                 </div>
                 <div class="space-y-4">
                   <div class="flex items-center gap-3">
                     <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                    </svg>
-                    <p>Popular For Humanities & Sciences</p>
-                  </div>
-                  <div class="flex items-center gap-3">
-                    <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
                     </svg>
-                    <p>QS World Ranking 3</p>
+                    <p>QS World Ranking 34</p>
                   </div>
                 </div>
               </div>
             </div>
+        
+            <!-- University of Montreal -->
             <div class="swiper-slide">
               <div class="university-card">
                 <div class="flex items-center gap-4 mb-6">
-                  <img src="/www.hsmvisa.com/images/4.jpg" alt="University of Oxford" class="w-12 h-12" />
-                  <h3 class="text-xl font-bold">University of Oxford</h3>
+                  <h3 class="text-xl font-bold">University of Montreal</h3>
                 </div>
                 <div class="space-y-4">
                   <div class="flex items-center gap-3">
                     <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                    </svg>
-                    <p>Popular For Humanities & Sciences</p>
-                  </div>
-                  <div class="flex items-center gap-3">
-                    <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
                     </svg>
-                    <p>QS World Ranking 3</p>
+                    <p>QS World Ranking 116</p>
                   </div>
                 </div>
               </div>
             </div>
-
+        
+            <!-- University of Alberta -->
             <div class="swiper-slide">
               <div class="university-card">
                 <div class="flex items-center gap-4 mb-6">
-                  <img src="/www.hsmvisa.com/images/5.jpg" alt="University of Oxford" class="w-12 h-12" />
-                  <h3 class="text-xl font-bold">University of Oxford</h3>
+                  <h3 class="text-xl font-bold">University of Alberta</h3>
                 </div>
                 <div class="space-y-4">
                   <div class="flex items-center gap-3">
                     <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                    </svg>
-                    <p>Popular For Humanities & Sciences</p>
-                  </div>
-                  <div class="flex items-center gap-3">
-                    <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
                     </svg>
-                    <p>QS World Ranking 3</p>
+                    <p>QS World Ranking 118</p>
                   </div>
                 </div>
               </div>
             </div>
-
+        
+            <!-- McMaster University -->
             <div class="swiper-slide">
               <div class="university-card">
                 <div class="flex items-center gap-4 mb-6">
-                  <img src="/www.hsmvisa.com/images/6.jpg" alt="University of Oxford" class="w-12 h-12" />
-                  <h3 class="text-xl font-bold">University of Oxford</h3>
+                  <h3 class="text-xl font-bold">McMaster University</h3>
                 </div>
                 <div class="space-y-4">
                   <div class="flex items-center gap-3">
                     <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                    </svg>
-                    <p>Popular For Humanities & Sciences</p>
-                  </div>
-                  <div class="flex items-center gap-3">
-                    <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
                     </svg>
-                    <p>QS World Ranking 3</p>
+                    <p>QS World Ranking 152</p>
                   </div>
                 </div>
               </div>
             </div>
-
+        
+            <!-- University of Waterloo -->
             <div class="swiper-slide">
               <div class="university-card">
                 <div class="flex items-center gap-4 mb-6">
-                  <img src="/www.hsmvisa.com/images/7.jpg" alt="University of Oxford" class="w-12 h-12" />
-                  <h3 class="text-xl font-bold">University of Oxford</h3>
+                  <h3 class="text-xl font-bold">University of Waterloo</h3>
                 </div>
                 <div class="space-y-4">
                   <div class="flex items-center gap-3">
                     <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                    </svg>
-                    <p>Popular For Humanities & Sciences</p>
-                  </div>
-                  <div class="flex items-center gap-3">
-                    <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
                     </svg>
-                    <p>QS World Ranking 3</p>
+                    <p>QS World Ranking 154</p>
                   </div>
                 </div>
               </div>
             </div>
+        
+            <!-- Western University -->
             <div class="swiper-slide">
               <div class="university-card">
                 <div class="flex items-center gap-4 mb-6">
-                  <img src="/www.hsmvisa.com/images/7.jpg" alt="University of Oxford" class="w-12 h-12" />
-                  <h3 class="text-xl font-bold">University of Oxford</h3>
+                  <h3 class="text-xl font-bold">Western University</h3>
                 </div>
                 <div class="space-y-4">
                   <div class="flex items-center gap-3">
                     <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                    </svg>
-                    <p>Popular For Humanities & Sciences</p>
-                  </div>
-                  <div class="flex items-center gap-3">
-                    <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
                     </svg>
-                    <p>QS World Ranking 3</p>
+                    <p>QS World Ranking 172</p>
                   </div>
                 </div>
               </div>
             </div>
-
+        
+            <!-- University of Calgary -->
             <div class="swiper-slide">
               <div class="university-card">
                 <div class="flex items-center gap-4 mb-6">
-                  <img src="/www.hsmvisa.com/images/6.jpg" alt="University of Oxford" class="w-12 h-12" />
-                  <h3 class="text-xl font-bold">University of Oxford</h3>
+                  <h3 class="text-xl font-bold">University of Calgary</h3>
                 </div>
                 <div class="space-y-4">
                   <div class="flex items-center gap-3">
                     <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                    </svg>
-                    <p>Popular For Humanities & Sciences</p>
-                  </div>
-                  <div class="flex items-center gap-3">
-                    <svg class="w-6 h-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
                     </svg>
-                    <p>QS World Ranking 3</p>
+                    <p>QS World Ranking 242</p>
                   </div>
                 </div>
               </div>
             </div>
+        
+          </div>
+        </div>
 
             <!-- Add more universities following the same pattern -->
             <!-- Include at least 6-7 more universities -->
@@ -1475,9 +1256,15 @@
         <!-- Business Management -->
         <div class="course-card">
           <div class="relative overflow-hidden">
-            <img src="/www.hsmvisa.com/images/Finance-img.jpg" alt="Business Management" class="course-image" />
+            <img
+              src="Uploads/business manegement.jpg"
+              alt="Business Management"
+              class="course-image"
+            />
             <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3 class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg">
+              <h3
+                class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg"
+              >
                 Business Management
               </h3>
             </div>
@@ -1487,9 +1274,15 @@
         <!-- Engineering -->
         <div class="course-card">
           <div class="relative overflow-hidden">
-            <img src="/www.hsmvisa.com/images/engrng-img.jpg" alt="Engineering" class="course-image" />
+            <img
+              src="Uploads/education.png"
+              alt="Engineering"
+              class="course-image"
+            />
             <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3 class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg">
+              <h3
+                class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg"
+              >
                 Engineering
               </h3>
             </div>
@@ -1499,9 +1292,15 @@
         <!-- Computer Science -->
         <div class="course-card">
           <div class="relative overflow-hidden">
-            <img src="/www.hsmvisa.com/images/it-img.jpg" alt="Computer Science" class="course-image" />
+            <img
+              src="Uploads/computer science.jpg"
+              alt="Computer Science"
+              class="course-image"
+            />
             <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3 class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg">
+              <h3
+                class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg"
+              >
                 Computer Science
               </h3>
             </div>
@@ -1511,9 +1310,15 @@
         <!-- Law -->
         <div class="course-card">
           <div class="relative overflow-hidden">
-            <img src="/www.hsmvisa.com/images/architecture-img.jpg" alt="Law" class="course-image" />
+            <img
+              src="Uploads/law.jpg"
+              alt="Law"
+              class="course-image"
+            />
             <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3 class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg">
+              <h3
+                class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg"
+              >
                 Law
               </h3>
             </div>
@@ -1523,9 +1328,15 @@
         <!-- Finance -->
         <div class="course-card">
           <div class="relative overflow-hidden">
-            <img src="/www.hsmvisa.com/images/Finance-img.jpg" alt="Finance" class="course-image" />
+            <img
+              src="Uploads/finance.jpg"
+              alt="Finance"
+              class="course-image"
+            />
             <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3 class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg">
+              <h3
+                class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg"
+              >
                 Finance
               </h3>
             </div>
@@ -1535,9 +1346,15 @@
         <!-- Architecture -->
         <div class="course-card">
           <div class="relative overflow-hidden">
-            <img src="/www.hsmvisa.com/images/architecture-img.jpg" alt="Architecture" class="course-image" />
+            <img
+              src="Uploads/architecture.jpg"
+              alt="Architecture"
+              class="course-image"
+            />
             <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3 class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg">
+              <h3
+                class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg"
+              >
                 Architecture
               </h3>
             </div>
@@ -1662,12 +1479,6 @@
               There are several different types of scholarships for Indian students to study in Canada – Fellowships,
               Assistantships, Sports, Need Based , etc.
             </p>
-            <p class="leading-relaxed">
-              Another important source of UK scholarships for Indian students
-              are the ones sponsored by the British Government. These are the
-              Chevening Scholarship Commonwealth scholarship and DFID
-              scholarship.
-            </p>
           </div>
         </div>
 
@@ -1678,7 +1489,7 @@
             <!-- <div class="decorative-line" style="top: -30px; right: -30px; transform: rotate(45deg);"></div> -->
             <div class="decorative-line" style="bottom: -30px; left: -30px; transform: rotate(-45deg)"></div>
 
-            <img src="/www.hsmvisa.com/images/scholar-img.png" alt="Graduate Student"
+            <img src="Uploads/study in canada.png" alt="Graduate Student"
               class="rounded-lg relative z-10 mx-auto" />
 
             <!-- Flying Certificate Icon -->
@@ -1687,94 +1498,6 @@
                             alt="Certificate" 
                             class="absolute top-10 right-10 transform rotate-12"
                         > -->
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container mx-auto px-4 py-16">
-      <!-- Title Section -->
-      <h2 class="text-5xl font-bold text-center mb-6">
-        Career Prospect
-        <span class="custom-underline font-semibold">In The Canada</span>
-      </h2>
-      <p class="text-center text-gray-600 mb-12 mt-10 max-w-3xl mx-auto text-lg">
-        The employment landscape in the UK is diverse, offering opportunities
-        across various sectors. Here are some key sectors and industries that
-        presently offer employment opportunities:
-      </p>
-
-      <!-- Courses Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Business Management -->
-        <div class="course-card">
-          <div class="relative overflow-hidden">
-            <img src="/www.hsmvisa.com/images/Finance-img.jpg" alt="Business Management" class="course-image" />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3 class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg">
-                Information Technology
-              </h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Engineering -->
-        <div class="course-card">
-          <div class="relative overflow-hidden">
-            <img src="/www.hsmvisa.com/images/engrng-img.jpg" alt="Engineering" class="course-image" />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3 class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg">
-                Education
-              </h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Computer Science -->
-        <div class="course-card">
-          <div class="relative overflow-hidden">
-            <img src="/www.hsmvisa.com/images/it-img.jpg" alt="Computer Science" class="course-image" />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3 class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg">
-                Computer Science
-              </h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Law -->
-        <div class="course-card">
-          <div class="relative overflow-hidden">
-            <img src="/www.hsmvisa.com/images/architecture-img.jpg" alt="Law" class="course-image" />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3 class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg">
-                Law
-              </h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Finance -->
-        <div class="course-card">
-          <div class="relative overflow-hidden">
-            <img src="/www.hsmvisa.com/images/Finance-img.jpg" alt="Finance" class="course-image" />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3 class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg">
-                Finance
-              </h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Architecture -->
-        <div class="course-card">
-          <div class="relative overflow-hidden">
-            <img src="/www.hsmvisa.com/images/architecture-img.jpg" alt="Architecture" class="course-image" />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3 class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg">
-                Architecture
-              </h3>
-            </div>
           </div>
         </div>
       </div>
@@ -1811,35 +1534,35 @@
           <div class="content-card bg-white p-8 rounded-2xl shadow-sm" id="documents-content"
             style="border: 1px solid gray">
             <h3 class="text-2xl font-bold mb-6">
-              Documents required to study in the Canada
+              Documents required to study in Canada
             </h3>
             <p class="text-gray-700 mb-6">
-              When applying for a course in the Canada as an international student, you typically need several documents
+              When applying for a course in Canada as an international student, you typically need several documents
               to complete the application process. These documents may vary depending on the institution and the
               specific program, but some common ones include:
             </p>
             <ul class="bullet-list text-gray-700">
               <li>
-                Application Form
+                Completed application form
               </li>
               <li>
-                Application Fees
+                Application fees
               </li>
               <li>
-                Statement of Purpose / Essays
+                Letter of Intent / Statement of Purpose
               </li>
-              <li>Marksheets & Certificates</li>
-              <li>Curriculum Vitae/Resume.</li>
+              <li>Official transcripts and certificates</li>
+              <li>Proof of English language proficiency (IELTS, TOEFL, etc.)</li>
               <li>
-                Resume
+                Letters of recommendation
               </li>
-              <li>Recommendation Letters</li>
-              <li>Bank Certificate</li>
+              <li>Updated resume/CV</li>
+              <li>Proof of financial support</li>
               <li>
-                Declaration Certificate of Finance.
+                Copy of valid passport
               </li>
               <li>
-                Test Score Report.
+                Passport-sized photographs
               </li>
             </ul>
             <a href="#"
@@ -1847,27 +1570,23 @@
               Free Expert Consultation
             </a>
           </div>
-
+        
           <!-- Visa Section -->
           <div class="content-card bg-white p-8 rounded-2xl shadow-sm hidden" id="visa-content"
             style="border: 1px solid gray">
-            <h3 class="text-2xl font-bold mb-6">Canada study visa process</h3>
+            <h3 class="text-2xl font-bold mb-6">Canada Study Permit process</h3>
             <p class="text-gray-700 mb-6">
-              All the efforts to study abroad become futile if you do not present your case effectively and assertively
-              during visa interviews. We provide comprehensive VISA guidance, which includes verifying the bank
-              financial statement, latest update on VISA TECHNOLOGY & RESEARCH, mock interviews, etc. Mentioned below
-              are the general steps for the procurement of a study visa in the Canada
+              To study in Canada, international students need a Study Permit. The application process requires careful preparation and attention to detail. Here are the general steps for obtaining a Study Permit for Canada:
             </p>
             <ul class="bullet-list text-gray-700">
-              <li>Obtain I-20 from University / College.</li>
-              <li>Finance for 12 months tuition fee + maintenance</li>
-              <li>Pay the SEVIS fee & Complete DS-160 form</li>
-              <li>
-                Pay Visa Application Fees
-              </li>
-              <li>Schedule interview date</li>
-              <li>Attend scheduled appointment with all the necessary documents</li>
-
+              <li>Receive a Letter of Acceptance from a Designated Learning Institution (DLI)</li>
+              <li>Gather required documents, including proof of financial support</li>
+              <li>Create an account on the Government of Canada website</li>
+              <li>Complete the online Study Permit application form</li>
+              <li>Pay the application fee and biometrics fee (if applicable)</li>
+              <li>Submit your application online</li>
+              <li>Provide biometrics (fingerprints and photo) if required</li>
+              <li>Attend an interview at a visa office if requested</li>
             </ul>
             <a href="#"
               class="inline-block mt-8 px-6 py-3 text-blue-700 border border-blue-700 rounded-lg hover:bg-blue-50 transition-colors">
@@ -1878,321 +1597,98 @@
       </div>
     </div>
 
-    <div class="mx-auto px-4 py-16 bg-gray-200">
-      <!-- Header -->
-      <div class="flex justify-between items-center mb-12">
-        <h2 class="text-4xl font-bold ml-40">
-          Success <span class="custom-underline">Stories</span>
-        </h2>
-        <div class="flex gap-3 mr-40">
-          <button class="nav-button bg-[#E2E8F0] hover:bg-blue-800 hover:text-white text-blue-800 prev-button">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button class="nav-button bg-blue-800 text-white next-button">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Slider Container -->
-      <div class="slider-container max-w-[80%] mx-auto">
-        <div class="swiper1 successSwiper">
-          <div class="swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="swiper-slide">
-              <div class="bg-white rounded-[32px] p-8">
-                <div class="flex flex-row items-center gap-8">
-                  <!-- Image Section -->
-                  <div class="w-1/2">
-                    <div class="relative rounded-2xl overflow-hidden">
-                      <img src="/www.hsmvisa.com/images/story-vdo-img6.jpg" alt="Student testimonial"
-                        class="w-full h-[400px] object-cover">
-                      <div
-                        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
-                        <svg class="w-8 h-8 text-blue-800 ml-1" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Content Section -->
-                  <div class="w-1/2">
-                    <p class="text-gray-800 text-lg mb-6 leading-relaxed">
-                      "Edwise was extremely helpful in selecting the course, preparing my documents, & finishing all the
-                      paper work. Thank you Edwise for guiding me."
-                    </p>
-                    <div class="flex items-center gap-4">
-                      <img src="/www.hsmvisa.com/images/testimonial-cirlce-img-1.png" alt="Profile"
-                        class="w-12 h-12 rounded-full">
-                      <div>
-                        <h4 class="font-bold text-gray-900">Afreen Jamadar</h4>
-                        <p class="text-gray-600">Aston University, UK</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
-
-            <div class="swiper-slide">
-              <div class="bg-white rounded-[32px] p-8">
-                <div class="flex flex-row items-center gap-8">
-                  <!-- Image Section -->
-                  <div class="w-1/2">
-                    <div class="relative rounded-2xl overflow-hidden">
-                      <img src="/www.hsmvisa.com/images/story-vdo-img6.jpg" alt="Student testimonial"
-                        class="w-full h-[400px] object-cover">
-                      <div
-                        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
-                        <svg class="w-8 h-8 text-blue-800 ml-1" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Content Section -->
-                  <div class="w-1/2">
-                    <p class="text-gray-800 text-lg mb-6 leading-relaxed">
-                      "rahul was extremely helpful in selecting the course, preparing my documents, & finishing all the
-                      paper work. Thank you Edwise for guiding me."
-                    </p>
-                    <div class="flex items-center gap-4">
-                      <img src="/www.hsmvisa.com/images/testimonial-cirlce-img-1.png" alt="Profile"
-                        class="w-12 h-12 rounded-full">
-                      <div>
-                        <h4 class="font-bold text-gray-900">Afreen Jamadar</h4>
-                        <p class="text-gray-600">Aston University, UK</p>
-                      </div>
-                    </div>
-                  </div>
+        <div class="container mx-auto px-4 py-16">
+          <h2 class="text-4xl font-bold text-center mb-12">FAQs</h2>
+        
+          <div class="max-w-8xl mx-auto justify-center space-y-4">
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+              <button
+                class="w-full bg-white rounded-[20px] p-6 flex justify-between items-center border border-blue-100 hover:border-blue-200 transition-all duration-300">
+                <span class="text-[30px] font-semibold text-blue-800">What is the cost of studying in Canada?</span>
+                <svg class="w-6 h-6 transform transition-transform duration-300 text-blue-800" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 bg-white rounded-b-[20px] px-6">
+                <div class="py-6 text-gray-600 font-semibold text-xl">
+                  The cost of studying in Canada varies depending on the institution and program. On average, international students can expect to pay between CAD 20,000 to CAD 30,000 per year for undergraduate programs. Graduate programs may range from CAD 16,000 to CAD 20,000 per year. Living expenses should also be considered, which can add another CAD 10,000 to CAD 15,000 per year.
                 </div>
               </div>
             </div>
-
-            <div class="swiper-slide">
-              <div class="bg-white rounded-[32px] p-8">
-                <div class="flex flex-row items-center gap-8">
-                  <!-- Image Section -->
-                  <div class="w-1/2">
-                    <div class="relative rounded-2xl overflow-hidden">
-                      <img src="/www.hsmvisa.com/images/story-vdo-img6.jpg" alt="Student testimonial"
-                        class="w-full h-[400px] object-cover">
-                      <div
-                        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg">
-                        <svg class="w-8 h-8 text-blue-800 ml-1" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Content Section -->
-                  <div class="w-1/2">
-                    <p class="text-gray-800 text-lg mb-6 leading-relaxed">
-                      "rahul was extremely helpful in selecting the course, preparing my documents, & finishing all the
-                      paper work. Thank you Edwise for guiding me."
-                    </p>
-                    <div class="flex items-center gap-4">
-                      <img src="/www.hsmvisa.com/images/testimonial-cirlce-img-1.png" alt="Profile"
-                        class="w-12 h-12 rounded-full">
-                      <div>
-                        <h4 class="font-bold text-gray-900">Afreen Jamadar</h4>
-                        <p class="text-gray-600">Aston University, UK</p>
-                      </div>
-                    </div>
-                  </div>
+        
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+              <button
+                class="w-full bg-white rounded-[20px] p-6 flex justify-between items-center border border-blue-100 hover:border-blue-200 transition-all duration-300">
+                <span class="text-[30px] font-semibold text-blue-800">Can I study in Canada without IELTS?</span>
+                <svg class="w-6 h-6 transform transition-transform duration-300 text-blue-800" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 bg-white rounded-b-[20px] px-6">
+                <div class="py-6 text-gray-600 font-semibold text-xl">
+                  While IELTS is widely accepted, some Canadian institutions may offer alternatives. These can include other English proficiency tests like TOEFL or CELPIP, or waivers for students from English-speaking countries or those who have completed previous education in English.
                 </div>
               </div>
             </div>
-
-            <!-- Add more slides with the same structure -->
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div class="container mx-auto px-4 py-16">
-      <h2 class="text-4xl font-bold text-center mb-12">FAQs</h2>
-
-      <div class="max-w-8xl mx-auto justify-center space-y-4">
-        <!-- FAQ Item 1 -->
-        <div class="faq-item">
-          <button
-            class="w-full bg-white rounded-[20px] p-6 flex justify-between items-center border border-blue-100 hover:border-blue-200 transition-all duration-300">
-            <span class="text-[30px] font-semibold text-blue-800">What is the cost of studying in the UK?</span>
-            <svg class="w-6 h-6 transform transition-transform duration-300 text-blue-800" fill="none"
-              stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 bg-white rounded-b-[20px] px-6">
-            <div class="py-6 text-gray-600 font-semibold text-xl">
-
-              The cost of studying in the UK varies depending on the university and selection of the course. You can see
-              the detailed cost break down in the cost section above.
+        
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+              <button
+                class="w-full bg-white rounded-[20px] p-6 flex justify-between items-center border border-blue-100 hover:border-blue-200 transition-all duration-300">
+                <span class="text-[30px] font-semibold text-blue-800">What are the best universities in Canada for international students?</span>
+                <svg class="w-6 h-6 transform transition-transform duration-300 text-blue-800" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 bg-white rounded-b-[20px] px-6">
+                <div class="py-6 text-gray-600 font-semibold text-xl">
+                  Some of the top-ranked universities in Canada for international students include the University of Toronto, University of British Columbia, McGill University, University of Waterloo, and University of Montreal. However, Canada has many excellent institutions, and the best choice depends on your specific program and personal preferences.
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <!-- FAQ Item 2 -->
-        <div class="faq-item">
-          <button
-            class="w-full bg-white rounded-[20px] p-6 flex justify-between items-center border border-blue-100 hover:border-blue-200 transition-all duration-300">
-            <span class="text-[30px] font-semibold text-blue-800">Can I study abroad in the UK without IELTS?</span>
-            <svg class="w-6 h-6 transform transition-transform duration-300 text-blue-800" fill="none"
-              stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 bg-white rounded-b-[20px] px-6">
-            <div class="py-6 text-gray-600 font-semibold text-xl">
-              Yes, some universities do offer a waiver and some universities also accept PTE and TOEFL.
+        
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+              <button
+                class="w-full bg-white rounded-[20px] p-6 flex justify-between items-center border border-blue-100 hover:border-blue-200 transition-all duration-300">
+                <span class="text-[30px] font-semibold text-blue-800">How much funds do I need to show for a Canadian study permit?</span>
+                <svg class="w-6 h-6 transform transition-transform duration-300 text-blue-800" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 bg-white rounded-b-[20px] px-6">
+                <div class="py-6 text-gray-600 font-semibold text-xl">
+                  As of 2023, you need to show that you have at least CAD 10,000 for living expenses for a 12-month period (or CAD 11,000 if studying in Quebec), plus your first year's tuition fees. This amount may vary based on your specific circumstances and the duration of your study program.
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Add more FAQ items with the same structure -->
-        <!-- FAQ Item 3 -->
-        <div class="faq-item">
-          <button
-            class="w-full bg-white rounded-[20px] p-6 flex justify-between items-center border border-blue-100 hover:border-blue-200 transition-all duration-300">
-            <span class="text-[30px] font-semibold text-blue-800">What are the best universities in the UK for
-              international students?</span>
-            <svg class="w-6 h-6 transform transition-transform duration-300 text-blue-800" fill="none"
-              stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 bg-white rounded-b-[20px] px-6">
-            <div class="py-6 text-gray-600 font-semibold text-xl">
-              The best universities include Oxford, Cambridge, Imperial College London, and other top-ranked
-              institutions. Please refer to our university rankings section for more details.
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ Item 4 -->
-        <div class="faq-item">
-          <button
-            class="w-full bg-white rounded-[20px] p-6 flex justify-between items-center border border-blue-100 hover:border-blue-200 transition-all duration-300">
-            <span class="text-[30px] font-semibold text-blue-800">How much bank balance is required for a UK student
-              visa?</span>
-            <svg class="w-6 h-6 transform transition-transform duration-300 text-blue-800" fill="none"
-              stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 bg-white rounded-b-[20px] px-6">
-            <div class="py-6 text-gray-600 font-semibold text-xl">
-              The required bank balance varies based on your location of study and course duration. Contact our
-              counselors for specific details.
-            </div>
-          </div>
-        </div>
-
-        <!-- FAQ Item 5 -->
-        <div class="faq-item">
-          <button
-            class="w-full bg-white rounded-[20px] p-6 flex justify-between items-center border border-blue-100 hover:border-blue-200 transition-all duration-300">
-            <span class="text-[30px] font-semibold text-blue-800">How can I get started on my study abroad journey in
-              the UK?</span>
-            <svg class="w-6 h-6 transform transition-transform duration-300 text-blue-800" fill="none"
-              stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 bg-white rounded-b-[20px] px-6">
-            <div class="py-6 text-gray-600 font-semibold text-xl">
-              Book a free consultation with our expert counselors who will guide you through the entire process.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container mx-auto">
-      <div class="container relative bg-[#1e3a8a] rounded-[32px] p-12 mt-16 overflow-hidden justify-center">
-
-        <div class="flex flex-col lg:flex-row items-center justify-between">
-          <!-- Left Content -->
-          <div class="lg:w-1/2 z-10">
-            <h2 class="text-6xl font-semibold text-white mb-2">
-              Get Ready To Begin
-            </h2>
-            <h2 class="text-4xl font-semibold text-white mb-6">
-              Your Journey
-              <span class="relative">
-                <span class="absolute -bottom-2 left-0 w-full">
-                  <svg class="w-full" height="8" viewBox="0 0 100 8" fill="none">
-                    <path d="M0 4C20 0 80 0 100 4" stroke="#ef4444" stroke-width="4" />
-                  </svg>
-                </span>
-              </span>
-            </h2>
-            <p class="text-gray-300 mb-8 text-lg">
-              Explore more, stay informed, and start your journey<br />
-              to academic excellence.
-            </p>
-
-            <!-- Buttons and Social Links -->
-            <div class="flex flex-col sm:flex-row items-center gap-6">
-              <a href="#"
-                class="bg-white text-[#1e3a8a] px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all">
-                Contact Us
-              </a>
-              <div class="flex items-center gap-4">
-                <a href="#" class="bg-white p-2 rounded-full hover:bg-opacity-90 transition-all">
-                  <img src="/instagram-icon.svg" alt="Instagram" class="w-5 h-5" />
-                </a>
-                <a href="#" class="bg-white p-2 rounded-full hover:bg-opacity-90 transition-all">
-                  <img src="/youtube-icon.svg" alt="YouTube" class="w-5 h-5" />
-                </a>
-                <a href="#" class="bg-white p-2 rounded-full hover:bg-opacity-90 transition-all">
-                  <img src="/linkedin-icon.svg" alt="LinkedIn" class="w-5 h-5" />
-                </a>
-                <a href="#" class="bg-white p-2 rounded-full hover:bg-opacity-90 transition-all">
-                  <img src="/facebook-icon.svg" alt="Facebook" class="w-5 h-5" />
-                </a>
-                <a href="#" class="bg-white p-2 rounded-full hover:bg-opacity-90 transition-all">
-                  <img src="/twitter-icon.svg" alt="Twitter" class="w-5 h-5" />
-                </a>
-                <a href="#" class="bg-white p-2 rounded-full hover:bg-opacity-90 transition-all">
-                  <img src="/blogger-icon.svg" alt="Blogger" class="w-5 h-5" />
-                </a>
+        
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+              <button
+                class="w-full bg-white rounded-[20px] p-6 flex justify-between items-center border border-blue-100 hover:border-blue-200 transition-all duration-300">
+                <span class="text-[30px] font-semibold text-blue-800">How can I get started on my study abroad journey in Canada?</span>
+                <svg class="w-6 h-6 transform transition-transform duration-300 text-blue-800" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              <div class="faq-content overflow-hidden max-h-0 transition-all duration-300 bg-white rounded-b-[20px] px-6">
+                <div class="py-6 text-gray-600 font-semibold text-xl">
+                  Start by researching Canadian universities and programs that interest you. Then, book a free consultation with our expert counselors who can guide you through the application process, help you understand admission requirements, and assist with your study permit application.
+                </div>
               </div>
             </div>
           </div>
-
-          <!-- Right Image -->
-          <div class="lg:w-1/2 relative">
-            <img src="/www.hsmvisa.com//images/scholar-img.png" alt="Student with globe"
-              class="relative z-10 max-w-xl mx-auto" />
-
-            <!-- Decorative Elements -->
-            <img src="/www.hsmvisa.com/images/testimonial-cirlce-img-1.png" alt=""
-              class="absolute -top-10 right-20 w-16 h-16 z-20" />
-            <img src="/www.hsmvisa.com/images/testimonial-cirlce-img-1.png" alt=""
-              class="absolute bottom-20 right-10 w-12 h-12 z-20" />
-
-            <!-- Curved Line -->
-            <svg class="absolute top-0 left-0 w-full h-full z-0" viewBox="0 0 400 400" fill="none">
-              <path d="M50,200 Q200,50 350,200" stroke="white" stroke-width="2" stroke-dasharray="5,5" fill="none" />
-            </svg>
-          </div>
         </div>
-      </div>
-    </div>
 
+    
     <footer>
       <div class="footer-content">
           <div class="footer-section">

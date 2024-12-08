@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -203,210 +204,323 @@
                 padding-left: 60px;
             }
         }
+
+
         .program-card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .program-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
+
         .faq-answer {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease;
         }
+
         .faq-item.active .faq-answer {
             max-height: 200px;
         }
+
         .chevron {
             transition: transform 0.3s ease;
         }
+
         .faq-item.active .chevron {
             transform: rotate(180deg);
         }
+
         /* Footer */
         footer {
-            background-color: #1d4ed8;
-            color: #fff;
-            padding: 2rem;
-            font-size: 1rem;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 1rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
-            margin-top: 20px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
         }
     </style>
 </head>
+
 <body>
-<header>
-    <div id="header"></div>
-    <script src="js/components.js"></script>
+    <header>
+        <div id="header"></div>
+        <script src="js/components.js"></script>
 
-<div class="font-sans">
-    <!-- Hero Section -->
-    <div class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-20">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Campus to Corporate Program</h1>
-            <p class="text-xl opacity-90">Transition seamlessly from campus life to the corporate world!</p>
-            <button class="mt-8 bg-white text-blue-800 px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all">
-                Get Started
-            </button>
+        <div class="font-sans">
+            <!-- Hero Section -->
+            <div class="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-20">
+                <div class="container mx-auto px-4 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Campus to Corporate Program</h1>
+                    <p class="text-xl opacity-90">Transition seamlessly from campus life to the corporate world!</p>
+                    <button
+                        class="mt-8 bg-white text-blue-800 px-8 py-3 rounded-full font-semibold hover:bg-opacity-90 transition-all">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+
+            <!-- Programs Section -->
+            <div class="container mx-auto px-4 py-16">
+                <h2 class="text-3xl font-bold text-center mb-12">Programs We Offer</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Campus to Corporate Card -->
+                    <div class="program-card bg-white rounded-lg shadow-lg p-6 border border-gray-200">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Campus to Corporate Program</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• Interview Skills</li>
+                            <li>• Resume Writing</li>
+                            <li>• Communication Skills</li>
+                            <li>• First Impression</li>
+                            <li>• Dining Etiquette</li>
+                            <li>• Global Etiquette</li>
+                            <li>• Image Enhancement</li>
+                            <li>• Mock Interview</li>
+                        </ul>
+                    </div>
+
+                    <!-- International Placement Card -->
+                    <div class="program-card bg-white rounded-lg shadow-lg p-6 border border-gray-200">
+                        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">International Placement Program</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• International Resume Writing</li>
+                            <li>• International Interview Skills</li>
+                            <li>• Personality Development</li>
+                            <li>• Communication Skills</li>
+                            <li>• Cultural Awareness</li>
+                            <li>• Global Etiquette</li>
+                            <li>• English Speaking Skills</li>
+                            <li>• Dining Etiquette</li>
+                        </ul>
+                    </div>
+
+                    <!-- English Speaking Card -->
+                    <div class="program-card bg-white rounded-lg shadow-lg p-6 border border-gray-200">
+                        <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                            <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">English Speaking Program</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>• Grammar</li>
+                            <li>• Vocabulary Building</li>
+                            <li>• Pronunciation</li>
+                            <li>• Conversational Skills</li>
+                            <li>• Fluency Development</li>
+                            <li>• Listening Skills</li>
+                            <li>• Speaking Practice</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Choose Us Section -->
+            <div class="bg-gray-50 py-16">
+                <div class="container mx-auto px-4">
+                    <h2 class="text-3xl font-bold text-center mb-12">Why Choose These Programs?</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h3 class="text-xl font-bold mb-3">Comprehensive Skill Development</h3>
+                            <p class="text-gray-600">These programs are designed to prepare you for the professional
+                                world, enhancing your confidence, communication skills, and cultural awareness.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h3 class="text-xl font-bold mb-3">Global Opportunities</h3>
+                            <p class="text-gray-600">Our training ensures you are equipped for international placements,
+                                by giving you a competative edge in the professional industry and making you stand out
+                                in the global job market.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h3 class="text-xl font-bold mb-3">Tailored for Success</h3>
+                            <p class="text-gray-600">Each program is tailored to meet the demands of corporate
+                                environments, ensuring a seamless transition from campus to career.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h3 class="text-xl font-bold mb-3">Expert Trainers</h3>
+                            <p class="text-gray-600">Learn from industry professionals and seasoned trainers who bring
+                                real-world experience to the table.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="container mx-auto px-4 py-16">
+                <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <div class="faq-item border rounded-lg">
+                        <button class="w-full flex justify-between items-center p-4 focus:outline-none">
+                            <span class="font-semibold">What is the duration of each program?</span>
+                            <svg class="w-6 h-6 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-4 pb-4">
+                            <p class="text-gray-600">The duration varies depending on the program chosen , ranging from
+                                4 to 12 weeks.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item border rounded-lg">
+                        <button class="w-full flex justify-between items-center p-4 focus:outline-none">
+                            <span class="font-semibold">Are the programs online or offline?</span>
+                            <svg class="w-6 h-6 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-4 pb-4">
+                            <p class="text-gray-600">The Program will be conducted Online.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item border rounded-lg">
+                        <button class="w-full flex justify-between items-center p-4 focus:outline-none">
+                            <span class="font-semibold">Who can enroll in these programs?</span>
+                            <svg class="w-6 h-6 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-4 pb-4">
+                            <p class="text-gray-600">Anyone looking to enhance their professional skills and overall
+                                personality, including students , fresh graduates and working professionals can enroll.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item border rounded-lg">
+                        <button class="w-full flex justify-between items-center p-4 focus:outline-none">
+                            <span class="font-semibold">What are the fees for these programs?</span>
+                            <svg class="w-6 h-6 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="faq-answer px-4 pb-4">
+                            <p class="text-gray-600">The fees depend on the program selected. Contact us for detailed
+                                pricing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>About The Expatlives</h3>
+                        <p>We help expats navigate their journey abroad with comprehensive support and resources for a
+                            successful international lifestyle.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contact Info</h3>
+                        <ul>
+                            <li><i class="fas fa-phone"></i> 91+ 9607621025</li>
+                            <li><i class="fas fa-phone"></i> 91+ 8600068599</li>
+                            <li><i class="fas fa-envelope"></i> info@theexpatlives.com</li>
+                            <li><i class="fas fa-map-marker-alt"></i> 245, ijmima building, mindspace, malad west, mumbai 400064.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 The Expatlives. All rights reserved.</p>
+                </div>
+            </footer>
+
+
+            <script>
+                document.querySelectorAll('.faq-item button').forEach(button => {
+                    button.addEventListener('click', () => {
+                        const faqItem = button.parentElement;
+                        faqItem.classList.toggle('active');
+                    });
+                });
+            </script>
         </div>
-    </div>
-
-    <!-- Programs Section -->
-    <div class="container mx-auto px-4 py-16">
-        <h2 class="text-3xl font-bold text-center mb-12">Programs We Offer</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Campus to Corporate Card -->
-            <div class="program-card bg-white rounded-lg shadow-lg p-6 border border-gray-200">
-                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                    <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-bold mb-4">Campus to Corporate Program</h3>
-                <ul class="space-y-2 text-gray-600">
-                    <li>• Interview Skills</li>
-                    <li>• Resume Writing</li>
-                    <li>• Communication Skills</li>
-                    <li>• First Impression</li>
-                    <li>• Dining Etiquette</li>
-                    <li>• Global Etiquette</li>
-                    <li>• Image Enhancement</li>
-                    <li>• Mock Interview</li>
-                </ul>
-            </div>
-
-            <!-- International Placement Card -->
-            <div class="program-card bg-white rounded-lg shadow-lg p-6 border border-gray-200">
-                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                    <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"></path>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-bold mb-4">International Placement Program</h3>
-                <ul class="space-y-2 text-gray-600">
-                    <li>• International Resume Writing</li>
-                    <li>• International Interview Skills</li>
-                    <li>• Personality Development</li>
-                    <li>• Communication Skills</li>
-                    <li>• Cultural Awareness</li>
-                    <li>• Global Etiquette</li>
-                    <li>• English Speaking Skills</li>
-                    <li>• Dining Etiquette</li>
-                </ul>
-            </div>
-
-            <!-- English Speaking Card -->
-            <div class="program-card bg-white rounded-lg shadow-lg p-6 border border-gray-200">
-                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
-                    <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-                    </svg>
-                </div>
-                <h3 class="text-xl font-bold mb-4">English Speaking Program</h3>
-                <ul class="space-y-2 text-gray-600">
-                    <li>• Grammar</li>
-                    <li>• Vocabulary Building</li>
-                    <li>• Pronunciation</li>
-                    <li>• Conversational Skills</li>
-                    <li>• Fluency Development</li>
-                    <li>• Listening Skills</li>
-                    <li>• Speaking Practice</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- Why Choose Us Section -->
-    <div class="bg-gray-50 py-16">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Why Choose These Programs?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-bold mb-3">Comprehensive Skill Development</h3>
-                    <p class="text-gray-600">These programs are designed to prepare you for the professional world, enhancing your confidence, communication skills, and cultural awareness.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-bold mb-3">Global Opportunities</h3>
-                    <p class="text-gray-600">Our training ensures you are equipped for international placements, by giving you a competative edge in the professional industry and making you stand out in the global job  market.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-bold mb-3">Tailored for Success</h3>
-                    <p class="text-gray-600">Each program is tailored to meet the demands of corporate environments, ensuring a seamless transition from campus to career.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="text-xl font-bold mb-3">Expert Trainers</h3>
-                    <p class="text-gray-600">Learn from industry professionals and seasoned trainers who bring real-world experience to the table.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- FAQ Section -->
-    <div class="container mx-auto px-4 py-16">
-        <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-        <div class="max-w-3xl mx-auto space-y-4">
-            <div class="faq-item border rounded-lg">
-                <button class="w-full flex justify-between items-center p-4 focus:outline-none">
-                    <span class="font-semibold">What is the duration of each program?</span>
-                    <svg class="w-6 h-6 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div class="faq-answer px-4 pb-4">
-                    <p class="text-gray-600">The duration varies depending on the program chosen , ranging from 4 to 12 weeks.</p>
-                </div>
-            </div>
-            <div class="faq-item border rounded-lg">
-                <button class="w-full flex justify-between items-center p-4 focus:outline-none">
-                    <span class="font-semibold">Are the programs online or offline?</span>
-                    <svg class="w-6 h-6 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div class="faq-answer px-4 pb-4">
-                    <p class="text-gray-600">The Program will be conducted Online.</p>
-                </div>
-            </div>
-            <div class="faq-item border rounded-lg">
-                <button class="w-full flex justify-between items-center p-4 focus:outline-none">
-                    <span class="font-semibold">Who can enroll in these programs?</span>
-                    <svg class="w-6 h-6 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div class="faq-answer px-4 pb-4">
-                    <p class="text-gray-600">Anyone looking to enhance their professional skills and overall personality, including students , fresh graduates and working professionals can enroll.</p>
-                </div>
-            </div>
-            <div class="faq-item border rounded-lg">
-                <button class="w-full flex justify-between items-center p-4 focus:outline-none">
-                    <span class="font-semibold">What are the fees for these programs?</span>
-                    <svg class="w-6 h-6 chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div class="faq-answer px-4 pb-4">
-                    <p class="text-gray-600">The fees depend on the program selected. Contact us for detailed pricing.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="bg-blue-800 text-white text-center py-6">
-        <p>© 2024 Campus to Corporate Program. All rights reserved.</p>
-    </footer>
-
-
-    <script>
-        document.querySelectorAll('.faq-item button').forEach(button => {
-            button.addEventListener('click', () => {
-                const faqItem = button.parentElement;
-                faqItem.classList.toggle('active');
-            });
-        });
-    </script>
-</div>
 </body>
+
 </html>

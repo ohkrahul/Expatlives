@@ -788,143 +788,9 @@
   </head>
   <body>
     <header>
-      <nav>
-          <a href="index.html" class="logo">
-              <i class="fas fa-globe-americas"></i>
-              <span>The Expatlives</span>
-          </a>
-          <button class="hamburger">
-              <span class="hamburger-line"></span>
-              <span class="hamburger-line"></span>
-              <span class="hamburger-line"></span>
-          </button>
-          <ul class="nav-list">
-              <li class="nav-item">
-                  <a href="#" class="nav-link">Coaching ▾</a>
-                  <div class="dropdown-content">
-                      <a href="ielts.html">IELTS</a>
-                      <a href="pte.html">PTE</a>
-                      <div class="has-nested">
-                          <a href="#">Foreign languages ▸</a>
-                          <div class="nested-dropdown">
-                              <a href="french.html">French</a>
-                              <a href="german.html">German</a>
-                              <a href="spaniish.html">Spanish</a>
-                              <a href="japanese.html">Japanese</a>
-                              <a href="chinese.html">Mandarin</a>
-                              <a href="polish.html">Polish</a>
-                          </div>
-                      </div>
-                      <a href="campustocorporat.html">Campus to corporate</a>
-                  </div>
-              </li>
-              <li class="nav-item">
-                  <a href="visa.html" class="nav-link">Visas</a>
-              </li>
-              <li class="nav-item">
-                  <a href="#" class="nav-link">Study In ▾</a>
-                  <div class="dropdown-content">
-                      <a href="uk.html">UK</a>
-                      <a href="usa.html">USA</a>
-                      <a href="germany.html">Germany</a>
-                      <a href="australia.html">Australia</a>
-                      <a href="newzealand.html">New Zealand</a>
-                      <a href="ireland.html">Ireland</a>
-                      <a href="canada.html">Canada</a>
-                  </div>
-              </li>
-              <li class="nav-item">
-                  <a href="consulting.html" class="nav-link">Consulting</a>
-              </li>
-              <li class="nav-item">
-                  <a href="aboutus.html" class="nav-link">About us</a>
-              </li>
-          </ul>
-      </nav>
+      <script src="js/components.js"></script>
+      <div id="header"></div>
 
-      <script>
-          document.addEventListener('DOMContentLoaded', function () {
-              const hamburger = document.querySelector('.hamburger');
-              const navList = document.querySelector('.nav-list');
-              const navItems = document.querySelectorAll('.nav-item');
-              const hasNested = document.querySelectorAll('.has-nested');
-
-              hamburger.addEventListener('click', function () {
-                  navList.classList.toggle('active');
-                  hamburger.classList.toggle('active');
-              });
-
-              navItems.forEach(item => {
-                  if (item.querySelector('.dropdown-content')) {
-                      item.querySelector('.nav-link').addEventListener('click', function (e) {
-                          if (window.innerWidth <= 1024) {
-                              e.preventDefault();
-                              item.classList.toggle('active');
-
-                              navItems.forEach(otherItem => {
-                                  if (otherItem !== item) {
-                                      otherItem.classList.remove('active');
-                                  }
-                              });
-                          }
-                      });
-                  }
-              });
-
-              hasNested.forEach(item => {
-                  item.querySelector('a').addEventListener('click', function (e) {
-                      if (window.innerWidth <= 1024) {
-                          e.preventDefault();
-                          item.classList.toggle('active');
-
-                          hasNested.forEach(otherItem => {
-                              if (otherItem !== item) {
-                                  otherItem.classList.remove('active');
-                              }
-                          });
-                      }
-                  });
-              });
-
-              document.addEventListener('click', function (e) {
-                  if (!navList.contains(e.target) && !hamburger.contains(e.target)) {
-                      navList.classList.remove('active');
-                      hamburger.classList.remove('active');
-                  }
-              });
-
-              window.addEventListener('resize', function () {
-                  if (window.innerWidth > 1024) {
-                      navList.classList.remove('active');
-                      hamburger.classList.remove('active');
-                      navItems.forEach(item => item.classList.remove('active'));
-                      hasNested.forEach(item => item.classList.remove('active'));
-                  }
-              });
-          });
-      </script>
-
-      <script>
-          // Mobile menu toggle
-          const menuToggle = document.querySelector('.menu-toggle');
-          const navLinks = document.querySelector('.nav-links');
-
-          menuToggle.addEventListener('click', () => {
-              navLinks.classList.toggle('active');
-          });
-
-          // Smooth scrolling for anchor links
-          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-              anchor.addEventListener('click', function (e) {
-                  e.preventDefault();
-                  document.querySelector(this.getAttribute('href')).scrollIntoView({
-                      behavior: 'smooth'
-                  });
-                  // Close mobile menu after clicking
-                  navLinks.classList.remove('active');
-              });
-          });
-      </script>
 
       
     
@@ -957,7 +823,7 @@
           <div class="lg:w-1/2 relative">
             <div class="relative">
               <img
-                src="/www.hsmvisa.com/images/study-abrd-uk (2).png"
+                src="Uploads/study in new zealand.png"
                 alt="Student with UK flag"
                 class="rounded-lg w-full max-w-md mx-auto object-cover"
               />
@@ -1287,11 +1153,6 @@
               <div class="swiper-slide">
                 <div class="university-card">
                   <div class="flex items-center gap-4 mb-6">
-                    <img
-                      src="/www.hsmvisa.com/images/1.jpg"
-                      alt="University of Cambridge"
-                      class="w-12 h-12"
-                    />
                     <h3 class="text-xl font-bold">The University of Auckland</h3>
                   </div>
                   <div class="space-y-4">
@@ -1319,11 +1180,6 @@
               <div class="swiper-slide">
                 <div class="university-card">
                   <div class="flex items-center gap-4 mb-6">
-                    <img
-                      src="/www.hsmvisa.com/images/2.jpg"
-                      alt="University of Oxford"
-                      class="w-12 h-12"
-                    />
                     <h3 class="text-xl font-bold">University of Otago</h3>
                   </div>
                   <div class="space-y-4">
@@ -1350,11 +1206,6 @@
               <div class="swiper-slide">
                 <div class="university-card">
                   <div class="flex items-center gap-4 mb-6">
-                    <img
-                      src="/www.hsmvisa.com/images/3.jpg"
-                      alt="University of Oxford"
-                      class="w-12 h-12"
-                    />
                     <h3 class="text-xl font-bold">Victoria University of Wellington</h3>
                   </div>
                   <div class="space-y-4">
@@ -1380,11 +1231,6 @@
               <div class="swiper-slide">
                 <div class="university-card">
                   <div class="flex items-center gap-4 mb-6">
-                    <img
-                      src="/www.hsmvisa.com/images/4.jpg"
-                      alt="University of Oxford"
-                      class="w-12 h-12"
-                    />
                     <h3 class="text-xl font-bold">University of Canterbury</h3>
                   </div>
                   <div class="space-y-4">
@@ -1411,11 +1257,6 @@
               <div class="swiper-slide">
                 <div class="university-card">
                   <div class="flex items-center gap-4 mb-6">
-                    <img
-                      src="/www.hsmvisa.com/images/5.jpg"
-                      alt="University of Oxford"
-                      class="w-12 h-12"
-                    />
                     <h3 class="text-xl font-bold">University of Waikato</h3>
                   </div>
                   <div class="space-y-4">
@@ -1442,11 +1283,6 @@
               <div class="swiper-slide">
                 <div class="university-card">
                   <div class="flex items-center gap-4 mb-6">
-                    <img
-                      src="/www.hsmvisa.com/images/6.jpg"
-                      alt="University of Oxford"
-                      class="w-12 h-12"
-                    />
                     <h3 class="text-xl font-bold">Massey University</h3>
                   </div>
                   <div class="space-y-4">
@@ -1473,11 +1309,6 @@
               <div class="swiper-slide">
                 <div class="university-card">
                   <div class="flex items-center gap-4 mb-6">
-                    <img
-                      src="/www.hsmvisa.com/images/7.jpg"
-                      alt="University of Oxford"
-                      class="w-12 h-12"
-                    />
                     <h3 class="text-xl font-bold">Lincoln University</h3>
                   </div>
                   <div class="space-y-4">
@@ -1503,11 +1334,6 @@
               <div class="swiper-slide">
                 <div class="university-card">
                   <div class="flex items-center gap-4 mb-6">
-                    <img
-                      src="/www.hsmvisa.com/images/7.jpg"
-                      alt="University of Oxford"
-                      class="w-12 h-12"
-                    />
                     <h3 class="text-xl font-bold">Auckland University of Technology</h3>
                   </div>
                   <div class="space-y-4">
@@ -1564,7 +1390,7 @@
         <div class="course-card">
           <div class="relative overflow-hidden">
             <img
-              src="/www.hsmvisa.com/images/Finance-img.jpg"
+              src="Uploads/business manegement.jpg"
               alt="Business Management"
               class="course-image"
             />
@@ -1582,7 +1408,7 @@
         <div class="course-card">
           <div class="relative overflow-hidden">
             <img
-              src="/www.hsmvisa.com/images/engrng-img.jpg"
+              src="Uploads/education.png"
               alt="Engineering"
               class="course-image"
             />
@@ -1600,7 +1426,7 @@
         <div class="course-card">
           <div class="relative overflow-hidden">
             <img
-              src="/www.hsmvisa.com/images/it-img.jpg"
+              src="Uploads/computer science.jpg"
               alt="Computer Science"
               class="course-image"
             />
@@ -1618,7 +1444,7 @@
         <div class="course-card">
           <div class="relative overflow-hidden">
             <img
-              src="/www.hsmvisa.com/images/architecture-img.jpg"
+              src="Uploads/law.jpg"
               alt="Law"
               class="course-image"
             />
@@ -1636,7 +1462,7 @@
         <div class="course-card">
           <div class="relative overflow-hidden">
             <img
-              src="/www.hsmvisa.com/images/Finance-img.jpg"
+              src="Uploads/finance.jpg"
               alt="Finance"
               class="course-image"
             />
@@ -1654,7 +1480,7 @@
         <div class="course-card">
           <div class="relative overflow-hidden">
             <img
-              src="/www.hsmvisa.com/images/architecture-img.jpg"
+              src="Uploads/architecture.jpg"
               alt="Architecture"
               class="course-image"
             />
@@ -1813,7 +1639,7 @@
             ></div>
 
             <img
-              src="/www.hsmvisa.com/images/scholar-img.png"
+              src="Uploads/study in new zealand.png"
               alt="Graduate Student"
               class="rounded-lg relative z-10 mx-auto"
             />
@@ -1824,132 +1650,6 @@
                             alt="Certificate" 
                             class="absolute top-10 right-10 transform rotate-12"
                         > -->
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container mx-auto px-4 py-16">
-      <!-- Title Section -->
-      <h2 class="text-5xl font-bold text-center mb-6">
-        Career Prospect
-        <span class="custom-underline font-semibold">In The New Zealand</span>
-      </h2>
-      <p
-        class="text-center text-gray-600 mb-12 mt-10 max-w-3xl mx-auto text-lg"
-      >
-        The employment landscape in the New Zealand is diverse, offering opportunities
-        across various sectors. Here are some key sectors and industries that
-        presently offer employment opportunities:
-      </p>
-
-      <!-- Courses Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Business Management -->
-        <div class="course-card">
-          <div class="relative overflow-hidden">
-            <img
-              src="/www.hsmvisa.com/images/Finance-img.jpg"
-              alt="Business Management"
-              class="course-image"
-            />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3
-                class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg"
-              >
-                Information Technology
-              </h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Engineering -->
-        <div class="course-card">
-          <div class="relative overflow-hidden">
-            <img
-              src="/www.hsmvisa.com/images/engrng-img.jpg"
-              alt="Engineering"
-              class="course-image"
-            />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3
-                class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg"
-              >
-                Education
-              </h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Computer Science -->
-        <div class="course-card">
-          <div class="relative overflow-hidden">
-            <img
-              src="/www.hsmvisa.com/images/it-img.jpg"
-              alt="Computer Science"
-              class="course-image"
-            />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3
-                class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg"
-              >
-                Computer Science
-              </h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Law -->
-        <div class="course-card">
-          <div class="relative overflow-hidden">
-            <img
-              src="/www.hsmvisa.com/images/architecture-img.jpg"
-              alt="Law"
-              class="course-image"
-            />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3
-                class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg"
-              >
-                Law
-              </h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Finance -->
-        <div class="course-card">
-          <div class="relative overflow-hidden">
-            <img
-              src="/www.hsmvisa.com/images/Finance-img.jpg"
-              alt="Finance"
-              class="course-image"
-            />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3
-                class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg"
-              >
-                Finance
-              </h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Architecture -->
-        <div class="course-card">
-          <div class="relative overflow-hidden">
-            <img
-              src="/www.hsmvisa.com/images/architecture-img.jpg"
-              alt="Architecture"
-              class="course-image"
-            />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3
-                class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg"
-              >
-                Architecture
-              </h3>
-            </div>
           </div>
         </div>
       </div>
