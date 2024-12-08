@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>French Learning Adventure - Expat Lifes</title>
+    <title>French Learning Adventure - The Expatlives</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -37,6 +37,18 @@
             position: relative;
             overflow: hidden;
         }
+
+        .hero::before {    
+      content: "";
+      background-color: #001f5c;
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 1;
+}
 
         .croissant-pattern {
             position: absolute;
@@ -620,6 +632,7 @@
             <a href="#levels" class="btn btn-secondary">Explore Levels</a>
         </div>
     </section>
+</div>
 
     <section class="section" id="why-french">
         <h2>Why Choose French? <span class="french-accent">Pourquoi le français?</span></h2>
@@ -664,18 +677,18 @@
             </div>
             
             <div class="card level-card">
-                <div class="level-badge">A1</div>
-                <h3>Beginner</h3>
-                <p>Start your French adventure! Learn basic phrases and everyday expressions.</p>
+                <div class="level-badge">A2</div>
+                <h3>Elementary</h3>
+                <p>Build on your basics and start expressing yourself in everyday situations.</p>
                 <ul>
-                    <li>Basic greetings</li>
-                    <li>Simple conversations</li>
-                    <li>Essential vocabulary</li>
+                    <li>Describe your daily routine</li>
+                    <li>Talk about past experiences</li>
+                    <li>Express preferences and opinions</li>
                 </ul>
                 <div class="progress-bar">
-                    <div class="progress"></div>
+                    <div class="progress" style="width: 40%;"></div>
                 </div>
-                <div class="fun-fact">🥐 Learn to order your first croissant!</div>
+                <div class="fun-fact">🍽️ Learn to navigate a French menu with confidence!</div>
             </div>
             
             <div class="card level-card">
@@ -814,94 +827,76 @@
     <section class="section" id="upcoming-courses">
         <h2>Upcoming French Courses</h2>
         <div class="grid">
+            <!-- Beginner Course -->
             <div class="card course-card">
                 <div class="course-badge">Beginner</div>
-                <div class="course-date">Starts Jan 15</div>
                 <h3>French for Beginners</h3>
                 <p>Perfect start for your French journey!</p>
                 <div class="course-details">
                     <div class="course-info">
-                        <span>⏰ 8 Weeks</span>
                         <span>👥 12 Students max</span>
-                        <span>🎯 A1 Level</span>
+                        <span>🎯 A1-A2 Level</span>
                     </div>
                     <ul>
                         <li>Basic conversation skills</li>
-                        <li>Essential grammar</li>
-                        <li>French culture introduction</li>
+                        <li>Essential grammar structures</li>
+                        <li>Everyday vocabulary</li>
                     </ul>
                     <div class="course-features">
-                        <span>✓ Live online classes</span>
-                        <span>✓ Practice materials</span>
-                        <span>✓ Cultural workshops</span>
+                        <span>✓ Interactive online classes</span>
+                        <span>✓ Beginner-friendly materials</span>
+                        <span>✓ Cultural introduction workshops</span>
                     </div>
                 </div>
-                <div class="course-price">
-                    <span class="price">€299</span>
-                    <span class="price-note">Early bird discount!</span>
-                </div>
                 <button class="btn btn-primary enroll-btn">Enroll Now</button>
-                <div class="seats-left">Only 5 seats left!</div>
             </div>
-
+    
+            <!-- Intermediate Course -->
             <div class="card course-card">
                 <div class="course-badge">Intermediate</div>
-                <div class="course-date">Starts Feb 1</div>
-                <h3>Business French</h3>
-                <p>Master professional French communication!</p>
+                <h3>French Fluency Builder</h3>
+                <p>Take your French to the next level!</p>
                 <div class="course-details">
                     <div class="course-info">
-                        <span>⏰ 10 Weeks</span>
-                        <span>👥 10 Students max</span>
+                        <span>👥 12 Students max</span>
                         <span>🎯 B1-B2 Level</span>
                     </div>
                     <ul>
-                        <li>Professional vocabulary</li>
-                        <li>Business correspondence</li>
-                        <li>Meeting presentations</li>
+                        <li>Advanced grammar concepts</li>
+                        <li>Idiomatic expressions</li>
+                        <li>Conversational fluency</li>
                     </ul>
                     <div class="course-features">
-                        <span>✓ Industry experts</span>
-                        <span>✓ Real-world scenarios</span>
-                        <span>✓ Certificate included</span>
+                        <span>✓ Native-speaking instructors</span>
+                        <span>✓ Real-world practice scenarios</span>
+                        <span>✓ French media analysis</span>
                     </div>
                 </div>
-                <div class="course-price">
-                    <span class="price">€399</span>
-                    <span class="price-note">Professional package</span>
-                </div>
                 <button class="btn btn-primary enroll-btn">Enroll Now</button>
-                <div class="seats-left">7 seats remaining</div>
             </div>
-
+    
+            <!-- Advanced Course -->
             <div class="card course-card">
                 <div class="course-badge">Advanced</div>
-                <div class="course-date">Starts Mar 1</div>
-                <h3>French Literature & Arts</h3>
-                <p>Dive deep into French culture!</p>
+                <h3>French Mastery Program</h3>
+                <p>Achieve near-native proficiency!</p>
                 <div class="course-details">
                     <div class="course-info">
-                        <span>⏰ 12 Weeks</span>
                         <span>👥 8 Students max</span>
                         <span>🎯 C1-C2 Level</span>
                     </div>
                     <ul>
-                        <li>Classic literature analysis</li>
-                        <li>Art history discussions</li>
-                        <li>Cultural deep dives</li>
+                        <li>Nuanced language use</li>
+                        <li>Advanced literary analysis</li>
+                        <li>Cultural and historical contexts</li>
                     </ul>
                     <div class="course-features">
-                        <span>✓ Native instructors</span>
-                        <span>✓ Virtual museum tours</span>
-                        <span>✓ Writing workshops</span>
+                        <span>✓ Expert-led seminars</span>
+                        <span>✓ Individual coaching sessions</span>
+                        <span>✓ Final project presentation</span>
                     </div>
                 </div>
-                <div class="course-price">
-                    <span class="price">€499</span>
-                    <span class="price-note">Premium experience</span>
-                </div>
                 <button class="btn btn-primary enroll-btn">Enroll Now</button>
-                <div class="seats-left warning">Only 2 seats left!</div>
             </div>
         </div>
     </section>

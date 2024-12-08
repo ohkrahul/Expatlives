@@ -788,143 +788,9 @@
   </head>
   <body>
     <header>
-      <nav>
-          <a href="index.html" class="logo">
-              <i class="fas fa-globe-americas"></i>
-              <span>The Expatlives</span>
-          </a>
-          <button class="hamburger">
-              <span class="hamburger-line"></span>
-              <span class="hamburger-line"></span>
-              <span class="hamburger-line"></span>
-          </button>
-          <ul class="nav-list">
-              <li class="nav-item">
-                  <a href="#" class="nav-link">Coaching ▾</a>
-                  <div class="dropdown-content">
-                      <a href="ielts.html">IELTS</a>
-                      <a href="pte.html">PTE</a>
-                      <div class="has-nested">
-                          <a href="#">Foreign languages ▸</a>
-                          <div class="nested-dropdown">
-                              <a href="french.html">French</a>
-                              <a href="german.html">German</a>
-                              <a href="spaniish.html">Spanish</a>
-                              <a href="japanese.html">Japanese</a>
-                              <a href="chinese.html">Mandarin</a>
-                              <a href="polish.html">Polish</a>
-                          </div>
-                      </div>
-                      <a href="campustocorporat.html">Campus to corporate</a>
-                  </div>
-              </li>
-              <li class="nav-item">
-                  <a href="visa.html" class="nav-link">Visas</a>
-              </li>
-              <li class="nav-item">
-                  <a href="#" class="nav-link">Study In ▾</a>
-                  <div class="dropdown-content">
-                      <a href="uk.html">UK</a>
-                      <a href="usa.html">USA</a>
-                      <a href="germany.html">Germany</a>
-                      <a href="australia.html">Australia</a>
-                      <a href="newzealand.html">New Zealand</a>
-                      <a href="ireland.html">Ireland</a>
-                      <a href="canada.html">Canada</a>
-                  </div>
-              </li>
-              <li class="nav-item">
-                  <a href="consulting.html" class="nav-link">Consulting</a>
-              </li>
-              <li class="nav-item">
-                  <a href="aboutus.html" class="nav-link">About us</a>
-              </li>
-          </ul>
-      </nav>
+      <script src="js/components.js"></script>
+      <div id="header"></div>
 
-      <script>
-          document.addEventListener('DOMContentLoaded', function () {
-              const hamburger = document.querySelector('.hamburger');
-              const navList = document.querySelector('.nav-list');
-              const navItems = document.querySelectorAll('.nav-item');
-              const hasNested = document.querySelectorAll('.has-nested');
-
-              hamburger.addEventListener('click', function () {
-                  navList.classList.toggle('active');
-                  hamburger.classList.toggle('active');
-              });
-
-              navItems.forEach(item => {
-                  if (item.querySelector('.dropdown-content')) {
-                      item.querySelector('.nav-link').addEventListener('click', function (e) {
-                          if (window.innerWidth <= 1024) {
-                              e.preventDefault();
-                              item.classList.toggle('active');
-
-                              navItems.forEach(otherItem => {
-                                  if (otherItem !== item) {
-                                      otherItem.classList.remove('active');
-                                  }
-                              });
-                          }
-                      });
-                  }
-              });
-
-              hasNested.forEach(item => {
-                  item.querySelector('a').addEventListener('click', function (e) {
-                      if (window.innerWidth <= 1024) {
-                          e.preventDefault();
-                          item.classList.toggle('active');
-
-                          hasNested.forEach(otherItem => {
-                              if (otherItem !== item) {
-                                  otherItem.classList.remove('active');
-                              }
-                          });
-                      }
-                  });
-              });
-
-              document.addEventListener('click', function (e) {
-                  if (!navList.contains(e.target) && !hamburger.contains(e.target)) {
-                      navList.classList.remove('active');
-                      hamburger.classList.remove('active');
-                  }
-              });
-
-              window.addEventListener('resize', function () {
-                  if (window.innerWidth > 1024) {
-                      navList.classList.remove('active');
-                      hamburger.classList.remove('active');
-                      navItems.forEach(item => item.classList.remove('active'));
-                      hasNested.forEach(item => item.classList.remove('active'));
-                  }
-              });
-          });
-      </script>
-
-      <script>
-          // Mobile menu toggle
-          const menuToggle = document.querySelector('.menu-toggle');
-          const navLinks = document.querySelector('.nav-links');
-
-          menuToggle.addEventListener('click', () => {
-              navLinks.classList.toggle('active');
-          });
-
-          // Smooth scrolling for anchor links
-          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-              anchor.addEventListener('click', function (e) {
-                  e.preventDefault();
-                  document.querySelector(this.getAttribute('href')).scrollIntoView({
-                      behavior: 'smooth'
-                  });
-                  // Close mobile menu after clicking
-                  navLinks.classList.remove('active');
-              });
-          });
-      </script>
 
       
     
@@ -957,7 +823,7 @@
           <div class="lg:w-1/2 relative">
             <div class="relative">
               <img
-                src="/www.hsmvisa.com/images/study-abrd-uk (2).png"
+                src="Uploads/study in germany.png"
                 alt="Student with UK flag"
                 class="rounded-lg w-full max-w-md mx-auto object-cover"
               />
@@ -1036,193 +902,110 @@
             <div class="space-y-8">
               <!-- Feature 1 -->
               <div class="flex gap-6 items-start">
-                <div
-                  class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0"
-                >
-                  <svg
-                    class="w-6 h-6 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                    ></path>
+                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                   </svg>
                 </div>
                 <div>
                   <h3 class="text-xl font-bold mb-2">
-                    GLOBAL EDGE
+                    TUITION-FREE EDUCATION
                   </h3>
-                  <p class="text-gray-600  font-semibold">
-                    The Germany has a plethora of institutions of higher education and research, much more than any other country. Despite the number of universities in Germany, it is the qualitative standards of education that matters which is respected worldwide.
+                  <p class="text-gray-600 font-semibold">
+                    One of the most attractive aspects of studying in Germany is that public universities offer tuition-free education for both domestic and international students at the undergraduate level. This makes high-quality German education accessible to students from around the world, regardless of their financial background.
                   </p>
                 </div>
               </div>
-
+            
               <!-- Feature 2 -->
               <div class="flex gap-6 items-start">
-                <div
-                  class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0"
-                >
-                  <svg
-                    class="w-6 h-6 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                    ></path>
+                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-xl font-bold mb-2">CHOICE</h3>
-                  <p class="text-gray-600  font-semibold">
-                    More than 4000 accredited institutions offer undergraduate, postgraduate, and doctorate degrees. Overall, the universities in Germany have a variety of academic programs that offer you leading edge careers.
+                  <h3 class="text-xl font-bold mb-2">ENGLISH-TAUGHT PROGRAMS</h3>
+                  <p class="text-gray-600 font-semibold">
+                    While German is the primary language of instruction, many universities in Germany offer a growing number of English-taught programs, especially at the master's level. This allows international students to study in Germany without needing to be fluent in German, opening up opportunities for a wider range of students.
                   </p>
                 </div>
               </div>
-
+            
               <!-- Feature 3 -->
               <div class="flex gap-6 items-start">
-                <div
-                  class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0"
-                >
-                  <svg
-                    class="w-6 h-6 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                    ></path>
+                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                   </svg>
                 </div>
                 <div>
                   <h3 class="text-xl font-bold mb-2">
-                    TWENTY-FIVE OF THE WORLD'S TOP 100 UNIVERSITIES
+                    STRONG INDUSTRY CONNECTIONS
                   </h3>
-                  <p class="text-gray-600  font-semibold">
-                    The Germany is home to twenty-five universities that rank amongst the top 100 universities in the world according to the QS World Ranking. The universities in the Germany offer a diverse range of programs and cutting-edge research opportunities that attract students from around the globe.
+                  <p class="text-gray-600 font-semibold">
+                    German universities, particularly Universities of Applied Sciences (Fachhochschulen), have strong ties with industry. Many programs include mandatory internships or practical semesters, allowing students to gain hands-on experience and build professional networks even before graduation.
                   </p>
                 </div>
               </div>
-
+            
               <!-- Feature 4 -->
               <div class="flex gap-6 items-start">
-                <div
-                  class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0"
-                >
-                  <svg
-                    class="w-6 h-6 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                    ></path>
+                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-xl font-bold mb-2">FINANCIAL ASSISTANCE</h3>
-                  <p class="text-gray-600  font-semibold">
-                    The decision to study in Germany is a wise investment for the future. With various options on tuition fees, accommodation choices, and financial support like scholarships and fee waivers, it is affordable and convenient.
+                  <h3 class="text-xl font-bold mb-2">EXCELLENT RESEARCH OPPORTUNITIES</h3>
+                  <p class="text-gray-600 font-semibold">
+                    Germany is known for its cutting-edge research in various fields, particularly in science and technology. The country is home to numerous research institutions, such as the Max Planck Society and the Fraunhofer Society, offering students unique opportunities to engage in groundbreaking research projects.
                   </p>
                 </div>
               </div>
-
+            
               <!-- Feature 5 -->
               <div class="flex gap-6 items-start">
-                <div
-                  class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0"
-                >
-                  <svg
-                    class="w-6 h-6 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                    ></path>
+                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-xl font-bold mb-2">FLEXIBILITY</h3>
-                  <p class="text-gray-600  font-semibold">
-                    The US education system excels for its flexibility in course selection and institution transfer. This unique feature allows students to switch courses, colleges or universities seamlessly, setting it apart from other countries.
+                  <h3 class="text-xl font-bold mb-2">DIVERSE CULTURAL EXPERIENCE</h3>
+                  <p class="text-gray-600 font-semibold">
+                    Studying in Germany offers a rich cultural experience. With its central location in Europe, students can easily explore other European countries. Germany itself boasts a diverse culture, from bustling modern cities to picturesque historical towns, providing a unique blend of tradition and innovation.
                   </p>
                 </div>
               </div>
-
+            
               <!-- Feature 6 -->
               <div class="flex gap-6 items-start">
-                <div
-                  class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0"
-                >
-                  <svg
-                    class="w-6 h-6 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                    ></path>
+                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-xl font-bold mb-2">AFFORDABLE</h3>
+                  <h3 class="text-xl font-bold mb-2">POST-STUDY WORK OPPORTUNITIES</h3>
                   <p class="text-gray-600">
-                    Education in the Germany becomes more feasible with financial aid, scholarships, and assistantships. Students can work up to 20 hours a week during their courses (on campus only), easing the financial burden.
+                    Germany offers excellent post-study work opportunities for international students. Graduates from German universities can apply for an 18-month job-seeking visa after completing their studies, allowing them to find employment in Germany. This provides a pathway to long-term career prospects in one of Europe's strongest economies.
                   </p>
                 </div>
               </div>
-
-               <!-- Feature 7 -->
-               <div class="flex gap-6 items-start">
-                <div
-                  class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0"
-                >
-                  <svg
-                    class="w-6 h-6 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                    ></path>
+            
+              <!-- Feature 7 -->
+              <div class="flex gap-6 items-start">
+                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                   </svg>
                 </div>
                 <div>
-                  <h3 class="text-xl font-bold mb-2">TECHNOLOGY & RESEARCH</h3>
+                  <h3 class="text-xl font-bold mb-2">SUSTAINABLE LIVING</h3>
                   <p class="text-gray-600">
-                    The Germany is renowned for its cutting-edge technologies and progressive advancements in various technical fields, making it a hub of innovation. Students who study a Master’s degree from the Germany benefit from the first-hand knowledge and excellent research opportunities, fostering their growth in their respective faculties.                  </p>
+                    Germany is a leader in sustainable living and environmental consciousness. Many universities offer programs focused on sustainability and renewable energy. Students can experience first-hand how a developed nation implements green policies, from efficient public transportation to widespread recycling practices, contributing to a more sustainable future.
+                  </p>
                 </div>
               </div>
             </div>
@@ -1269,6 +1052,8 @@
           </div>
         </div>
       </div>
+    </div>
+
       <!-- Universities List Section -->
       <div class="mt-20 bg-gray-200" style="border-radius: 50px">
         <div class="container mx-auto px-4 py-12">
@@ -1287,11 +1072,6 @@
               <div class="swiper-slide">
                 <div class="university-card">
                   <div class="flex items-center gap-4 mb-6">
-                    <img
-                      src="/www.hsmvisa.com/images/1.jpg"
-                      alt="University of Cambridge"
-                      class="w-12 h-12"
-                    />
                     <h3 class="text-xl font-bold">Technical University of Munich</h3>
                   </div>
                   <div class="space-y-4">
@@ -1319,11 +1099,6 @@
               <div class="swiper-slide">
                 <div class="university-card">
                   <div class="flex items-center gap-4 mb-6">
-                    <img
-                      src="/www.hsmvisa.com/images/2.jpg"
-                      alt="University of Oxford"
-                      class="w-12 h-12"
-                    />
                     <h3 class="text-xl font-bold">Ludwig-Maximilians-Universität München </h3>
                   </div>
                   <div class="space-y-4">
@@ -1350,11 +1125,6 @@
               <div class="swiper-slide">
                 <div class="university-card">
                   <div class="flex items-center gap-4 mb-6">
-                    <img
-                      src="/www.hsmvisa.com/images/3.jpg"
-                      alt="University of Oxford"
-                      class="w-12 h-12"
-                    />
                     <h3 class="text-xl font-bold">Heidelberg University</h3>
                   </div>
                   <div class="space-y-4">
@@ -1380,11 +1150,6 @@
               <div class="swiper-slide">
                 <div class="university-card">
                   <div class="flex items-center gap-4 mb-6">
-                    <img
-                      src="/www.hsmvisa.com/images/4.jpg"
-                      alt="University of Oxford"
-                      class="w-12 h-12"
-                    />
                     <h3 class="text-xl font-bold">Karlsruhe Institute of Technology</h3>
                   </div>
                   <div class="space-y-4">
@@ -1411,11 +1176,6 @@
               <div class="swiper-slide">
                 <div class="university-card">
                   <div class="flex items-center gap-4 mb-6">
-                    <img
-                      src="/www.hsmvisa.com/images/5.jpg"
-                      alt="University of Oxford"
-                      class="w-12 h-12"
-                    />
                     <h3 class="text-xl font-bold">Humboldt-Universität zu Berlin</h3>
                   </div>
                   <div class="space-y-4">
@@ -1442,11 +1202,6 @@
               <div class="swiper-slide">
                 <div class="university-card">
                   <div class="flex items-center gap-4 mb-6">
-                    <img
-                      src="/www.hsmvisa.com/images/6.jpg"
-                      alt="University of Oxford"
-                      class="w-12 h-12"
-                    />
                     <h3 class="text-xl font-bold">Technische Universität Berlin</h3>
                   </div>
                   <div class="space-y-4">
@@ -1473,11 +1228,6 @@
               <div class="swiper-slide">
                 <div class="university-card">
                   <div class="flex items-center gap-4 mb-6">
-                    <img
-                      src="/www.hsmvisa.com/images/7.jpg"
-                      alt="University of Oxford"
-                      class="w-12 h-12"
-                    />
                     <h3 class="text-xl font-bold">Universität Bonn</h3>
                   </div>
                   <div class="space-y-4">
@@ -1503,11 +1253,6 @@
               <div class="swiper-slide">
                 <div class="university-card">
                   <div class="flex items-center gap-4 mb-6">
-                    <img
-                      src="/www.hsmvisa.com/images/7.jpg"
-                      alt="University of Oxford"
-                      class="w-12 h-12"
-                    />
                     <h3 class="text-xl font-bold">Goethe-Universität Frankfurt am Main</h3>
                   </div>
                   <div class="space-y-4">
@@ -1534,11 +1279,6 @@
               <div class="swiper-slide">
                 <div class="university-card">
                   <div class="flex items-center gap-4 mb-6">
-                    <img
-                      src="/www.hsmvisa.com/images/6.jpg"
-                      alt="University of Oxford"
-                      class="w-12 h-12"
-                    />
                     <h3 class="text-xl font-bold">Universität zu Köln</h3>
                   </div>
                   <div class="space-y-4">
@@ -1576,6 +1316,7 @@
                     </div> -->
         </div>
       </div>
+    </div>
       
     <!-- </div> -->
 
@@ -1597,7 +1338,7 @@
         <div class="course-card">
           <div class="relative overflow-hidden">
             <img
-              src="/www.hsmvisa.com/images/Finance-img.jpg"
+              src="Uploads/business manegement.jpg"
               alt="Business Management"
               class="course-image"
             />
@@ -1615,7 +1356,7 @@
         <div class="course-card">
           <div class="relative overflow-hidden">
             <img
-              src="/www.hsmvisa.com/images/engrng-img.jpg"
+              src="Uploads/education.png"
               alt="Engineering"
               class="course-image"
             />
@@ -1633,7 +1374,7 @@
         <div class="course-card">
           <div class="relative overflow-hidden">
             <img
-              src="/www.hsmvisa.com/images/it-img.jpg"
+              src="Uploads/computer science.jpg"
               alt="Computer Science"
               class="course-image"
             />
@@ -1651,7 +1392,7 @@
         <div class="course-card">
           <div class="relative overflow-hidden">
             <img
-              src="/www.hsmvisa.com/images/architecture-img.jpg"
+              src="Uploads/law.jpg"
               alt="Law"
               class="course-image"
             />
@@ -1669,7 +1410,7 @@
         <div class="course-card">
           <div class="relative overflow-hidden">
             <img
-              src="/www.hsmvisa.com/images/Finance-img.jpg"
+              src="Uploads/finance.jpg"
               alt="Finance"
               class="course-image"
             />
@@ -1687,7 +1428,7 @@
         <div class="course-card">
           <div class="relative overflow-hidden">
             <img
-              src="/www.hsmvisa.com/images/architecture-img.jpg"
+              src="Uploads/architecture.jpg"
               alt="Architecture"
               class="course-image"
             />
@@ -1840,7 +1581,7 @@
             ></div>
 
             <img
-              src="/www.hsmvisa.com/images/scholar-img.png"
+              src="Uploads/study in germany.png"
               alt="Graduate Student"
               class="rounded-lg relative z-10 mx-auto"
             />
@@ -1851,130 +1592,6 @@
                             alt="Certificate" 
                             class="absolute top-10 right-10 transform rotate-12"
                         > -->
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container mx-auto px-4 py-16">
-      <!-- Title Section -->
-      <h2 class="text-5xl font-bold text-center mb-6">
-        Career Prospect
-        <span class="custom-underline font-semibold">In The Germany</span>
-      </h2>
-      <p
-        class="text-center text-gray-600 mb-12 mt-10 max-w-3xl mx-auto text-lg"
-      >
-      Germany offers excellent career prospects due to its strong economy, diverse industries, and emphasis on research and development. Graduates in fields like engineering, IT, healthcare, finance, and renewable energy are particularly in demand.
-      </p>
-
-      <!-- Courses Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Business Management -->
-        <div class="course-card">
-          <div class="relative overflow-hidden">
-            <img
-              src="/www.hsmvisa.com/images/Finance-img.jpg"
-              alt="Business Management"
-              class="course-image"
-            />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3
-                class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg"
-              >
-                Information Technology
-              </h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Engineering -->
-        <div class="course-card">
-          <div class="relative overflow-hidden">
-            <img
-              src="/www.hsmvisa.com/images/engrng-img.jpg"
-              alt="Engineering"
-              class="course-image"
-            />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3
-                class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg"
-              >
-                Education
-              </h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Computer Science -->
-        <div class="course-card">
-          <div class="relative overflow-hidden">
-            <img
-              src="/www.hsmvisa.com/images/it-img.jpg"
-              alt="Computer Science"
-              class="course-image"
-            />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3
-                class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg"
-              >
-                Computer Science
-              </h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Law -->
-        <div class="course-card">
-          <div class="relative overflow-hidden">
-            <img
-              src="/www.hsmvisa.com/images/architecture-img.jpg"
-              alt="Law"
-              class="course-image"
-            />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3
-                class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg"
-              >
-                Law
-              </h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Finance -->
-        <div class="course-card">
-          <div class="relative overflow-hidden">
-            <img
-              src="/www.hsmvisa.com/images/Finance-img.jpg"
-              alt="Finance"
-              class="course-image"
-            />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3
-                class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg"
-              >
-                Finance
-              </h3>
-            </div>
-          </div>
-        </div>
-
-        <!-- Architecture -->
-        <div class="course-card">
-          <div class="relative overflow-hidden">
-            <img
-              src="/www.hsmvisa.com/images/architecture-img.jpg"
-              alt="Architecture"
-              class="course-image"
-            />
-            <div class="absolute bottom-0 left-0 right-0 p-6">
-              <h3
-                class="text-xl font-bold text-center text-white bg-black bg-opacity-50 py-4 rounded-lg"
-              >
-                Architecture
-              </h3>
-            </div>
           </div>
         </div>
       </div>
@@ -2032,82 +1649,67 @@
         <!-- Right Side Content -->
         <div class="lg:w-3/4" id="content">
           <!-- Documents Section -->
-          <div
-            class="content-card bg-white p-8 rounded-2xl shadow-sm"
-            id="documents-content"
-            style="border: 1px solid gray"
+          <div 
+              class="content-card bg-white p-8 rounded-2xl shadow-sm"
+              id="documents-content"
+              style="border: 1px solid gray"
           >
-            <h3 class="text-2xl font-bold mb-6">
-                Documents required to study in the Germany
-            </h3>
-            <p class="text-gray-700 mb-6">
-                When applying for a course in the Germany as an international student, you typically need several documents to complete the application process. These documents may vary depending on the institution and the specific program, but some common ones include:
-            </p>
-            <ul class="bullet-list text-gray-700">
-              <li>
-                Academic Transcripts and Diplomas
-              </li>
-              <li>
-                Application Fees
-              </li>
-              <li>
-                Language Proficiency Certificates
-              </li>
-              </li>Letter of Motivation </li
-              <li>Curriculum Vitae.</li>
-              <li>
-                Resume
-              </li>
-              <li>Recommendation Letters</li>
-              <li>Bank Certificate</li>
-              <li>
-                Proof of Financial Resources
-              </li>
-              <li>
-                Test Score Report.
-              </li>
-              <li>Passport Copy</li>
-              <li>Passport-Sized Photographs</li>
-            </ul>
-            <a
-              href="#"
-              class="inline-block mt-8 px-6 py-3 text-blue-700 border border-blue-700 rounded-lg hover:bg-blue-50 transition-colors"
-            >
-              Free Expert Consultation
-            </a>
+              <h3 class="text-2xl font-bold mb-6">
+                  Documents Required to Study in Germany
+              </h3>
+              <p class="text-gray-700 mb-6">
+                  When applying for a course in Germany as an international student, you typically need several key documents to complete the application process. These documents may vary depending on the institution and specific program, but here are the most common requirements:
+              </p>
+              <ul class="bullet-list text-gray-700">
+                  <li>Authenticated Academic Transcripts and Certificates</li>
+                  <li>Hochschulzugangsberechtigung (HZB) - University Entrance Qualification</li>
+                  <li>Proof of German Language Proficiency (TestDaF or Goethe-Zertifikat)</li>
+                  <li>Proof of English Language Proficiency (IELTS or TOEFL, if applicable)</li>
+                  <li>Motivational Letter (Motivationsschreiben)</li>
+                  <li>Detailed Curriculum Vitae (Lebenslauf)</li>
+                  <li>Copies of Passport or ID</li>
+                  <li>Passport-Sized Biometric Photographs</li>
+                  <li>Detailed Study Plan or Research Proposal</li>
+                  <li>Recommendation Letters from Academic Referees</li>
+                  <li>Proof of Financial Resources (Finanzierungsnachweis)</li>
+                  <li>Health Insurance Confirmation</li>
+              </ul>
+              <a 
+                  href="#"
+                  class="inline-block mt-8 px-6 py-3 text-blue-700 border border-blue-700 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                  Free Expert Consultation
+              </a>
           </div>
-
+          
           <!-- Visa Section -->
-          <div
-            class="content-card bg-white p-8 rounded-2xl shadow-sm hidden"
-            id="visa-content"
-            style="border: 1px solid gray"
+          <div 
+              class="content-card bg-white p-8 rounded-2xl shadow-sm hidden"
+              id="visa-content"
+              style="border: 1px solid gray"
           >
-            <h3 class="text-2xl font-bold mb-6">Germany study visa process</h3>
-            <p class="text-gray-700 mb-6">
-              The German student visa process generally involves securing admission, opening a blocked account, preparing documents, submitting the visa application, attending the visa interview, and receiving visa approval.
-            </p>
-            <ul class="bullet-list text-gray-700">
-              <li>Secure Admission</li>
-              <li>Financial Proof</li>
-              <li>Document Preparation</li>
-              <li>
-                Visa Application
-              </li>
-              <li>Visa Interview</li>
-              <li>Visa Approval</li>
-
-            </ul>
-            <a
-              href="#"
-              class="inline-block mt-8 px-6 py-3 text-blue-700 border border-blue-700 rounded-lg hover:bg-blue-50 transition-colors"
-            >
-              Free Expert Consultation
-            </a>
+              <h3 class="text-2xl font-bold mb-6">German Student Visa Process</h3>
+              <p class="text-gray-700 mb-6">
+                  The German student visa process is comprehensive and requires careful preparation. Here are the key steps international students must follow to obtain a student visa:
+              </p>
+              <ul class="bullet-list text-gray-700">
+                  <li>Secure University Admission (Admission Letter from a German University)</li>
+                  <li>Open a Blocked Account (Sperrkontos) with Minimum Required Funds</li>
+                  <li>Comprehensive Health Insurance Registration</li>
+                  <li>Complete National Visa Application (Nationales Visum)</li>
+                  <li>Gather and Prepare All Required Documents</li>
+                  <li>Schedule and Attend Visa Interview at German Embassy/Consulate</li>
+                  <li>Pay Visa Application Fee</li>
+                  <li>Await Visa Approval and Decision</li>
+              </ul>
+              <a 
+                  href="#"
+                  class="inline-block mt-8 px-6 py-3 text-blue-700 border border-blue-700 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                  Free Expert Consultation
+              </a>
           </div>
-        </div>
       </div>
-    </div>
 
     <div class="container mx-auto px-4 py-16">
         <h2 class="text-4xl font-bold text-center mb-12">FAQs</h2>

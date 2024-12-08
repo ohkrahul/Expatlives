@@ -116,7 +116,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
+            background:#FFD700;
         }
         #hero .container {
             position: relative;
@@ -508,21 +508,71 @@
 
         /* Footer */
         footer {
-            background-color: var(--color-blue);
+            background-color: var(--primary-color);
             color: white;
-            padding: 2rem 0;
-            text-align: center;
+            padding: 4rem 1rem 2rem;
         }
-        .footer-logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 0.5rem;
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p {
+            line-height: 1.6;
             margin-bottom: 1rem;
         }
-        .footer-text {
-            opacity: 0.8;
-            margin-bottom: 1.5rem;
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
         }
 
         /* Responsive Design */
@@ -668,48 +718,45 @@
 
     <section id="courses">
         <div class="container">
-            <h2>Our Courses</h2>
+            <h2>Our Spanish Courses</h2>
             <div class="course-grid">
                 <div class="course-card">
-                    <h3>Spanish Foundations</h3>
+                    <h3>Spanish Foundations (A1-A2)</h3>
                     <div class="course-details">
                         <p>Level: Beginner</p>
-                        <p>Duration: 3 months</p>
                     </div>
                     <ul class="course-features">
-                        <li>Live online classes with native teachers</li>
-                        <li>Interactive exercises and quizzes</li>
-                        <li>Spanish culture workshops</li>
+                        <li>Master basic Spanish pronunciation and phonetics</li>
+                        <li>Learn essential vocabulary for everyday situations</li>
+                        <li>Grasp fundamental grammar structures (present tense, gender, numbers)</li>
                     </ul>
-                    <p class="course-price">$199</p>
+                    <p class="course-outcome">By the end, you'll be able to introduce yourself, ask for directions, order food, and engage in basic conversations about daily life.</p>
                     <button class="nav-button">Enroll Now</button>
                 </div>
                 <div class="course-card">
-                    <h3>Business Spanish</h3>
+                    <h3>Spanish Proficiency (B1-B2)</h3>
                     <div class="course-details">
                         <p>Level: Intermediate</p>
-                        <p>Duration: 4 months</p>
                     </div>
                     <ul class="course-features">
-                        <li>Professional vocabulary and etiquette</li>
-                        <li>Business communication in Spanish</li>
-                        <li>Industry-specific content</li>
+                        <li>Expand vocabulary to discuss a wide range of topics</li>
+                        <li>Master complex grammar (subjunctive, conditional, perfect tenses)</li>
+                        <li>Develop fluency in expressing opinions and emotions</li>
                     </ul>
-                    <p class="course-price">$299</p>
+                    <p class="course-outcome">By the end, you'll be able to converse fluently on various topics, understand Spanish media, and write coherent essays expressing your views.</p>
                     <button class="nav-button">Enroll Now</button>
                 </div>
                 <div class="course-card">
-                    <h3>Spanish Mastery</h3>
+                    <h3>Spanish Mastery (C1-C2)</h3>
                     <div class="course-details">
                         <p>Level: Advanced</p>
-                        <p>Duration: 6 months</p>
                     </div>
                     <ul class="course-features">
-                        <li>Advanced grammar and stylistics</li>
-                        <li>Spanish and Latin American literature</li>
-                        <li>Conversation practice with natives</li>
+                        <li>Refine advanced grammar and stylistics</li>
+                        <li>Analyze complex Spanish and Latin American literature</li>
+                        <li>Develop near-native fluency and accent reduction</li>
                     </ul>
-                    <p class="course-price">$399</p>
+                    <p class="course-outcome">By the end, you'll have near-native proficiency, able to understand and use Spanish in highly complex academic, professional, and social contexts.</p>
                     <button class="nav-button">Enroll Now</button>
                 </div>
             </div>
@@ -758,17 +805,17 @@
             <h2>Explore Spanish Culture</h2>
             <div class="culture-grid">
                 <div class="culture-card">
-                    <img src="https://source.unsplash.com/400x300/?flamenco" alt="Flamenco Dance">
+                    <img src="Uploads/flamenco spanish.jpg" alt="Flamenco Dance">
                     <h3>Flamenco</h3>
                     <p>Experience the passion of this traditional Andalusian dance and music.</p>
                 </div>
                 <div class="culture-card">
-                    <img src="https://source.unsplash.com/400x300/?paella" alt="Spanish Paella">
+                    <img src="Uploads/gastronomy.jpg" alt="Spanish Paella">
                     <h3>Gastronomy</h3>
                     <p>Savor the flavors of Spanish cuisine, from paella to tapas.</p>
                 </div>
                 <div class="culture-card">
-                    <img src="https://source.unsplash.com/400x300/?la-tomatina" alt="La Tomatina">
+                    <img src="Uploads/spanish festival.jpg" alt="La Tomatina">
                     <h3>Festivals</h3>
                     <p>Join the excitement of Spanish festivals like La Tomatina and San Fermín.</p>
                 </div>
@@ -822,22 +869,34 @@
         </div>
     </section>
 
-    <div id="footer"></div>
-
     <footer>
-        <div class="container">
-            <div class="footer-logo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                </svg>
-                <span>¡Viva Español!</span>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About The Expatlives</h3>
+                <p>We help expats navigate their journey abroad with comprehensive support and resources for a
+                    successful international lifestyle.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
             </div>
-            <p class="footer-text">Start your Spanish journey today and open doors to new opportunities!</p>
-            <button class="nav-button button-outline" onclick="scrollToSection('hero')">Back to Top</button>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> 91+ 9607621025</li>
+                    <li><i class="fas fa-phone"></i> 91+ 8600068599</li>
+                    <li><i class="fas fa-envelope"></i> info@theexpatlives.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 245, ijmima building, mindspace, malad west, mumbai 400064.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 The Expatlives. All rights reserved.</p>
         </div>
     </footer>
+
     <script src="js/components.js"></script>
 
     <script>

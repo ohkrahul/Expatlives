@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadComponent('header', 'components/header.html');
     loadComponent('footer', 'components/footer.html');
     loadComponent('pathway', 'components/pathway.html', initializePathway);
-    
+    loadComponent('japanesePathway', 'components/japanesePathway.html');
 
     // Function to load components
     function loadComponent(id, url) {
