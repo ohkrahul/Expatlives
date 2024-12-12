@@ -632,18 +632,18 @@
         <div class="section">
             <h2><i class="fas fa-envelope"></i> Get Expert Assistance</h2>
             <div class="alert alert-info" id="submitAlert">Thank you for your message! We'll get back to you shortly.</div>
-            <form class="contact-form" id="contactForm">
+            <form class="contact-form" id="contactForm" name="contact-form" method="post" action="https://script.google.com/macros/s/AKfycbyYbiegehwZ2IOWRnyHeR37ZrUBTIZAC07QAXpGHzLdSPfmseryIs6Pb-ezt5OVzScT/exec">
                 <div class="form-group">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name" required placeholder="Enter your full name">
+                    <input type="text" id="name" required placeholder="Enter your full name" name="name">
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address</label>
-                    <input type="email" id="email" required placeholder="Enter your email address">
+                    <input type="email" id="email" required placeholder="Enter your email address" name="email">
                 </div>
                 <div class="form-group">
                     <label for="country">Desired Study Country</label>
-                    <select id="country" required>
+                    <select id="country" required name="country">
                         <option value="">Select Country</option>
                         <option value="usa">United States</option>
                         <option value="uk">United Kingdom</option>
@@ -657,12 +657,14 @@
                 </div>
                 <div class="form-group">
                     <label for="message">Your Message</label>
-                    <textarea id="message" rows="4" required placeholder="Tell us about your study plans and any questions you have"></textarea>
+                    <textarea id="message" rows="4" required placeholder="Tell us about your study plans and any questions you have" name="message"></textarea>
                 </div>
                 <button type="submit">Send Message <i class="fas fa-paper-plane"></i></button>
             </form>
         </div>
     </div>
+
+    <script src="google sheet4.js"></script>
 
     <footer>
         <div class="footer-content">
@@ -720,3 +722,5 @@
             section.style.transform = 'translateY(20px)';
             observer.observe(section);
         });
+
+        

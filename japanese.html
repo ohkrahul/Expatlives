@@ -35,7 +35,6 @@
     </script>
 
     <style>
-
         :root {
             --primary-color: #2C3E50;
             --secondary-color: #3498DB;
@@ -44,6 +43,7 @@
             --text-dark: #2C3E50;
             --text-light: #7F8C8D;
         }
+
         header {
             background-color: var(--primary-color);
             padding: 0;
@@ -55,7 +55,7 @@
         }
 
         nav {
-           
+
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -209,6 +209,7 @@
                 padding-left: 60px;
             }
         }
+
         .course-card {
             background-color: white;
             border-radius: 0.5rem;
@@ -220,6 +221,34 @@
         .course-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Button Styles */
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: pink;
+            /* border: 2px solid white; */
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .course-image {
@@ -259,18 +288,31 @@
             text-transform: uppercase;
         }
 
-        .level-beginner { background-color: #E6F4EA; color: #1E8E3E; }
-        .level-intermediate { background-color: #FFF0B3; color: #B06000; }
-        .level-advanced { background-color: #FCE8E6; color: #C5221F; }
+        .level-beginner {
+            background-color: #E6F4EA;
+            color: #1E8E3E;
+        }
 
-        .course-duration, .course-lessons {
+        .level-intermediate {
+            background-color: #FFF0B3;
+            color: #B06000;
+        }
+
+        .level-advanced {
+            background-color: #FCE8E6;
+            color: #C5221F;
+        }
+
+        .course-duration,
+        .course-lessons {
             display: flex;
             align-items: center;
             font-size: 0.875rem;
             color: #718096;
         }
 
-        .course-duration i, .course-lessons i {
+        .course-duration i,
+        .course-lessons i {
             margin-right: 0.5rem;
         }
 
@@ -343,6 +385,7 @@
         .toggle-details:hover {
             background-color: #AED581;
         }
+
         /* Enhanced Animations */
         @keyframes softFloat {
 
@@ -484,7 +527,7 @@
             background-color: #FF6B8B;
         }
 
-        <style>@keyframes softFloat {
+        @keyframes softFloat {
 
             0%,
             100% {
@@ -646,6 +689,7 @@
         .course-stat i {
             margin-righ: 0.5rem;
         }
+
         footer {
             background-color: var(--primary-color);
             color: white;
@@ -712,6 +756,10 @@
             text-align: center;
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.7);
+        }
+
+        .cta-buttons1{
+            text-align: center;
         }
     </style>
 </head>
@@ -843,10 +891,9 @@
                         seamlessly blends tradition with innovation.
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <button
-                            class="px-8 py-4 bg-sakura-dark text-white rounded-full hover:bg-sakura transition-colors">
-                            Explore Courses
-                        </button>
+                        <div class="cta-buttons">
+                            <a href="#japan" class="btn btn-secondary">Explore Now</a>
+                        </div>
                     </div>
                 </div>
                 <div class="relative">
@@ -855,373 +902,371 @@
                 </div>
             </div>
         </div>
-    </div>
+        </div>
 
-    <!-- Why Learn Japanese Section -->
-    <div id="why-japanese" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16">
-                Why Learn <span class="text-sakura-dark">Japanese?</span>
-            </h2>
+        <!-- Why Learn Japanese Section -->
+        <div id="why-japanese" class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16">
+                    Why Learn <span class="text-sakura-dark">Japanese?</span>
+                </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Career Opportunities -->
-                <div class="hover-card bg-wisteria-light rounded-xl p-8">
-                    <div class="w-14 h-14 bg-wisteria rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-briefcase text-white text-xl"></i>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Career Opportunities -->
+                    <div class="hover-card bg-wisteria-light rounded-xl p-8">
+                        <div class="w-14 h-14 bg-wisteria rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-briefcase text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Career Opportunities</h3>
+                        <p class="text-gray-600">
+                            Japan is home to many global companies like Toyota, Sony, and Nintendo. Japanese language
+                            skills
+                            can open doors to:
+                        </p>
+                        <ul class="mt-4 space-y-2 text-gray-600">
+                            <li>• International business roles</li>
+                            <li>• Technology sector positions</li>
+                            <li>• Teaching opportunities in Japan</li>
+                        </ul>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Career Opportunities</h3>
-                    <p class="text-gray-600">
-                        Japan is home to many global companies like Toyota, Sony, and Nintendo. Japanese language skills
-                        can open doors to:
-                    </p>
-                    <ul class="mt-4 space-y-2 text-gray-600">
-                        <li>• International business roles</li>
-                        <li>• Technology sector positions</li>
-                        <li>• Teaching opportunities in Japan</li>
+
+                    <!-- Technology & Innovation -->
+                    <div class="hover-card bg-bamboo-light rounded-xl p-8">
+                        <div class="w-14 h-14 bg-bamboo rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-microchip text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Technology & Innovation</h3>
+                        <p class="text-gray-600">
+                            Access cutting-edge technology and research directly from Japan:
+                        </p>
+                        <ul class="mt-4 space-y-2 text-gray-600">
+                            <li>• Robotics and AI development</li>
+                            <li>• Gaming industry insights</li>
+                            <li>• Latest technological trends</li>
+                        </ul>
+                    </div>
+
+                    <!-- Cultural Understanding -->
+                    <div class="hover-card bg-sakura-light rounded-xl p-8">
+                        <div class="w-14 h-14 bg-sakura rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-theater-masks text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Rich Culture</h3>
+                        <p class="text-gray-600">
+                            Immerse yourself in Japan's fascinating culture:
+                        </p>
+                        <ul class="mt-4 space-y-2 text-gray-600">
+                            <li>• Anime and manga in original form</li>
+                            <li>• Traditional arts and customs</li>
+                            <li>• Modern pop culture phenomena</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Statistics Section -->
+                <div class="mt-20 grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-sakura-dark mb-2">#3</div>
+                        <p class="text-gray-600">World's Largest Economy</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-sakura-dark mb-2">128M+</div>
+                        <p class="text-gray-600">Japanese Speakers</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-sakura-dark mb-2">$40K+</div>
+                        <p class="text-gray-600">Average Teaching Salary in Japan</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-sakura-dark mb-2">500K+</div>
+                        <p class="text-gray-600">Foreign Workers in Japan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Learning Path Section -->
+        <div id="japanesePathway"></div>
+
+        <script src="js/components.js"></script>
+
+
+        <!-- JLPT Preparation Section -->
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-wisteria-light">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16">
+                    Japanese Language <span class="text-wisteria-dark">Exams</span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="exam-card p-6">
+                        <h3 class="text-xl font-bold mb-4">JLPT (N1-N5)</h3>
+                        <p class="text-gray-600 mb-4">The standard test for Japanese language proficiency, with five
+                            levels.
+                        </p>
+                    </div>
+                    <div class="exam-card p-6">
+                        <h3 class="text-xl font-bold mb-4">BJT Business Japanese</h3>
+                        <p class="text-gray-600 mb-4">Test your Japanese skills in a business context.</p>
+                    </div>
+                    <div class="exam-card p-6">
+                        <h3 class="text-xl font-bold mb-4">J-TEST</h3>
+                        <p class="text-gray-600 mb-4">A test of practical Japanese for students and business people.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-bamboo-light" id="japan">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16">
+                    Japanese Language <span class="text-bamboo-dark">Courses</span>
+                </h2>
+                <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+                    Embark on your journey to master the Japanese language with our comprehensive course offerings. From
+                    beginner to advanced levels, we have the perfect course to help you achieve your language learning
+                    goals.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="courses-container">
+                    <!-- Course cards will be dynamically added here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Get in Touch Section -->
+        <section class="w-full py-12 md:py-24 lg:py-32 bg-sakura-light" id="start">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16">
+                    Get in <span class="text-sakura-dark">Touch</span>
+                </h2>
+                <div class="max-w-2xl mx-auto">
+                    <form class="contact-form" name="contact-form" method="post" action="https://script.google.com/macros/s/AKfycbx3FKzC_4RoYZOX20uvwsT1R35E7NiX9xHfpgrh9VK3O_oFypzXLgw-DS9z3V_LClCX/exec">
+                        <input type="text" placeholder="Your Name" name="name" required>
+                        <input type="email" placeholder="Your Email" name="email" required>
+                        <textarea rows="4" placeholder="Your Message" name="message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <div id="course-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden">
+            <div class="relative top-20 mx-auto p-5 border w-11/12 md:w-3/4 lg:w-1/2 shadow-lg rounded-md bg-white">
+                <div class="mt-3 text-center">
+                    <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title"></h3>
+                    <div class="mt-2 px-7 py-3">
+                        <p class="text-sm text-gray-500" id="modal-description"></p>
+                    </div>
+                    <div class="items-center px-4 py-3">
+                        <button id="close-modal"
+                            class="px-4 py-2 bg-bamboo-dark text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-bamboo focus:outline-none focus:ring-2 focus:ring-bamboo-dark">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About The Expatlives</h3>
+                    <p>We help navigate their journey abroad with comprehensive support and resources for a
+                        successful international lifestyle.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 91+ 9607621025</li>
+                        <li><i class="fas fa-phone"></i> 91+ 8600068599</li>
+                        <li><i class="fas fa-envelope"></i> info@expatlife.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i>245, ijmima building, mindspace, malad west,
+                            mumbai 400064.</li>
                     </ul>
                 </div>
-
-                <!-- Technology & Innovation -->
-                <div class="hover-card bg-bamboo-light rounded-xl p-8">
-                    <div class="w-14 h-14 bg-bamboo rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-microchip text-white text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Technology & Innovation</h3>
-                    <p class="text-gray-600">
-                        Access cutting-edge technology and research directly from Japan:
-                    </p>
-                    <ul class="mt-4 space-y-2 text-gray-600">
-                        <li>• Robotics and AI development</li>
-                        <li>• Gaming industry insights</li>
-                        <li>• Latest technological trends</li>
-                    </ul>
-                </div>
-
-                <!-- Cultural Understanding -->
-                <div class="hover-card bg-sakura-light rounded-xl p-8">
-                    <div class="w-14 h-14 bg-sakura rounded-full flex items-center justify-center mb-6">
-                        <i class="fas fa-theater-masks text-white text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-4">Rich Culture</h3>
-                    <p class="text-gray-600">
-                        Immerse yourself in Japan's fascinating culture:
-                    </p>
-                    <ul class="mt-4 space-y-2 text-gray-600">
-                        <li>• Anime and manga in original form</li>
-                        <li>• Traditional arts and customs</li>
-                        <li>• Modern pop culture phenomena</li>
-                    </ul>
-                </div>
             </div>
-
-            <!-- Statistics Section -->
-            <div class="mt-20 grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-sakura-dark mb-2">#3</div>
-                    <p class="text-gray-600">World's Largest Economy</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-sakura-dark mb-2">128M+</div>
-                    <p class="text-gray-600">Japanese Speakers</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-sakura-dark mb-2">$40K+</div>
-                    <p class="text-gray-600">Average Teaching Salary in Japan</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold text-sakura-dark mb-2">500K+</div>
-                    <p class="text-gray-600">Foreign Workers in Japan</p>
-                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 The Expatlives. All rights reserved.</p>
             </div>
-        </div>
-    </div>
-
-    <!-- Interactive Learning Path Section -->
-    <div id="japanesePathway"></div>
-
-    <script src="js/components.js"></script>
+        </footer>
 
 
-    <!-- JLPT Preparation Section -->
-    <section class="w-full py-12 md:py-24 lg:py-32 bg-wisteria-light">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16">
-                Japanese Language <span class="text-wisteria-dark">Exams</span>
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="exam-card p-6">
-                    <h3 class="text-xl font-bold mb-4">JLPT (N1-N5)</h3>
-                    <p class="text-gray-600 mb-4">The standard test for Japanese language proficiency, with five levels.
-                    </p>
-                    <a href="#" class="text-wisteria-dark hover:underline">Learn more →</a>
-                </div>
-                <div class="exam-card p-6">
-                    <h3 class="text-xl font-bold mb-4">BJT Business Japanese</h3>
-                    <p class="text-gray-600 mb-4">Test your Japanese skills in a business context.</p>
-                    <a href="#" class="text-wisteria-dark hover:underline">Learn more →</a>
-                </div>
-                <div class="exam-card p-6">
-                    <h3 class="text-xl font-bold mb-4">J-TEST</h3>
-                    <p class="text-gray-600 mb-4">A test of practical Japanese for students and business people.</p>
-                    <a href="#" class="text-wisteria-dark hover:underline">Learn more →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="w-full py-12 md:py-24 lg:py-32 bg-bamboo-light">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16">
-                Japanese Language <span class="text-bamboo-dark">Courses</span>
-            </h2>
-            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">
-                Embark on your journey to master the Japanese language with our comprehensive course offerings. From
-                beginner to advanced levels, we have the perfect course to help you achieve your language learning
-                goals.
-            </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="courses-container">
-                <!-- Course cards will be dynamically added here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Get in Touch Section -->
-    <section class="w-full py-12 md:py-24 lg:py-32 bg-sakura-light">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl lg:text-5xl font-bold text-center mb-16">
-                Get in <span class="text-sakura-dark">Touch</span>
-            </h2>
-            <div class="max-w-2xl mx-auto">
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea rows="4" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <div id="course-modal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden">
-        <div class="relative top-20 mx-auto p-5 border w-11/12 md:w-3/4 lg:w-1/2 shadow-lg rounded-md bg-white">
-            <div class="mt-3 text-center">
-                <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title"></h3>
-                <div class="mt-2 px-7 py-3">
-                    <p class="text-sm text-gray-500" id="modal-description"></p>
-                </div>
-                <div class="items-center px-4 py-3">
-                    <button id="close-modal"
-                        class="px-4 py-2 bg-bamboo-dark text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-bamboo focus:outline-none focus:ring-2 focus:ring-bamboo-dark">
-                        Close
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>About The Expatlives</h3>
-                <p>We help navigate their journey abroad with comprehensive support and resources for a
-                    successful international lifestyle.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Info</h3>
-                <ul>
-                    <li><i class="fas fa-phone"></i> 91+ 9607621025</li>
-                    <li><i class="fas fa-phone"></i> 91+ 8600068599</li>
-                    <li><i class="fas fa-envelope"></i> info@expatlife.com</li>
-                    <li><i class="fas fa-map-marker-alt"></i>245, ijmima building, mindspace, malad west, mumbai 400064.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 The Expatlives. All rights reserved.</p>
-        </div>
-    </footer>
-
-
-    <!-- Add necessary JavaScript -->
-    <script>
-        // JLPT Level Selection
-        document.querySelectorAll('.jlpt-level-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                document.querySelectorAll('.jlpt-level-btn').forEach(btn => {
-                    btn.classList.remove('active');
+        <!-- Add necessary JavaScript -->
+        <script>
+            // JLPT Level Selection
+            document.querySelectorAll('.jlpt-level-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    document.querySelectorAll('.jlpt-level-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    // Add active class to clicked button
+                    button.classList.add('active');
+                    // Update content based on selected level
+                    updateJLPTContent(button.dataset.level);
                 });
-                // Add active class to clicked button
-                button.classList.add('active');
-                // Update content based on selected level
-                updateJLPTContent(button.dataset.level);
             });
-        });
 
-        // Business Japanese Flashcards
-        let currentPhraseIndex = 0;
-        const businessPhrases = [
-            {
-                japanese: '申し訳ございません',
-                romaji: 'Mōshiwake gozaimasen',
-                english: 'I sincerely apologize (formal)'
-            },
-            // Add more phrases
-        ];
+            // Business Japanese Flashcards
+            let currentPhraseIndex = 0;
+            const businessPhrases = [
+                {
+                    japanese: '申し訳ございません',
+                    romaji: 'Mōshiwake gozaimasen',
+                    english: 'I sincerely apologize (formal)'
+                },
+                // Add more phrases
+            ];
 
-        function updateBusinessPhrase(direction) {
-            currentPhraseIndex = (currentPhraseIndex + direction + businessPhrases.length) % businessPhrases.length;
-            const phrase = businessPhrases[currentPhraseIndex];
-            // Update the card content
-            document.querySelector('.business-phrase-card').innerHTML = `
+            function updateBusinessPhrase(direction) {
+                currentPhraseIndex = (currentPhraseIndex + direction + businessPhrases.length) % businessPhrases.length;
+                const phrase = businessPhrases[currentPhraseIndex];
+                // Update the card content
+                document.querySelector('.business-phrase-card').innerHTML = `
             <div class="text-xl mb-2">${phrase.japanese}</div>
             <div class="text-gray-600 mb-1">${phrase.romaji}</div>
             <div class="text-gray-500 text-sm">${phrase.english}</div>
         `;
-        }
+            }
 
-        // Keigo Practice
-        document.querySelector('.keigo-input').addEventListener('input', (e) => {
-            const input = e.target.value;
-            // Add validation logic
-        });
-
-        // Progress Tracking
-        function updateProgress(section, value) {
-            const circle = document.querySelector(`#progress-${section}`);
-            const circumference = 2 * Math.PI * 60;
-            const offset = circumference - (value / 100) * circumference;
-            circle.style.strokeDashoffset = offset;
-        }
-
-        // Intersection Observer for animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                    observer.unobserve(entry.target);
-                }
+            // Keigo Practice
+            document.querySelector('.keigo-input').addEventListener('input', (e) => {
+                const input = e.target.value;
+                // Add validation logic
             });
-        }, {
-            threshold: 0.1
-        });
 
-        document.querySelectorAll('.hover-card').forEach(card => {
-            observer.observe(card);
-        });
-        <script>
-            // Existing JavaScript
-            // ... (keep all the existing JavaScript as it is) ...
+            // Progress Tracking
+            function updateProgress(section, value) {
+                const circle = document.querySelector(`#progress-${section}`);
+                const circumference = 2 * Math.PI * 60;
+                const offset = circumference - (value / 100) * circumference;
+                circle.style.strokeDashoffset = offset;
+            }
 
-            // New JavaScript for form submission
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            this.reset();
-        });
-
-        // Intersection Observer for exam cards
-        const examCards = document.querySelectorAll('.exam-card');
-        const examObserver = new IntersectionObserver((entries) => {
+            // Intersection Observer for animations
+            const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.style.opacity = 1;
-                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.classList.add('fade-in');
+                        observer.unobserve(entry.target);
                     }
                 });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.hover-card').forEach(card => {
+                observer.observe(card);
+            });
+            <script>
+            // Existing JavaScript
+                // ... (keep all the existing JavaScript as it is) ...
+
+                // New JavaScript for form submission
+                document.querySelector('.contact-form').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                alert('Thank you for your message! We will get back to you soon.');
+                this.reset();
+        });
+
+                // Intersection Observer for exam cards
+                const examCards = document.querySelectorAll('.exam-card');
+        const examObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = 1;
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
         }, {threshold: 0.1 });
 
         examCards.forEach(card => {
-                card.style.opacity = 0;
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'opacity 0.5s, transform 0.5s';
-            examObserver.observe(card);
+                    card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s, transform 0.5s';
+                examObserver.observe(card);
         });
-    const courses = [
-        {
-                title: "Beginner's Japanese",
-            description: "Start your journey with basic greetings and essential phrases. Perfect for absolute beginners!",
-            image: "https://source.unsplash.com/random/800x600?japan,language",
-            level: "Beginner",
-            duration: "8 weeks",
-            lessons: 24,
-            features: [
+                const courses = [
+                {
+                    title: "Beginner's Japanese",
+                description: "Start your journey with basic greetings and essential phrases. Perfect for absolute beginners!",
+                image: "https://source.unsplash.com/random/800x600?japan,language",
+                level: "Beginner",
+                duration: "8 weeks",
+                lessons: 24,
+                features: [
                 "Basic greetings and introductions",
                 "Hiragana and Katakana writing systems",
                 "Essential vocabulary for daily life",
                 "Simple sentence structures"
-            ]
+                ]
         },
-        {
-                title: "Intermediate Conversation",
-            description: "Improve your speaking skills with practical dialogues and expand your vocabulary.",
-            image: "https://source.unsplash.com/random/800x600?japan,conversation",
-            level: "Intermediate",
-            duration: "10 weeks",
-            lessons: 30,
-            features: [
+                {
+                    title: "Intermediate Conversation",
+                description: "Improve your speaking skills with practical dialogues and expand your vocabulary.",
+                image: "https://source.unsplash.com/random/800x600?japan,conversation",
+                level: "Intermediate",
+                duration: "10 weeks",
+                lessons: 30,
+                features: [
                 "Advanced conversation techniques",
                 "Idiomatic expressions",
                 "Listening comprehension practice",
                 "Role-playing real-life scenarios"
-            ]
+                ]
         },
-        {
-                title: "Business Japanese",
-            description: "Master formal Japanese for professional settings and business interactions.",
-            image: "https://source.unsplash.com/random/800x600?japan,business",
-            level: "Advanced",
-            duration: "12 weeks",
-            lessons: 36,
-            features: [
+                {
+                    title: "Business Japanese",
+                description: "Master formal Japanese for professional settings and business interactions.",
+                image: "https://source.unsplash.com/random/800x600?japan,business",
+                level: "Advanced",
+                duration: "12 weeks",
+                lessons: 36,
+                features: [
                 "Formal speech and keigo",
                 "Business etiquette and customs",
                 "Writing professional emails",
                 "Negotiation and presentation skills"
-            ]
+                ]
         }
-    ];
-    function createCourseCard(course) {
+                ];
+                function createCourseCard(course) {
         return `
-            <div class="course-card">
-                <div class="course-image"></div>
-                <div class="course-content">
-                    <span class="course-level level-${course.level.toLowerCase()}">${course.level}</span>
-                    <h3 class="course-title">${course.title}</h3>
-                    <p class="course-description">${course.description}</p>
-                    <ul class="course-features">
-                        ${course.features.map(feature => `<li>${feature}</li>`).join('')}
-                    </ul>
-                    <div class="course-stats">
-                        <span class="course-stat"><i class="fas fa-calendar-alt"></i> ${course.duration}</span>
-                        <span class="course-stat"><i class="fas fa-book-open"></i> ${course.lessons} lessons</span>
+                <div class="course-card">
+                    <div class="course-image"></div>
+                    <div class="course-content">
+                        <span class="course-level level-${course.level.toLowerCase()}">${course.level}</span>
+                        <h3 class="course-title">${course.title}</h3>
+                        <p class="course-description">${course.description}</p>
+                        <ul class="course-features">
+                            ${course.features.map(feature => `<li>${feature}</li>`).join('')}
+                        </ul>
+                        <div class="cta-buttons1" >
+                            <a href="#start" class="btn btn-secondary">Enroll Now</a>
+                        </div>
                     </div>
-                    <a href="#" class="course-button mt-4 block text-center" data-course-title="${course.title}">Learn More</a>
                 </div>
-            </div>
-        `;
+                `;
     }
 
-    function createFAQItem(faq, index) {
+                function createFAQItem(faq, index) {
         return `
-            <div class="mb-4">
-                <button class="flex justify-between items-center w-full text-left font-semibold py-2 px-4 bg-gray-100 hover:bg-gray-200 rounded-lg focus:outline-none" onclick="toggleFAQ(${index})">
-                    ${faq.question}
-                    <svg class="w-5 h-5 transform transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
-                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                    </svg>
-                </button>
-                <div class="faq-answer hidden mt-2 px-4 py-2">
-                    ${faq.answer}
+                <div class="mb-4">
+                    <button class="flex justify-between items-center w-full text-left font-semibold py-2 px-4 bg-gray-100 hover:bg-gray-200 rounded-lg focus:outline-none" onclick="toggleFAQ(${index})">
+                        ${faq.question}
+                        <svg class="w-5 h-5 transform transition-transform duration-200" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden mt-2 px-4 py-2">
+                        ${faq.answer}
+                    </div>
                 </div>
-            </div>
         `;
     }
 
@@ -1283,83 +1328,82 @@
             }
         });
     });
-    </script>
+        </script>
 
-    <script>
-        // Existing JavaScript
+        <script>
+            // Existing JavaScript
 
-        // New JavaScript for courses section
-        const courses = [
-  {
-    id: 1,
-    title: "Beginner's Japanese",
-    description: "Start your journey with basic greetings and essential phrases. Perfect for absolute beginners!",
-    image: "https://source.unsplash.com/random/800x600?japan,language",
-    level: "Beginner",
-    features: [
-      "Basic greetings and introductions",
-      "Hiragana and Katakana writing systems",
-      "Essential vocabulary for daily life",
-      "Simple sentence structures"
-    ]
+            // New JavaScript for courses section
+            const courses = [
+            {
+                id: 1,
+            title: "Beginner's Japanese",
+            description: "Start your journey with basic greetings and essential phrases. Perfect for absolute beginners!",
+            image: "https://source.unsplash.com/random/800x600?japan,language",
+            level: "Beginner",
+            features: [
+            "Basic greetings and introductions",
+            "Hiragana and Katakana writing systems",
+            "Essential vocabulary for daily life",
+            "Simple sentence structures"
+            ]
   },
-  {
-    id: 2,
-    title: "Intermediate Conversation",
-    description: "Improve your speaking skills with practical dialogues and expand your vocabulary.",
-    image: "https://source.unsplash.com/random/800x600?japan,conversation",
-    level: "Intermediate",
-    features: [
-      "Advanced conversation techniques",
-      "Idiomatic expressions",
-      "Listening comprehension practice",
-      "Role-playing real-life scenarios"
-    ]
+            {
+                id: 2,
+            title: "Intermediate Conversation",
+            description: "Improve your speaking skills with practical dialogues and expand your vocabulary.",
+            image: "https://source.unsplash.com/random/800x600?japan,conversation",
+            level: "Intermediate",
+            features: [
+            "Advanced conversation techniques",
+            "Idiomatic expressions",
+            "Listening comprehension practice",
+            "Role-playing real-life scenarios"
+            ]
   },
-  {
-    id: 3,
-    title: "Advanced Japanese Mastery",
-    description: "Achieve near-native proficiency and master complex aspects of the Japanese language.",
-    image: "https://source.unsplash.com/random/800x600?japan,advanced",
-    level: "Advanced",
-    features: [
-      "Advanced grammar and nuanced expressions",
-      "Literary Japanese and classical texts",
-      "Debate and presentation skills",
-      "Cultural and historical contexts"
-    ]
+            {
+                id: 3,
+            title: "Advanced Japanese Mastery",
+            description: "Achieve near-native proficiency and master complex aspects of the Japanese language.",
+            image: "https://source.unsplash.com/random/800x600?japan,advanced",
+            level: "Advanced",
+            features: [
+            "Advanced grammar and nuanced expressions",
+            "Literary Japanese and classical texts",
+            "Debate and presentation skills",
+            "Cultural and historical contexts"
+            ]
   }
-];
+            ];
 
-function createCourseCard(course) {
+            function createCourseCard(course) {
   return `
-    <div class="course-card">
-      <div class="course-image"></div>
-      <div class="course-content">
-        <span class="course-level level-${course.level.toLowerCase()}">${course.level}</span>
-        <h3 class="course-title">${course.title}</h3>
-        <p class="course-description">${course.description}</p>
-        <ul class="course-features">
-          ${course.features.map(feature => `<li>${feature}</li>`).join('')}
-        </ul>
-        <div class="course-stats">
-          <span class="course-stat"><i class="fas fa-book-open"></i> ${course.lessons} lessons</span>
-        </div>
-        <a href="#" class="course-button mt-4 block text-center" data-course-title="${course.title}">Learn More</a>
-      </div>
-    </div>
-  `;
+            <div class="course-card">
+                <div class="course-image"></div>
+                <div class="course-content">
+                    <span class="course-level level-${course.level.toLowerCase()}">${course.level}</span>
+                    <h3 class="course-title">${course.title}</h3>
+                    <p class="course-description">${course.description}</p>
+                    <ul class="course-features">
+                        ${course.features.map(feature => `<li>${feature}</li>`).join('')}
+                    </ul>
+                    <div class="cta-buttons1">
+                        <a href="#start" class="btn btn-secondary">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+            `;
 }
 
-// Example usage
-console.log(courses.map(createCourseCard).join('\n'));
+            // Example usage
+            console.log(courses.map(createCourseCard).join('\n'));
 
-        function renderCourses() {
+            function renderCourses() {
             const coursesContainer = document.getElementById('courses-container');
             coursesContainer.innerHTML = courses.map(createCourseCard).join('');
         }
 
-        function toggleCourseDetails(courseId) {
+            function toggleCourseDetails(courseId) {
             const detailsElement = document.getElementById(`course-details-${courseId}`);
             detailsElement.classList.toggle('expanded');
             const button = detailsElement.previousElementSibling;
@@ -1389,7 +1433,8 @@ console.log(courses.map(createCourseCard).join('\n'));
                 courseObserver.observe(card);
             });
         });
-    </script>
+        </script>
+        <script src="google sheet.js"></script>
 </body>
 
 </html>

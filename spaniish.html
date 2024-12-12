@@ -505,10 +505,67 @@
             color: var(--color-blue);
             font-style: italic;
         }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--eiffel-gray);
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--french-blue);
+            box-shadow: 0 0 0 3px rgba(0, 35, 149, 0.1);
+        }
+
+        .success-message {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
         /* Footer */
         footer {
-            background-color: var(--primary-color);
+            background-color: var(--color-light-blue);
             color: white;
             padding: 4rem 1rem 2rem;
         }
@@ -575,6 +632,34 @@
             color: rgba(255, 255, 255, 0.7);
         }
 
+         /* Button Styles */
+         .btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--color-orange);
+            color: rgb(3, 3, 3);
+        }
+
+        .btn-secondary {
+            background-color: var(--color-red);
+            border: 2px solid white;
+            color: rgb(218, 106, 247);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
         /* Responsive Design */
         @media (min-width: 768px) {
             h1 {
@@ -635,9 +720,9 @@
         <div class="container">
             <h1>Discover the Magic of <span>Spanish</span></h1>
             <p class="hero-description">Embark on a journey to master one of the world's most beautiful and widely spoken languages</p>
-            <div class="button-group">
-                <button class="nav-button" onclick="scrollToSection('courses')">Start Your Journey</button>
-                <button class="nav-button button-outline" onclick="scrollToSection('why-spanish')">Learn More</button>
+            <div class="cta-buttons">
+                <a href="#courses" class="btn btn-secondary">Start Your Journey</a>
+                <a href="#why-spanish" class="btn btn-secondary">Learn More</a>
             </div>
             <div class="scroll-indicator" onclick="scrollToSection('why-spanish')">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -731,7 +816,9 @@
                         <li>Grasp fundamental grammar structures (present tense, gender, numbers)</li>
                     </ul>
                     <p class="course-outcome">By the end, you'll be able to introduce yourself, ask for directions, order food, and engage in basic conversations about daily life.</p>
-                    <button class="nav-button">Enroll Now</button>
+                    <div class="cta-buttons">
+                        <a href="#start" class="btn btn-secondary">Enroll Now</a>
+                    </div>
                 </div>
                 <div class="course-card">
                     <h3>Spanish Proficiency (B1-B2)</h3>
@@ -744,7 +831,9 @@
                         <li>Develop fluency in expressing opinions and emotions</li>
                     </ul>
                     <p class="course-outcome">By the end, you'll be able to converse fluently on various topics, understand Spanish media, and write coherent essays expressing your views.</p>
-                    <button class="nav-button">Enroll Now</button>
+                    <br/>
+                    <br/>
+                    <a href="#start" class="btn btn-secondary">Enroll Now</a>
                 </div>
                 <div class="course-card">
                     <h3>Spanish Mastery (C1-C2)</h3>
@@ -756,8 +845,10 @@
                         <li>Analyze complex Spanish and Latin American literature</li>
                         <li>Develop near-native fluency and accent reduction</li>
                     </ul>
-                    <p class="course-outcome">By the end, you'll have near-native proficiency, able to understand and use Spanish in highly complex academic, professional, and social contexts.</p>
-                    <button class="nav-button">Enroll Now</button>
+                    <p class="course-outcome">By the end, you'll have near-native profiiency, able to understand and use Spanish in highly complex academic, professional, and social contexts.</p>
+                    <br/>
+                    <br/>
+                    <a href="#start" class="btn btn-secondary">Enroll Now</a>
                 </div>
             </div>
         </div>
@@ -867,6 +958,37 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section class="section" id="start">
+        <h2>Begin Your Spanish Journey</h2>
+        <form class="contact-form" id="contact-form" name="contact-form" method="post" action="https://script.google.com/macros/s/AKfycbwSa1OGZaHFktNPelAnXWo_C9eUToCkNz_Rf8afJIDZzxr5EMEDhxmtbxcRVJrZgVQEbg/exec">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" required placeholder="John Doe" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required placeholder="john@example.com" name="email">
+            </div>
+            <div class="form-group">
+                <label for="level">Current Spanish Level</label>
+                <select id="level" name="level">
+                    <option value="beginner">Complete Beginner</option>
+                    <option value="a1">A1 - Spanish Basic</option>
+                    <option value="a2">A2 - Spanish Elementary</option>
+                    <option value="b1">B1 - Spanish Intermediate</option>
+                    <option value="b2">B2 - Spanish Upper Intermediate</option>
+                    <option value="c1">C1 - Spanish Advanced</option>
+                    <option value="c2">C2 - Spanish Mastery</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Tell us your goals</label>
+                <textarea id="message" rows="4" placeholder="I want to learn Spanish because..." name="message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Start Learning Spanish!</button>
+        </form>
     </section>
 
     <footer>
@@ -1115,5 +1237,7 @@
 
         setInterval(showNextPhrase, 5000); // Change phrase every 5 seconds
     </script>
+
+    <script src="google sheet3.js"></script>
 </body>
 </html>

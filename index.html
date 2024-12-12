@@ -257,7 +257,7 @@
         padding: 12px 30px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-        }
+}
         /* Hero Section */
         .hero {
             height: 100vh;
@@ -1388,242 +1388,28 @@
         </script>
 
 
-        <!-- <section class="" id="home"> -->
-            <!-- <div class="hero-content">
-                <h1>Your Journey to a New Life Abroad</h1>
-                <p>Expert guidance, local insights, and a global community to support your expat adventure</p>
-                <a href="#services" class="cta-button">Start Your Journey</a>
-            </div> -->
-            <!-- <section class="hero-section" id="home" >
-                <div class="slide active">
-                    <div class="hero-content">
-                        <h1>Begin Your Global Journey Today</h1>
-                        <p>Expert visa services with 99% success rate in UK, USA, Canada, and worldwide</p>
-                        <a href="#services" class="cta-button">Get Started</a>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="hero-content">
-                        <h1>Student Visa Specialists</h1>
-                        <p>Your dreams of studying abroad, our expertise in making it happen</p>
-                        <a href="#student-visa" class="cta-button">Explore Education Visas</a>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="hero-content">
-                        <h1>Work Visa Solutions</h1>
-                        <p>Professional guidance for skilled workers and entrepreneurs</p>
-                        <a href="#work-visa" class="cta-button">Discover Opportunities</a>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="hero-content">
-                        <h1>Family Immigration Services</h1>
-                        <p>Reunite with your loved ones through our expert family visa services</p>
-                        <a href="#family-visa" class="cta-button">Learn More</a>
-                    </div>
-                </div>
-                <div class="slider-controls">
-                    <span class="dot active" onclick="setSlide(0)"></span>
-                    <span class="dot" onclick="setSlide(1)"></span>
-                    <span class="dot" onclick="setSlide(2)"></span>
-                    <span class="dot" onclick="setSlide(3)"></span>
-                </div>
-            
-                <style>
-                .hero-section {
-                    position: relative;
-                    height: 100vh;
-                    overflow: hidden;
-                    margin-top: 70px; /* Adjusted to account for the fixed header */
-                }
-            
-                .slide {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    opacity: 0;
-                    transition: opacity 0.8s ease-in-out;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    text-align: center;
-                }
-            
-                .slide:nth-child(1) {
-                    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/api/placeholder/1920/1080') center/cover;
-                }
-            
-                .slide:nth-child(2) {
-                    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/api/placeholder/1920/1080') center/cover;
-                }
-            
-                .slide:nth-child(3) {
-                    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/api/placeholder/1920/1080') center/cover;
-                }
-            
-                .slide:nth-child(4) {
-                    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/api/placeholder/1920/1080') center/cover;
-                }
-            
-                .slide.active {
-                    opacity: 1;
-                }
-            
-                .hero-content {
-                    max-width: 900px;
-                    padding: 2rem;
-                    color: white;
-                    background-color: rgba(0, 0, 0, 0.5);
-                    border-radius: 15px;
-                    backdrop-filter: blur(5px);
-                    animation: fadeUp 0.8s ease-out;
-                }
-            
-                @keyframes fadeUp {
-                    from {
-                        opacity: 0;
-                        transform: translateY(20px);
-                    }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
-            
-                .hero-content h1 {
-                    font-size: 3.5rem;
-                    margin-bottom: 1.5rem;
-                    font-weight: 700;
-                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-                }
-            
-                .hero-content p {
-                    font-size: 1.25rem;
-                    margin-bottom: 2rem;
-                    line-height: 1.6;
-                }
-            
-                .cta-button {
-                    display: inline-block;
-                    padding: 1rem 2.5rem;
-                    background-color: #E74C3C;
-                    color: white;
-                    text-decoration: none;
-                    border-radius: 50px;
-                    font-weight: bold;
-                    transition: all 0.3s ease;
-                    border: 2px solid transparent;
-                }
-            
-                .cta-button:hover {
-                    background-color: transparent;
-                    border-color: #E74C3C;
-                    transform: translateY(-3px);
-                }
-            
-                .slider-controls {
-                    position: absolute;
-                    bottom: 2rem;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    display: flex;
-                    gap: 1rem;
-                    z-index: 3;
-                }
-            
-                .dot {
-                    width: 12px;
-                    height: 12px;
-                    border-radius: 50%;
-                    background-color: rgba(255, 255, 255, 0.5);
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                }
-            
-                .dot.active {
-                    background-color: #E74C3C;
-                    transform: scale(1.2);
-                }
-            
-                @media (max-width: 768px) {
-                    .hero-content h1 {
-                        font-size: 2.5rem;
-                    }
-                    .hero-content p {
-                        font-size: 1.1rem;
-                    }
-                }
-            
-                @media (max-width: 480px) {
-                    .hero-content h1 {
-                        font-size: 2rem;
-                    }
-                    .hero-content p {
-                        font-size: 1rem;
-                    }
-                    .cta-button {
-                        padding: 0.8rem 2rem;
-                    }
-                }
-                </style>
-            
-                <script>
-                let currentSlide = 0;
-                const slides = document.querySelectorAll('.slide');
-                const dots = document.querySelectorAll('.dot');
-            
-                function setSlide(index) {
-                    slides[currentSlide].classList.remove('active');
-                    dots[currentSlide].classList.remove('active');
-                    currentSlide = index;
-                    slides[currentSlide].classList.add('active');
-                    dots[currentSlide].classList.add('active');
-                }
-            
-                function nextSlide() {
-                    const next = (currentSlide + 1) % slides.length;
-                    setSlide(next);
-                }
-            
-                // Auto advance slides every 5 seconds
-                setInterval(nextSlide, 5000);
-                </script>
-            </section> -->
-        <!-- </section> -->
         <section class="hero-section" id="home">
             <div class="slide active">
                 <div class="hero-content">
                     <h1>Begin Your Global Journey Today</h1>
-                    <p>Expert visa services with 99% success rate in UK, USA, Canada, and worldwide</p>
+                    <!-- <p>Expert visa services with 99% success rate in UK, USA, Canada, and worldwide</p> -->
                     <a href="visa.html" class="cta-button">Get Started</a>
                 </div>
             </div>
             <div class="slide">
                 <div class="hero-content">
-                    <h1>Student Visa Specialists</h1>
-                    <p>Your dreams of studying abroad, our expertise in making it happen</p>
-                    <a href="visa.html" class="cta-button">Explore Education Visas</a>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="hero-content">
-                    <h1>Work Visa Solutions</h1>
-                    <p>Professional guidance for skilled workers and entrepreneurs</p>
-                    <a href="visa.html" class="cta-button">Discover Opportunities</a>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="hero-content">
-                    <h1>Family Immigration Services</h1>
-                    <p>Reunite with your loved ones through our expert family visa services</p>
+                    <h1>Campus to Corporate</h1>
+                    <p>From academic theories to real-world impact, your journey begins here.</p>
                     <a href="visa.html" class="cta-button">Learn More</a>
                 </div>
             </div>
-        
-            
-            <button class="slider-arrow prev">❮</button>
-            <button class="slider-arrow next">❯</button>
+            <div class="slide">
+                <div class="hero-content">
+                    <h1>Foreign languages</h1>
+                    <p>Learn Languages from all around the world</p>
+                    <a href="visa.html" class="cta-button">Learn More</a>
+                </div>
+            </div>
         
             <div class="slider-controls">
                 <span class="dot active" onclick="setSlide(0)"></span>
@@ -1656,23 +1442,39 @@
             .slide.active {
                 opacity: 1;
                 transform: scale(1);
+                /* background-image: url(slide1.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover; */
             }
         
           
             .slide:nth-child(1) {
-                background: linear-gradient(135deg, rgba(76, 44, 144, 0.8), rgba(28, 20, 56, 0.8)), url('/api/placeholder/1920/1080') center/cover;
+                background-image: url(Uploads/slide1.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
             }
         
             .slide:nth-child(2) {
-                background: linear-gradient(135deg, rgba(41, 128, 185, 0.8), rgba(44, 62, 80, 0.8)), url('/api/placeholder/1920/1080') center/cover;
+                background-image: url(Uploads/slide2.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
             }
-        
+
             .slide:nth-child(3) {
-                background: linear-gradient(135deg, rgba(192, 57, 43, 0.8), rgba(44, 62, 80, 0.8)), url('/api/placeholder/1920/1080') center/cover;
+                background-image: url(Uploads/slide3.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
             }
-        
+
             .slide:nth-child(4) {
-                background: linear-gradient(135deg, rgba(39, 174, 96, 0.8), rgba(44, 62, 80, 0.8)), url('/api/placeholder/1920/1080') center/cover;
+                background-image: url(slide4.jpg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
             }
         
             .hero-content {
@@ -1710,6 +1512,7 @@
                 margin-bottom: 2.5rem;
                 line-height: 1.6;
                 text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                color: #1e293b;
             }
         
             .cta-button {
@@ -1731,13 +1534,14 @@
                 box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
                 background: linear-gradient(45deg, #C0392B, #E74C3C);
             }
-                    .slider-arrow {
+                    
+            .slider-arrow {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                background: rgba(255, 255, 255, 0.2);
+                background: rgba(12, 12, 12, 0.2);
                 border: none;
-                color: white;
+                color: rgb(255, 255, 255);
                 padding: 1rem 1.5rem;
                 cursor: pointer;
                 font-size: 1.5rem;
@@ -1899,7 +1703,7 @@
             resetAutoSlide();
             </script>
         </section>
-         
+        <!-- </section> -->
              
         <!-- <div id="pathway"></div> -->
 
@@ -2539,18 +2343,18 @@
             </div>
             <div class="contact-container">
                 <div class="contact-form">
-                    <form>
+                    <form method="post" name="contact-form" action="https://script.google.com/macros/s/AKfycbx3FKzC_4RoYZOX20uvwsT1R35E7NiX9xHfpgrh9VK3O_oFypzXLgw-DS9z3V_LClCX/exec">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" required>
+                            <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" required>
+                            <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" required></textarea>
+                            <textarea id="message" name="message" required></textarea>
                         </div>
                         <button type="submit" class="submit-btn">Send Message</button>
                     </form>
@@ -2609,6 +2413,7 @@
                 });
             });
         </script>
+        <script src="Google Sheet.js"></script>
 </body>
 
 </html>
