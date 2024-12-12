@@ -545,26 +545,56 @@
       position: relative;
     }
 
-    .graduate-image::before {
-      content: "";
-      position: absolute;
-      top: -20px;
-      right: -20px;
-      width: 40px;
-      height: 40px;
-      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234338ca"><path d="M12 2L15 9L22 9L16 14L19 21L12 17L5 21L8 14L2 9L9 9L12 2Z"/></svg>');
-      background-repeat: no-repeat;
-    }
+    .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            display: inline-block;
+            margin: 0.5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
 
-    .decorative-line {
-      position: absolute;
-      border: 2px solid #4338ca;
-      border-style: dashed;
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      z-index: -1;
-    }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-primary {
+            background-color: var(--french-blue);
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            /* border: 2px solid var(--french-gold); */
+            /* color: var(--french-gold); */
+            background-color: #1e40af;
+            color: white;
+        }
   </style>
   <style>
     .custom-underline {
@@ -833,12 +863,9 @@
               destination for top-tier education and limitless potential
             </h1>
 
-            <div class="flex flex-col sm:flex-row gap-4">
-              <a href="#"
-                class="inline-block px-6 py-3 bg-blue-800 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center">
-                Free Expert Consultation
-              </a>
-            </div>
+            <div class="cta-buttons">
+              <a href="#start" class="btn btn-secondary">Free Expert Consultation</a>
+          </div>
           </div>
         </div>
 
@@ -1030,19 +1057,19 @@
         </div>
 
         <!-- Right Content - Form -->
-        <div class="lg:w-1/3">
+        <div class="lg:w-1/3" id="start">
           <div class="bg-white rounded-lg p-6 shadow-lg">
             <h3 class="text-xl font-bold text-blue-800 mb-6">
               Book your Free Consultation with Trustworthy Counsellors
             </h3>
-            <form class="space-y-4">
-              <input type="text" placeholder="Name"
+            <form class="space-y-4" method="post" name="contact-form" action="https://script.google.com/macros/s/AKfycbwICrcXPm-7kVoKRbMK8OBVi4RfbsOAkGWsYzhlwdC79ZfiX-3hpcoHQ6LKwr5CTL6n4Q/exec">
+              <input type="text" placeholder="Name" name="name"
                 class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-              <input type="email" placeholder="Email"
+              <input type="email" placeholder="Email" name="email"
                 class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-              <input type="tel" placeholder="Mobile Number"
+              <input type="tel" placeholder="Mobile Number" name="number"
                 class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-              <input type="text" placeholder="Preferred Course"
+              <input type="text" placeholder="Preferred Course" name="course"
                 class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
               <button type="submit"
                 class="w-full bg-blue-800 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors">
@@ -1565,10 +1592,9 @@
                 Passport-sized photographs
               </li>
             </ul>
-            <a href="#"
-              class="inline-block mt-8 px-6 py-3 text-blue-700 border border-blue-700 rounded-lg hover:bg-blue-50 transition-colors">
-              Free Expert Consultation
-            </a>
+            <div class="cta-buttons">
+              <a href="#start" class="btn btn-secondary">Free Expert Consultation</a>
+          </div>
           </div>
         
           <!-- Visa Section -->
@@ -1588,10 +1614,9 @@
               <li>Provide biometrics (fingerprints and photo) if required</li>
               <li>Attend an interview at a visa office if requested</li>
             </ul>
-            <a href="#"
-              class="inline-block mt-8 px-6 py-3 text-blue-700 border border-blue-700 rounded-lg hover:bg-blue-50 transition-colors">
-              Free Expert Consultation
-            </a>
+            <div class="cta-buttons">
+              <a href="#start" class="btn btn-secondary">Free Expert Consultation</a>
+          </div>
           </div>
         </div>
       </div>
@@ -1689,32 +1714,33 @@
         </div>
 
     
-    <footer>
-      <div class="footer-content">
-          <div class="footer-section">
-              <h3>About Expat Life</h3>
-              <p>We help expats navigate their journey abroad with comprehensive support and resources for a
-                  successful international lifestyle.</p>
-              <div class="social-links">
-                  <a href="#"><i class="fab fa-facebook"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
-                  <a href="#"><i class="fab fa-linkedin"></i></a>
+        <footer>
+          <div class="footer-content">
+              <div class="footer-section">
+                  <h3>About The Expatlives</h3>
+                  <p>We help expats navigate their journey abroad with comprehensive support and resources for a
+                      successful international lifestyle.</p>
+                  <div class="social-links">
+                      <a href="#"><i class="fab fa-facebook"></i></a>
+                      <a href="#"><i class="fab fa-twitter"></i></a>
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="#"><i class="fab fa-linkedin"></i></a>
+                  </div>
+              </div>
+              <div class="footer-section">
+                  <h3>Contact Info</h3>
+                  <ul>
+                      <li><i class="fas fa-phone"></i> 91+ 9607621025</li>
+                      <li><i class="fas fa-phone"></i> 91+ 8600068599</li>
+                      <li><i class="fas fa-envelope"></i> info@theexpatlives.com</li>
+                      <li><i class="fas fa-map-marker-alt"></i>245, ijmima building, mindspace, malad west, mumbai 400064.</li>
+                  </ul>
               </div>
           </div>
-          <div class="footer-section">
-              <h3>Contact Info</h3>
-              <ul>
-                  <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
-                  <li><i class="fas fa-envelope"></i> info@expatlife.com</li>
-                  <li><i class="fas fa-map-marker-alt"></i> 123 Global Street, International City</li>
-              </ul>
+          <div class="footer-bottom">
+              <p>&copy; 2024 The Expatlives. All rights reserved.</p>
           </div>
-      </div>
-      <div class="footer-bottom">
-          <p>&copy; 2024 Expat Life. All rights reserved.</p>
-      </div>
-  </footer>
+      </footer>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
@@ -1921,6 +1947,8 @@
 
     <!-- Optional: Add Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <script src="google sheet2.js"></script>
 </body>
 
 </html>

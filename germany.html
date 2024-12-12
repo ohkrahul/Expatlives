@@ -532,26 +532,56 @@
         position: relative;
       }
 
-      .graduate-image::before {
-        content: "";
-        position: absolute;
-        top: -20px;
-        right: -20px;
-        width: 40px;
-        height: 40px;
-        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234338ca"><path d="M12 2L15 9L22 9L16 14L19 21L12 17L5 21L8 14L2 9L9 9L12 2Z"/></svg>');
-        background-repeat: no-repeat;
-      }
+      .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            display: inline-block;
+            margin: 0.5rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
 
-      .decorative-line {
-        position: absolute;
-        border: 2px solid #4338ca;
-        border-style: dashed;
-        border-radius: 50%;
-        width: 150px;
-        height: 150px;
-        z-index: -1;
-      }
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-primary {
+            background-color: var(--french-blue);
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            /* border: 2px solid var(--french-gold); */
+            /* color: var(--french-gold); */
+            background-color: #1e40af;
+            color: white;
+        }
     </style>
     <style>
       .custom-underline {
@@ -789,266 +819,233 @@
   <body>
     <header>
       <script src="js/components.js"></script>
-      <div id="header"></div>
+      <div id="header"></div>  
 
-
-      
-    
       <!-- Hero Section -->
-      <div class="container mx-auto px-4 py-12 lg:py-20">
-        
-        <div class="flex flex-col lg:flex-row items-center justify-between">
-          <!-- Left Content -->
-          <div class="lg:w-1/2 mb-8 lg:mb-0">
-            <div class="max-w-xl">
-              <h1 class="text-3xl lg:text-5xl font-bold text-gray-900 mb-2">
-                Germany: <Span class="font-semibold ">Affordable Excellence</Span>
-              </h1>
-              <h1 class="text-4xl lg:text-5xl font-semibold text-gray-900 mb-8">
-                Study in Germany without Breaking the Bank.
-              </h1>
+    <div class="container mx-auto px-4 py-12 lg:py-20">
 
-              <div class="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="#"
-                  class="inline-block px-6 py-3 bg-blue-800 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center"
-                >
-                  Free Expert Consultation
-                </a>
-              </div>
-            </div>
+      <div class="flex flex-col lg:flex-row items-center justify-between">
+        <!-- Left Content -->
+        <div class="lg:w-1/2 mb-8 lg:mb-0">
+          <div class="max-w-xl">
+            <h1 class="text-3xl lg:text-5xl font-bold text-gray-900 mb-2">
+              Germany: <Span class="font-semibold ">Affordable Excellence</Span>
+            </h1>
+            <h1 class="text-4xl lg:text-5xl font-semibold text-gray-900 mb-8">
+              Study in Germany without Breaking the Bank.
+            </h1>
+
+            <a href="#start" class="btn btn-secondary">Free Expert Consultation</a>
           </div>
+        </div>
 
-          <!-- Right Image -->
-          <div class="lg:w-1/2 relative">
-            <div class="relative">
-              <img
-                src="Uploads/study in germany.png"
-                alt="Student with UK flag"
-                class="rounded-lg w-full max-w-md mx-auto object-cover"
-              />
+        <!-- Right Image -->
+        <div class="lg:w-1/2 relative">
+          <div class="relative">
+            <img src="Uploads/study in germany.png" alt="Student with UK flag"
+              class="rounded-lg w-full max-w-md mx-auto object-cover" />
 
-              <!-- Decorative Elements -->
-              <!-- <div class="absolute -top-4 -right-4">
+            <!-- Decorative Elements -->
+            <!-- <div class="absolute -top-4 -right-4">
                             <img src="/api/placeholder/48/48" alt="" class="w-12 h-12">
                         </div> -->
-              <!-- <div class="absolute top-1/4 -right-8">
+            <!-- <div class="absolute top-1/4 -right-8">
                             <img src="/api/placeholder/64/64" alt="" class="w-16 h-16">
                         </div> -->
 
-              <!-- Floating Icons -->
-              <!-- <div class="absolute top-12 left-0 transform -translate-x-1/2">
+            <!-- Floating Icons -->
+            <!-- <div class="absolute top-12 left-0 transform -translate-x-1/2">
                             <img src="/api/placeholder/40/40" alt="Graduate cap icon" class="w-10 h-10">
                         </div>
                         <div class="absolute bottom-20 right-0 transform translate-x-1/2">
                             <img src="/api/placeholder/48/48" alt="UK flag icon" class="w-12 h-12">
                         </div> -->
-            </div>
-          </div>
-        </div>
-
-        <!-- Stats Section -->
-        <div class="mt-16 bg-gray-100 rounded-3xl shadow-lg">
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8">
-            <div class="text-center">
-              <h2 class="text-4xl font-bold text-blue-800">400+</h2>
-              <p class="text-gray-600 mt-2 font-semibold">Universities</p>
-            </div>
-            <div class="text-center">
-              <h2 class="text-4xl font-bold text-blue-800">€5k - €20k</h2>
-              <p class="text-gray-600 mt-2  font-semibold">Annual tuition fees</p>
-            </div>
-            <div class="text-center">
-              <h2 class="text-4xl font-bold text-blue-800">350k+</h2>
-              <p class="text-gray-600 mt-2  font-semibold">International Students</p>
-            </div>
-            <div class="text-center">
-              <h2 class="text-4xl font-bold text-blue-800">18-Month Job-Seeking Visa</h2>
-              <p class="text-gray-600 mt-2  font-semibold">Graduate Immigration Visa</p>
-            </div>
           </div>
         </div>
       </div>
 
-      <!-- Chat Button -->
-      <button
-        class="fixed bottom-8 right-8 bg-blue-800 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300"
-        aria-label="Chat"
-      >
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-          ></path>
-        </svg>
-      </button>
+      <!-- Stats Section -->
+      <div class="mt-16 bg-gray-100 rounded-3xl shadow-lg">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 p-8">
+          <div class="text-center">
+            <h2 class="text-4xl font-bold text-blue-800">400+</h2>
+            <p class="text-gray-600 mt-2 font-semibold">Universities</p>
+          </div>
+          <div class="text-center">
+            <h2 class="text-4xl font-bold text-blue-800">€5k - €20k</h2>
+            <p class="text-gray-600 mt-2  font-semibold">Annual tuition fees</p>
+          </div>
+          <div class="text-center">
+            <h2 class="text-4xl font-bold text-blue-800">350k+</h2>
+            <p class="text-gray-600 mt-2  font-semibold">International Students</p>
+          </div>
+          <div class="text-center">
+            <h2 class="text-4xl font-bold text-blue-800">18-Month Job-Seeking Visa</h2>
+            <p class="text-gray-600 mt-2  font-semibold">Graduate Immigration Visa</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      <div class="container mx-auto px-4 py-12">
-        <div class="flex flex-col lg:flex-row gap-12">
-          <!-- Left Content -->
-          <div class="lg:w-2/3">
-            <h2 class="text-4xl font-bold mb-12">
-              Why <span class="custom-underline">Study In The Germany?</span>
-            </h2>
+    <!-- Chat Button -->
+    <button
+      class="fixed bottom-8 right-8 bg-blue-800 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300"
+      aria-label="Chat">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
+        </path>
+      </svg>
+    </button>
 
-            <!-- Features List -->
-            <div class="space-y-8">
-              <!-- Feature 1 -->
-              <div class="flex gap-6 items-start">
-                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
-                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold mb-2">
-                    TUITION-FREE EDUCATION
-                  </h3>
-                  <p class="text-gray-600 font-semibold">
-                    One of the most attractive aspects of studying in Germany is that public universities offer tuition-free education for both domestic and international students at the undergraduate level. This makes high-quality German education accessible to students from around the world, regardless of their financial background.
-                  </p>
-                </div>
+    <div class="container mx-auto px-4 py-12">
+      <div class="flex flex-col lg:flex-row gap-12">
+        <!-- Left Content -->
+        <div class="lg:w-2/3">
+          <h2 class="text-4xl font-bold mb-12">
+            Why <span class="custom-underline">Study In The Germany?</span>
+          </h2>
+
+          <!-- Features List -->
+          <div class="space-y-8">
+            <!-- Feature 1 -->
+            <div class="flex gap-6 items-start">
+              <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6">
+                  </path>
+                </svg>
               </div>
-            
-              <!-- Feature 2 -->
-              <div class="flex gap-6 items-start">
-                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
-                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold mb-2">ENGLISH-TAUGHT PROGRAMS</h3>
+              <div>
+                <h3 class="text-xl font-bold mb-2">
+                  TUITION-FREE EDUCATION
+                </h3>
+                <p class="text-gray-600 font-semibold">
+                  One of the most attractive aspects of studying in Germany is that public universities offer tuition-free education for both domestic and international students at the undergraduate level. This makes high-quality German education accessible to students from around the world, regardless of their financial background.
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="flex gap-6 items-start">
+              <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6">
+                  </path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">ENGLISH-TAUGHT PROGRAMS</h3>
                   <p class="text-gray-600 font-semibold">
                     While German is the primary language of instruction, many universities in Germany offer a growing number of English-taught programs, especially at the master's level. This allows international students to study in Germany without needing to be fluent in German, opening up opportunities for a wider range of students.
                   </p>
-                </div>
               </div>
-            
-              <!-- Feature 3 -->
-              <div class="flex gap-6 items-start">
-                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
-                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold mb-2">
-                    STRONG INDUSTRY CONNECTIONS
-                  </h3>
-                  <p class="text-gray-600 font-semibold">
-                    German universities, particularly Universities of Applied Sciences (Fachhochschulen), have strong ties with industry. Many programs include mandatory internships or practical semesters, allowing students to gain hands-on experience and build professional networks even before graduation.
-                  </p>
-                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="flex gap-6 items-start">
+              <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6">
+                  </path>
+                </svg>
               </div>
-            
-              <!-- Feature 4 -->
-              <div class="flex gap-6 items-start">
-                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
-                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold mb-2">EXCELLENT RESEARCH OPPORTUNITIES</h3>
+              <div>
+                <h3 class="text-xl font-bold mb-2">
+                  STRONG INDUSTRY CONNECTIONS
+                </h3>
+                <p class="text-gray-600 font-semibold">
+                  German universities, particularly Universities of Applied Sciences (Fachhochschulen), have strong ties with industry. Many programs include mandatory internships or practical semesters, allowing students to gain hands-on experience and build professional networks even before graduation.
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="flex gap-6 items-start">
+              <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6">
+                  </path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">EXCELLENT RESEARCH OPPORTUNITIES</h3>
                   <p class="text-gray-600 font-semibold">
                     Germany is known for its cutting-edge research in various fields, particularly in science and technology. The country is home to numerous research institutions, such as the Max Planck Society and the Fraunhofer Society, offering students unique opportunities to engage in groundbreaking research projects.
                   </p>
-                </div>
               </div>
-            
-              <!-- Feature 5 -->
-              <div class="flex gap-6 items-start">
-                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
-                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold mb-2">DIVERSE CULTURAL EXPERIENCE</h3>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="flex gap-6 items-start">
+              <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6">
+                  </path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">DIVERSE CULTURAL EXPERIENCE</h3>
                   <p class="text-gray-600 font-semibold">
                     Studying in Germany offers a rich cultural experience. With its central location in Europe, students can easily explore other European countries. Germany itself boasts a diverse culture, from bustling modern cities to picturesque historical towns, providing a unique blend of tradition and innovation.
                   </p>
-                </div>
               </div>
-            
-              <!-- Feature 6 -->
-              <div class="flex gap-6 items-start">
-                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
-                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold mb-2">POST-STUDY WORK OPPORTUNITIES</h3>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="flex gap-6 items-start">
+              <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6">
+                  </path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">POST-STUDY WORK OPPORTUNITIES</h3>
                   <p class="text-gray-600">
                     Germany offers excellent post-study work opportunities for international students. Graduates from German universities can apply for an 18-month job-seeking visa after completing their studies, allowing them to find employment in Germany. This provides a pathway to long-term career prospects in one of Europe's strongest economies.
                   </p>
-                </div>
               </div>
-            
-              <!-- Feature 7 -->
-              <div class="flex gap-6 items-start">
-                <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
-                  <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                  </svg>
-                </div>
-                <div>
-                  <h3 class="text-xl font-bold mb-2">SUSTAINABLE LIVING</h3>
+            </div>
+
+            <!-- Feature 7 -->
+            <div class="flex gap-6 items-start">
+              <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6">
+                  </path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold mb-2">SUSTAINABLE LIVING</h3>
                   <p class="text-gray-600">
                     Germany is a leader in sustainable living and environmental consciousness. Many universities offer programs focused on sustainability and renewable energy. Students can experience first-hand how a developed nation implements green policies, from efficient public transportation to widespread recycling practices, contributing to a more sustainable future.
                   </p>
-                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Right Content - Form -->
-          <div class="lg:w-1/3">
-            <div class="bg-white rounded-lg p-6 shadow-lg">
-              <h3 class="text-xl font-bold text-blue-800 mb-6">
-                Book your Free Consultation with Trustworthy Counsellors
-              </h3>
-              <form class="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Name"
-                  class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <input
-                  type="email"
-                  placeholder="Email"
-                  class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <input
-                  type="tel"
-                  placeholder="Mobile Number"
-                  class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <input
-                  type="text"
-                  placeholder="Preferred Course"
-                  class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <select
-                  class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                >
-                <button
-                  type="submit"
-                  class="w-full bg-blue-800 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  Submit
-                </button>
-              </form>
-            </div>
+        <!-- Right Content - Form -->
+        <div class="lg:w-1/3" id="start">
+          <div class="bg-white rounded-lg p-6 shadow-lg">
+            <h3 class="text-xl font-bold text-blue-800 mb-6">
+              Book your Free Consultation with Trustworthy Counsellors
+            </h3>
+            <form class="space-y-4" name="contact-form" method="post">
+              <input type="text" placeholder="Name" name="name"
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              <input type="email" placeholder="Email" name="email"
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              <input type="tel" placeholder="Mobile Number" name="number"
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              <input type="text" placeholder="Preferred Course" name="course"
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              <button type="submit"
+                class="w-full bg-blue-800 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors">
+                Submit
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -1674,12 +1671,7 @@
                   <li>Proof of Financial Resources (Finanzierungsnachweis)</li>
                   <li>Health Insurance Confirmation</li>
               </ul>
-              <a 
-                  href="#"
-                  class="inline-block mt-8 px-6 py-3 text-blue-700 border border-blue-700 rounded-lg hover:bg-blue-50 transition-colors"
-              >
-                  Free Expert Consultation
-              </a>
+              <a href="#start" class="btn btn-secondary">Free Expert Consultation</a>
           </div>
           
           <!-- Visa Section -->
@@ -1702,12 +1694,7 @@
                   <li>Pay Visa Application Fee</li>
                   <li>Await Visa Approval and Decision</li>
               </ul>
-              <a 
-                  href="#"
-                  class="inline-block mt-8 px-6 py-3 text-blue-700 border border-blue-700 rounded-lg hover:bg-blue-50 transition-colors"
-              >
-                  Free Expert Consultation
-              </a>
+              <a href="#start" class="btn btn-secondary">Free Expert Consultation</a>
           </div>
       </div>
 
@@ -2030,6 +2017,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+
+    <script src="google sheet2.js"></script>
   </body>
 </html>
                                                                         

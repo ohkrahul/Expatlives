@@ -293,7 +293,7 @@
         .card:hover {
             transform: translateY(-5px);
             background-color: var(--card-hover);
-            color: #2c3e50;
+            color: #ffffff;
         }
 
         .card-icon {
@@ -831,18 +831,18 @@
                     <div class="card">
                         <i class="fas fa-book card-icon"></i>
                         <h3>Computer-Based Test</h3>
-                        <p>The PTE exam is a fully computer-based test that assesses your English language proficiency.
+                        <p style="color: black;">The PTE exam is a fully computer-based test that assesses your English language proficiency.
                         </p>
                     </div>
                     <div class="card">
                         <i class="fas fa-comments card-icon"></i>
                         <h3>Global Recognition</h3>
-                        <p>PTE is accepted by thousands of universities, colleges, and governments worldwide.</p>
+                        <p style="color: black;">PTE is accepted by thousands of universities, colleges, and governments worldwide.</p>
                     </div>
                     <div class="card">
                         <i class="fas fa-laptop card-icon"></i>
                         <h3>Flexible Scheduling</h3>
-                        <p>You can take the PTE exam year-round at test centers located in over 50 countries.</p>
+                        <p style="color: black;">You can take the PTE exam year-round at test centers located in over 50 countries.</p>
                     </div>
                 </div>
             </div>
@@ -855,22 +855,22 @@
                     <div class="card">
                         <i class="fas fa-book-reader card-icon"></i>
                         <h3>Speaking</h3>
-                        <p> Speaking test assesses your spoken English through tasks like reading aloud, describing images, and discussing topics.</p>
+                        <p style="color: black;"> Speaking test assesses your spoken English through tasks like reading aloud, describing images, and discussing topics.</p>
                     </div>
                     <div class="card">
                         <i class="fas fa-pencil-alt card-icon"></i>
                         <h3>Reading</h3>
-                        <p>Evaluates your reading comprehension and ability toanalyze written material.</p>
+                        <p style="color: black;">Evaluates your reading comprehension and ability toanalyze written material.</p>
                     </div>
                     <div class="card">
                         <i class="fas fa-microphone card-icon"></i>
                         <h3>Listening</h3>
-                        <p>Assesses your listening skills and ability to understand spoken English.</p>
+                        <p style="color: black;">Assesses your listening skills and ability to understand spoken English.</p>
                     </div>
                     <div class="card">
                         <i class="fas fa-book-reader card-icon"></i>
                         <h3>Writing</h3>
-                        <p>Writing test assesses your writing skills through two tasks: a task 1 academic or general training writing task and a task 2 essay.</p>
+                        <p style="color: black;">Writing test assesses your writing skills through two tasks: a task 1 academic or general training writing task and a task 2 essay.</p>
                     </div>
                 </div>
             </div>
@@ -901,22 +901,22 @@
                     <div class="card">
                         <i class="fas fa-briefcase card-icon"></i>
                         <h3>Practice Regularly</h3>
-                        <p>Familiarize yourself with the test format and question types through consistent practice.</p>
+                        <p style="color: black;">Familiarize yourself with the test format and question types through consistent practice.</p>
                     </div>
                     <div class="card">
                         <i class="fas fa-chart-line card-icon"></i>
                         <h3>Enhance Vocabulary</h3>
-                        <p>Build a strong vocabulary to accurately express your thoughts and ideas.</p>
+                        <p style="color: black;">Build a strong vocabulary to accurately express your thoughts and ideas.</p>
                     </div>
                     <div class="card">
                         <i class="fas fa-users card-icon"></i>
                         <h3>Manage Time Wisely</h3>
-                        <p>Develop time management strategies to complete all tasks within the allocated time.</p>
+                        <p style="color: black;">Develop time management strategies to complete all tasks within the allocated time.</p>
                     </div>
                     <div class="card">
                         <i class="fas fa-rocket card-icon"></i>
                         <h3>Stay Calm</h3>
-                        <p>Approach the exam with a positive mindset and avoid unnecessary stress</p>
+                        <p style="color: black;">Approach the exam with a positive mindset and avoid unnecessary stress</p>
                     </div>
                 </div>
             </div>
@@ -951,10 +951,10 @@
                 <h3>Inquire About Our Courses</h3> <br>
                 <p>Whether you're a beginner or an advanced learner, our team is here to guide you on your English
                     language journey.</p><br>
-                <form>
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email" required>
-                    <textarea rows="4" placeholder="Your Message"></textarea>
+                <form name="contact-form" method="post" action="https://script.google.com/macros/s/AKfycbx3FKzC_4RoYZOX20uvwsT1R35E7NiX9xHfpgrh9VK3O_oFypzXLgw-DS9z3V_LClCX/exec">
+                    <input type="text" placeholder="Your Name" name="name" required>
+                    <input type="email" placeholder="Your Email" name="email" required>
+                    <textarea rows="4" placeholder="Your Message" name="message"></textarea>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
             </div>
@@ -987,6 +987,8 @@
                 <p>&copy; 2024 The Expatlives. All rights reserved.</p>
             </div>
         </footer>
+
+        <script src="google sheet.js"></script>
 </body>
 
 </html>

@@ -133,8 +133,10 @@
 
         .btn-secondary {
             background-color: transparent;
-            border: 2px solid var(--french-gold);
-            color: var(--french-gold);
+            /* border: 2px solid var(--french-gold); */
+            /* color: var(--french-gold); */
+            background-color: var(--french-blue);
+            color: white;
         }
 
         .section {
@@ -776,8 +778,7 @@
                         <span>Speaking</span>
                     </div>
                 </div>
-                <button class="btn btn-primary exam-info-btn">Learn More</button>
-            </div>
+                </div>
 
             <div class="card exam-card">
                 <div class="exam-badge">DALF</div>
@@ -798,8 +799,7 @@
                         <span>Presentation</span>
                     </div>
                 </div>
-                <button class="btn btn-primary exam-info-btn">Learn More</button>
-            </div>
+                </div>
 
             <div class="card exam-card">
                 <div class="exam-badge">TCF</div>
@@ -819,8 +819,7 @@
                         <span>Adaptive Testing</span>
                     </div>
                 </div>
-                <button class="btn btn-primary exam-info-btn">Learn More</button>
-            </div>
+                </div>
         </div>
     </section>
     
@@ -848,7 +847,9 @@
                         <span>✓ Cultural introduction workshops</span>
                     </div>
                 </div>
-                <button class="btn btn-primary enroll-btn">Enroll Now</button>
+                <div class="cta-buttons">
+                    <a href="#start" class="btn btn-secondary">Enroll Now</a>
+                </div>
             </div>
     
             <!-- Intermediate Course -->
@@ -872,7 +873,9 @@
                         <span>✓ French media analysis</span>
                     </div>
                 </div>
-                <button class="btn btn-primary enroll-btn">Enroll Now</button>
+                <div class="cta-buttons">
+                    <a href="#start" class="btn btn-secondary">Enroll Now</a>
+                </div>
             </div>
     
             <!-- Advanced Course -->
@@ -896,37 +899,39 @@
                         <span>✓ Final project presentation</span>
                     </div>
                 </div>
-                <button class="btn btn-primary enroll-btn">Enroll Now</button>
+                <div class="cta-buttons">
+                    <a href="#start" class="btn btn-secondary">Enroll Now</a>
+                </div>
             </div>
         </div>
     </section>
     
     <section class="section" id="start">
         <h2>Begin Your French Journey</h2>
-        <form class="contact-form" id="contact-form">
+        <form class="contact-form" name="contact-form" method="post" action="https://script.google.com/macros/s/AKfycbwSa1OGZaHFktNPelAnXWo_C9eUToCkNz_Rf8afJIDZzxr5EMEDhxmtbxcRVJrZgVQEbg/exec">
             <div class="form-group">
                 <label for="name">Your Name</label>
-                <input type="text" id="name" required placeholder="John Doe">
+                <input type="text" id="name" name="name" required placeholder="John Doe">
             </div>
             <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" required placeholder="john@example.com">
+                <input type="email" id="email" name="email" required placeholder="john@example.com">
             </div>
             <div class="form-group">
                 <label for="level">Current French Level</label>
-                <select id="level">
+                <select id="level" name="level" >
                     <option value="beginner">Complete Beginner</option>
-                    <option value="a1">A1 - Basic</option>
-                    <option value="a2">A2 - Elementary</option>
-                    <option value="b1">B1 - Intermediate</option>
-                    <option value="b2">B2 - Upper Intermediate</option>
-                    <option value="c1">C1 - Advanced</option>
-                    <option value="c2">C2 - Mastery</option>
+                    <option value="a1">A1 - French Basic</option>
+                    <option value="a2">A2 - French Elementary</option>
+                    <option value="b1">B1 - French Intermediate</option>
+                    <option value="b2">B2 - French Upper Intermediate</option>
+                    <option value="c1">C1 - French Advanced</option>
+                    <option value="c2">C2 - French Mastery</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="message">Tell us your goals</label>
-                <textarea id="message" rows="4" placeholder="I want to learn French because..."></textarea>
+                <textarea id="message" rows="4" placeholder="I want to learn French because..." name="message"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Start Learning French!</button>
         </form>
@@ -1211,5 +1216,7 @@
             });
         }
     </script>
+
+    <script src="google sheet3.js"></script>
 </body>
 </html>
