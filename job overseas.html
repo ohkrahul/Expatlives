@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpatLives - Your Career. Worldwide.</title>
+    <style>
+        :root {
+            --primary-green: #0D4F3C;
+            --emerald: #10B981;
+            --gold: #F59E0B;
+            --white: #FFFFFF;
+            --gray-light: #F1F5F9;
+            --gray-text: #64748B;
+            --australia-highlight: #FF6B35;
+            --success-green: #22C55E;
+            --error-red: #EF4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--primary-green);
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        /* Hero Section - Mobile Optimized */
+        .hero-section {
+            min-height: 130vh;
+            position: relative;
+            background: linear-gradient(135deg, var(--gray-light) 0%, var(--white) 100%);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+            
+        }
+
+        .world-map {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 600'%3E%3Cpath d='M200,200 Q400,100 600,200 T1000,200' stroke='%2310B981' stroke-width='2' fill='none'/%3E%3Ccircle cx='300' cy='180' r='4' fill='%2310B981'/%3E%3Ccircle cx='700' cy='220' r='4' fill='%2310B981'/%3E%3Ccircle cx='500' cy='160' r='4' fill='%23F59E0B'/%3E%3C/svg%3E");
+            animation: worldPulse 8s ease-in-out infinite;
+        }
+
+        @keyframes worldPulse {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.1; }
+            50% { transform: scale(1.05) rotate(1deg); opacity: 0.2; }
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 1400px;
+            width: 100%;
+            z-index: 2;
+            margin-top: 20%;
+        }
+
+        .floating-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border: 2px solid var(--emerald);
+            border-radius: 24px;
+            padding: 2rem;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+            box-shadow: 0 20px 60px rgba(16, 185, 129, 0.2);
+        }
+
+        .floating-card:nth-child(2) {
+            animation-delay: -3s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(0.5deg); }
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-green), var(--emerald));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray-text);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .counter-display {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--gold);
+            text-shadow: 0 4px 8px rgba(245, 158, 11, 0.3);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .counter-label {
+            font-size: 1rem;
+            color: var(--primary-green);
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .magnetic-cta {
+            display: block;
+            background: linear-gradient(135deg, var(--gold), #FCD34D);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
+            margin: 1.5rem auto 0;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+            width: fit-content;
+            min-height: 48px;
+        }
+
+        .magnetic-cta:hover,
+        .magnetic-cta:active {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(245, 158, 11, 0.6);
+        }
+
+        /* Industries Section - Mobile Optimized */
+        .industries-section {
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, var(--white) 0%, var(--gray-light) 50%, var(--white) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .industries-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2310B981' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            animation: backgroundFloat 20s ease-in-out infinite;
+        }
+
+        @keyframes backgroundFloat {
+            0%, 100% { transform: translateX(0) translateY(0); }
+            25% { transform: translateX(10px) translateY(-10px); }
+            50% { transform: translateX(-5px) translateY(10px); }
+            75% { transform: translateX(-10px) translateY(-5px); }
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            color: var(--gray-text);
+            font-size: 1rem;
+            position: relative;
+            z-index: 2;
+            padding: 0 1rem;
+        }
+
+        .industries-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hexagon-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .hexagon-card {
+            position: relative;
+            background: var(--white);
+            border-radius: 20px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 20px rgba(13, 79, 60, 0.08);
+            min-height: 140px;
+            justify-content: center;
+            min-width: 0;
+        }
+
+        .hexagon-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--emerald), var(--success-green));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            border-radius: 18px;
+        }
+
+        .hexagon-card::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--emerald), var(--gold), var(--emerald));
+            border-radius: 20px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .hexagon-card:hover,
+        .hexagon-card:active {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(16, 185, 129, 0.2);
+            border-color: var(--emerald);
+        }
+
+        .hexagon-card:hover::before,
+        .hexagon-card:active::before {
+            opacity: 0.95;
+        }
+
+        .hexagon-card:hover::after,
+        .hexagon-card:active::after {
+            opacity: 1;
+        }
+
+        .hexagon-card:hover .hexagon-icon,
+        .hexagon-card:active .hexagon-icon {
+            transform: scale(1.1) rotate(5deg);
+            filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.3));
+        }
+
+        .hexagon-card:hover .hexagon-title,
+        .hexagon-card:active .hexagon-title {
+            color: var(--white);
+        }
+
+        .hexagon-card:hover .hexagon-description,
+        .hexagon-card:active .hexagon-description {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .hexagon-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
+            z-index: 2;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .hexagon-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            z-index: 2;
+            color: var(--primary-green);
+            margin-bottom: 0.4rem;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .hexagon-description {
+            font-size: 0.8rem;
+            color: var(--gray-text);
+            z-index: 2;
+            transition: all 0.4s ease;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .featured-card {
+            background: linear-gradient(135deg, var(--emerald), var(--success-green));
+            color: var(--white);
+        }
+
+        .featured-card .hexagon-title,
+        .featured-card .hexagon-description {
+            color: var(--white);
+        }
+
+        .featured-card::before {
+            background: linear-gradient(135deg, var(--gold), #FCD34D);
+        }
+
+        /* Process Section - Mobile Optimized */
+        .process-section {
+            padding: 4rem 1rem;
+            background: linear-gradient(135deg, var(--gray-light), var(--white));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .river-path {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .river-flow {
+            position: absolute;
+            top: 0;
+            left: 2rem;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--emerald), var(--gold));
+            border-radius: 2px;
+        }
+
+        .process-step {
+            position: relative;
+            margin: 3rem 0;
+            padding-left: 4rem;
+        }
+
+        .step-island {
+            background: var(--white);
+            border: 2px solid var(--primary-green);
+            border-radius: 20px;
+            padding: 1.5rem;
+            position: relative;
+            box-shadow: 0 10px 25px rgba(13, 79, 60, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .step-island:hover,
+        .step-island:active {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(13, 79, 60, 0.2);
+        }
+
+        .step-number {
+            position: absolute;
+            top: 50%;
+            left: -3rem;
+            transform: translateY(-50%);
+            width: 35px;
+            height: 35px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 800;
+            font-size: 1rem;
+        }
+
+        .step-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 0.8rem;
+        }
+
+        .step-description {
+            color: var(--gray-text);
+            line-height: 1.5;
+            font-size: 0.9rem;
+        }
+
+        .step-list {
+            list-style: none;
+            margin-top: 0.8rem;
+        }
+
+        .step-list li {
+            color: var(--gray-text);
+            margin: 0.4rem 0;
+            padding-left: 1rem;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .step-list li::before {
+            content: '•';
+            color: var(--emerald);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        /* Countries Section - Mobile Optimized */
+        .countries-section {
+            padding: 4rem 1rem;
+            background: var(--primary-green);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .countries-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            color: var(--white);
+        }
+
+        .continents-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .continent-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 2px solid var(--emerald);
+            border-radius: 20px;
+            padding: 1.5rem;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+
+        .continent-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(16, 185, 129, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+
+        .continent-card:hover,
+        .continent-card:active {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.3);
+        }
+
+        .continent-card:hover::before,
+        .continent-card:active::before {
+            opacity: 1;
+            animation: aurora 2s ease-in-out infinite;
+        }
+
+        @keyframes aurora {
+            0%, 100% { transform: rotate(45deg) translateX(-100%); }
+            50% { transform: rotate(45deg) translateX(100%); }
+        }
+
+        .continent-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--emerald);
+        }
+
+        .continent-countries {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 1rem;
+        }
+
+        .country-tag {
+            background: var(--gold);
+            color: var(--white);
+            padding: 0.3rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Trust Section - Mobile Optimized */
+        .trust-section {
+            padding: 4rem 1rem;
+            background: var(--white);
+            position: relative;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .trust-badge {
+            text-align: center;
+            padding: 1.5rem;
+            position: relative;
+            cursor: pointer;
+            background: var(--gray-light);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .trust-badge:hover,
+        .trust-badge:active {
+            background: var(--white);
+            box-shadow: 0 10px 25px rgba(13, 79, 60, 0.1);
+            transform: translateY(-3px);
+        }
+
+        .badge-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--emerald), var(--success-green));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            color: var(--white);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .badge-icon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gold);
+            border-radius: 50%;
+            transform: scale(0);
+            transition: transform 0.5s ease;
+        }
+
+        .trust-badge:hover .badge-icon,
+        .trust-badge:active .badge-icon {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+        }
+
+        .trust-badge:hover .badge-icon::before,
+        .trust-badge:active .badge-icon::before {
+            transform: scale(1);
+        }
+
+        .badge-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .badge-description {
+            color: var(--gray-text);
+            font-size: 0.9rem;
+        }
+
+        /* CTA Section - Mobile Optimized */
+        .cta-section {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portal-left,
+        .portal-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 50vh;
+            padding: 3rem 1rem;
+        }
+
+        .portal-left {
+            background: linear-gradient(135deg, var(--emerald), var(--success-green));
+        }
+
+        .portal-right {
+            background: linear-gradient(135deg, var(--gold), #FCD34D);
+        }
+
+        .portal-content {
+            text-align: center;
+            color: var(--white);
+            z-index: 2;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .portal-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .portal-description {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .portal-cta {
+            background: var(--white);
+            color: var(--primary-green);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            border: none;
+            min-height: 48px;
+        }
+
+        .portal-cta:hover,
+        .portal-cta:active {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .energy-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+
+        .particle-dot {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            animation: floatParticle 6s ease-in-out infinite;
+        }
+
+        @keyframes floatParticle {
+            0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.6; }
+            50% { transform: translateY(-20px) translateX(15px); opacity: 1; }
+        }
+
+        /* Form Modal - Mobile Optimized */
+        .form-constellation {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            border: 2px solid var(--emerald);
+            border-radius: 20px;
+            padding: 2rem;
+            max-width: 400px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .form-constellation.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .form-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .form-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .form-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--gray-light);
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: var(--white);
+            min-height: 48px;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--emerald);
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+        }
+
+        .form-submit {
+            width: 100%;
+            background: linear-gradient(135deg, var(--gold), #FCD34D);
+            color: var(--white);
+            padding: 1rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            min-height: 48px;
+        }
+
+        .form-submit:hover,
+        .form-submit:active {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        .close-form {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--gray-text);
+            cursor: pointer;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 1rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: #FFFFFF;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 2rem auto 0;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Newsletter Section */
+        .newsletter {
+            background-color: var(--secondary-color);
+            padding: 4rem 1rem;
+            color: white;
+            text-align: center;
+        }
+
+        .newsletter-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .newsletter p {
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form button {
+            padding: 1rem 2rem;
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        .newsletter-form button:hover {
+            background-color: #c0392b;
+        }
+
+
+        /* Desktop Responsive Adjustments */
+        @media (min-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+                margin-top: -10%;
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+                text-align: left;
+            }
+
+            .hero-subtitle {
+                font-size: 1.3rem;
+                text-align: left;
+            }
+
+            .counter-display {
+                font-size: 4rem;
+            }
+
+            .counter-label {
+                font-size: 1.1rem;
+            }
+
+            .magnetic-cta {
+                margin: 2rem 0 0 0;
+                width: auto;
+            }
+
+            .floating-card {
+                padding: 3rem;
+            }
+
+            .section-title {
+                font-size: 3rem;
+            }
+
+            .hexagon-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                max-width: 1400px;
+                gap: 2rem;
+            }
+
+            .hexagon-card {
+                min-height: 200px;
+                padding: 2rem;
+            }
+
+            .hexagon-icon {
+                font-size: 3.5rem;
+            }
+
+            .hexagon-title {
+                font-size: 1.3rem;
+            }
+
+            .hexagon-description {
+                font-size: 0.9rem;
+            }
+
+            .industries-section,
+            .process-section,
+            .countries-section,
+            .trust-section {
+                padding: 8rem 2rem;
+            }
+
+            .river-path {
+                max-width: 1200px;
+            }
+
+            .river-flow {
+                left: 50%;
+                transform: translateX(-50%);
+                width: 4px;
+            }
+
+            .process-step {
+                margin: 4rem 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-left: 0;
+            }
+
+            .process-step:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+
+            .step-island {
+                max-width: 400px;
+                padding: 2.5rem;
+            }
+
+            .step-number {
+                position: absolute;
+                top: -15px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .step-title {
+                font-size: 1.5rem;
+            }
+
+            .step-description {
+                font-size: 1rem;
+            }
+
+            .continents-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                max-width: 1200px;
+                gap: 3rem;
+            }
+
+            .continent-card {
+                padding: 2.5rem;
+            }
+
+            .continent-title {
+                font-size: 1.8rem;
+            }
+
+            .trust-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                max-width: 1000px;
+                gap: 3rem;
+            }
+
+            .trust-badge {
+                padding: 2rem;
+                background: transparent;
+            }
+
+            .badge-icon {
+                width: 80px;
+                height: 80px;
+                font-size: 2rem;
+            }
+
+            .badge-title {
+                font-size: 1.3rem;
+            }
+
+            .badge-description {
+                font-size: 0.95rem;
+            }
+
+            .cta-section {
+                flex-direction: row;
+                min-height: 100vh;
+            }
+
+            .portal-left,
+            .portal-right {
+                flex: 1;
+                min-height: 100vh;
+                padding: 2rem;
+            }
+
+            .portal-title {
+                font-size: 2.5rem;
+            }
+
+            .portal-description {
+                font-size: 1.1rem;
+            }
+
+            .form-constellation {
+                max-width: 500px;
+                padding: 3rem;
+            }
+
+            .form-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Particle Animation */
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: flowDown 4s linear infinite;
+        }
+
+        @keyframes flowDown {
+            0% { transform: translateY(-20px); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+
+        /* Touch-friendly improvements */
+        @media (hover: none) and (pointer: coarse) {
+            .hexagon-card:active,
+            .trust-badge:active,
+            .continent-card:active,
+            .step-island:active {
+                transform: scale(0.98);
+            }
+        }
+
+        /* Accessibility improvements */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* High contrast mode support */
+        @media (prefers-contrast: high) {
+            .hexagon-card,
+            .step-island,
+            .continent-card,
+            .trust-badge {
+                border-width: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header"></div>
+      <script src="js/components.js"></script>
+
+    <!-- Form Overlay -->
+    <div class="form-overlay" id="formOverlay" onclick="closeForm()"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="world-map"></div>
+        <div class="hero-content">
+            <div class="floating-card">
+                <h1 class="hero-title">Your Career. Worldwide.</h1>
+                <p class="hero-subtitle">At The ExpatLives, we believe that talent knows no borders. Our global job placement services are designed to help professionals and workers from all walks of life find meaningful, rewarding employment in international markets.</p>
+                <button class="magnetic-cta" onclick="openForm()">🚀 Start Your International Journey Today</button>
+            </div>
+            <div class="floating-card">
+                <div class="counter-display" id="counter">0</div>
+                <div class="counter-label">Successful Placements Worldwide</div>
+                <p style="margin-top: 1.5rem; color: var(--gray-text); text-align: center;">Backed by a trusted network and growing presence in over 25 countries, we’ve supported thousands in launching global careers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries-section">
+        <div class="industries-container">
+            <h2 class="section-title">🏢 Industries We Serve</h2>
+            <p class="section-subtitle">
+                We place candidates across a wide range of industries. Whether you're an unskilled laborer, technician, nurse, engineer, or a senior executive, The ExpatLives has a tailored path for your international career.
+            </p>
+            <div class="hexagon-grid">
+                <div class="hexagon-card">
+                    <div class="hexagon-icon">🛢️</div>
+                    <div class="hexagon-title">Oil & Gas</div>
+                    <div class="hexagon-description">Exploration, production, refining and distribution positions worldwide</div>
+                </div>
+                <div class="hexagon-card">
+                    <div class="hexagon-icon">🏗️</div>
+                    <div class="hexagon-title">Construction & Infrastructure</div>
+                    <div class="hexagon-description">Building the future with global construction opportunities</div>
+                </div>
+                <div class="hexagon-card">
+                    <div class="hexagon-icon">⚕️</div>
+                    <div class="hexagon-title">Healthcare & Medical Services</div>
+                    <div class="hexagon-description">From nursing to specialized medical roles across borders</div>
+                </div>
+                <div class="hexagon-card">
+                    <div class="hexagon-icon">💻</div>
+                    <div class="hexagon-title">IT & Software Development</div>
+                    <div class="hexagon-description">Tech opportunities in emerging and established markets</div>
+                </div>
+                <div class="hexagon-card">
+                    <div class="hexagon-icon">⚙️</div>
+                    <div class="hexagon-title">Engineering</div>
+                    <div class="hexagon-description">Mechanical, Civil, Electrical engineering positions globally</div>
+                </div>
+                <div class="hexagon-card">
+                    <div class="hexagon-icon">🏨</div>
+                    <div class="hexagon-title">Hospitality & Tourism</div>
+                    <div class="hexagon-description">Service excellence in international destinations</div>
+                </div>
+                <div class="hexagon-card">
+                    <div class="hexagon-icon">🏭</div>
+                    <div class="hexagon-title">Manufacturing & Heavy Industries</div>
+                    <div class="hexagon-description">Production and operational roles worldwide</div>
+                </div>
+                <div class="hexagon-card">
+                    <div class="hexagon-icon">🛍️</div>
+                    <div class="hexagon-title">Retail & Customer Service</div>
+                    <div class="hexagon-description">Global brands seeking international talent</div>
+                </div>
+                <div class="hexagon-card">
+                    <div class="hexagon-icon">🎓</div>
+                    <div class="hexagon-title">Education & Training</div>
+                    <div class="hexagon-description">Teaching and educational opportunities abroad</div>
+                </div>
+                <div class="hexagon-card">
+                    <div class="hexagon-icon">🚢</div>
+                    <div class="hexagon-title">Marine & Shipping</div>
+                    <div class="hexagon-description">Maritime careers across international waters</div>
+                </div>
+                <div class="hexagon-card">
+                    <div class="hexagon-icon">💄</div>
+                    <div class="hexagon-title">Beauty, Wellness & Fitness</div>
+                    <div class="hexagon-description">Health and beauty industry opportunities worldwide</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <h2 class="section-title">🔍 Our Step-by-Step Placement Process</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; color: var(--gray-text); font-size: 1rem; padding: 0 1rem;">
+            We simplify the journey from candidate to global professional through a streamlined and transparent recruitment process:
+        </p>
+        <div class="river-path">
+            <div class="river-flow"></div>
+            <div class="process-step">
+                <div class="step-island">
+                    <div class="step-number">1</div>
+                    <h3 class="step-title">Career Consultation & Registration</h3>
+                    <p class="step-description">Submit your resume or register online. Our consultants will assess your skills, qualifications, and aspirations to recommend suitable job openings.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-island">
+                    <div class="step-number">2</div>
+                    <h3 class="step-title">Job Matching & Shortlisting</h3>
+                    <p class="step-description">We work with a network of verified international employers. Based on your profile, we shortlist roles that align with your career goals and experience.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-island">
+                    <div class="step-number">3</div>
+                    <h3 class="step-title">Interview Scheduling & Coaching</h3>
+                    <p class="step-description">Our team arranges and prepares you for interviews—helping with mock sessions, interview etiquette, and country-specific expectations.</p>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-island">
+                    <div class="step-number">4</div>
+                    <h3 class="step-title">Documentation & Visa Assistance</h3>
+                    <p class="step-description">We assist with all necessary paperwork, including:</p>
+                    <ul class="step-list">
+                        <li>Work permit applications</li>
+                        <li>Visa processing</li>
+                        <li>Medical tests</li>
+                        <li>Background verification</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="process-step">
+                <div class="step-island">
+                    <div class="step-number">5</div>
+                    <h3 class="step-title">Pre-Departure Orientation</h3>
+                    <p class="step-description">We equip you with everything you need to adapt smoothly to your new environment—cultural awareness, legal rights, employer expectations, and local living tips.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countries Section -->
+    <section class="countries-section">
+        <h2 class="countries-title">🌎 Countries We Work With</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem; color: rgba(255,255,255,0.8); font-size: 1rem; padding: 0 1rem;">
+            We offer job placements in some of the most in-demand destinations for expatriates:
+        </p>
+        <div class="continents-grid">
+            <div class="continent-card">
+                <h3 class="continent-title">Europe</h3>
+                <div class="continent-countries">
+                    <span class="country-tag">Germany</span>
+                    <span class="country-tag">Romania</span>
+                    <span class="country-tag">Italy</span>
+                    <span class="country-tag">France</span>
+                    <span class="country-tag">Hungary</span>
+                    <span class="country-tag">Malta</span>
+                    <span class="country-tag">Latvia</span>
+                    <span class="country-tag">Lithuania</span>
+                    <span class="country-tag">Poland</span>
+                </div>
+                <p>Explore exciting opportunities in Europe's most dynamic economies with excellent work-life balance and career growth potential.</p>
+            </div>
+            <div class="continent-card">
+                <h3 class="continent-title">Australia</h3>
+                <div class="continent-countries">
+                    <span class="country-tag">Australia</span>
+                </div>
+                <p>Dynamic markets with exceptional growth potential and multicultural work environments in the Australia.</p>
+            </div>
+            <div class="continent-card">
+                <h3 class="continent-title">North America</h3>
+                <div class="continent-countries">
+                    <span class="country-tag">Canada</span>
+                </div>
+                <p>Premium opportunities in Canada for select skilled categories with pathways to permanent residency and citizenship.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <h2 class="section-title">🤝 Why Trust The ExpatLives with Your Career Abroad?</h2>
+        <div class="trust-grid">
+            <div class="trust-badge">
+                <div class="badge-icon">🌐</div>
+                <h3 class="badge-title">Global Employer Network</h3>
+                <p class="badge-description">We work only with verified, reputable companies.</p>
+            </div>
+            <div class="trust-badge">
+                <div class="badge-icon">⏰</div>
+                <h3 class="badge-title">10+ Years of Experience</h3>
+                <p class="badge-description">In overseas recruitment and mobility.</p>
+            </div>
+            <div class="trust-badge">
+                <div class="badge-icon">👥</div>
+                <h3 class="badge-title">All Skill Levels Covered</h3>
+                <p class="badge-description">From general labor to niche executive placements.</p>
+            </div>
+            <div class="trust-badge">
+                <div class="badge-icon">🎯</div>
+                <h3 class="badge-title">Personalized Guidance</h3>
+                <p class="badge-description">One-on-one support throughout the process.</p>
+            </div>
+            <div class="trust-badge">
+                <div class="badge-icon">💎</div>
+                <h3 class="badge-title">Transparent Process</h3>
+                <p class="badge-description">No hidden charges, no fake offers.</p>
+            </div>
+            <div class="trust-badge">
+                <div class="badge-icon">⚖️</div>
+                <h3 class="badge-title">Compliance-First</h3>
+                <p class="badge-description">All processes adhere to international labor and visa regulations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="portal-left">
+            <div class="energy-particles"></div>
+            <div class="portal-content">
+                <h2 class="portal-title">Register Now</h2>
+                <p class="portal-description">👉 Register Now to explore live job opportunities and get matched with employers abroad.</p>
+                <button class="portal-cta" onclick="openForm()">Register Now</button>
+            </div>
+        </div>
+        <div class="portal-right">
+            <div class="energy-particles"></div>
+            <div class="portal-content">
+                <h2 class="portal-title">Upload Your Resume</h2>
+                <p class="portal-description">👉 Upload Your Resume and get matched with employers abroad. Your global career starts here.</p>
+                <button class="portal-cta" onclick="openForm()">Upload Resume</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Modal -->
+    <div class="form-constellation" id="formModal">
+        <button class="close-form" onclick="closeForm()" aria-label="Close form">&times;</button>
+        <h3 class="form-title">Start Your International Journey</h3>
+        <form id="careerForm">
+            <div class="form-group">
+                <input type="text" class="form-input" placeholder="Full Name" required aria-label="Full Name">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-input" placeholder="Email Address" required aria-label="Email Address">
+            </div>
+            <div class="form-group">
+                <input type="tel" class="form-input" placeholder="Phone Number" required aria-label="Phone Number">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-input" placeholder="Current Location" required aria-label="Current Location">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-input" placeholder="Desired Country" required aria-label="Desired Country">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-input" placeholder="Industry/Field" required aria-label="Industry or Field">
+            </div>
+            <button type="submit" class="form-submit">Launch My Career Journey</button>
+        </form>
+        <p style="text-align: center; margin-top: 1rem; color: var(--gray-text); font-size: 0.9rem;">
+            Welcome to The ExpatLives—where ambition meets opportunity.
+        </p>
+    </div>
+
+    <script src="js/components.js"></script>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About The Expatlives</h3>
+                <p>We help expats navigate their journey abroad with comprehensive support and resources for a
+                    successful international lifestyle.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> 91+ 9607621025</li>
+                    <li><i class="fas fa-phone"></i> 91+ 8600068599</li>
+                    <li><i class="fas fa-envelope"></i> info@theexpatlives.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 245, ijmima building, mindspace, malad west, mumbai 400064.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 The Expatlives. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // Counter Animation
+        function animateCounter() {
+            const counter = document.getElementById('counter');
+            const target = 350000;
+            const duration = 3000;
+            const step = target / (duration / 16);
+            let current = 0;
+
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                counter.textContent = Math.floor(current).toLocaleString() + '+';
+            }, 16);
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.id === 'counter') {
+                        animateCounter();
+                    }
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for scroll animations
+        document.querySelectorAll('.floating-card, .hexagon-card, .step-island, .continent-card, .trust-badge').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+            observer.observe(el);
+        });
+
+        // Enhanced touch interactions for mobile
+        function addTouchSupport() {
+            const touchElements = document.querySelectorAll('.hexagon-card, .trust-badge, .continent-card, .step-island');
+            
+            touchElements.forEach(element => {
+                element.addEventListener('touchstart', function(e) {
+                    this.style.transform = 'scale(0.98)';
+                }, { passive: true });
+
+                element.addEventListener('touchend', function(e) {
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                }, { passive: true });
+
+                element.addEventListener('touchcancel', function(e) {
+                    this.style.transform = '';
+                }, { passive: true });
+            });
+        }
+
+        // Magnetic CTA effect (disabled on touch devices)
+        function initMagneticEffects() {
+            if (window.matchMedia('(hover: hover)').matches) {
+                document.querySelectorAll('.magnetic-cta, .portal-cta').forEach(btn => {
+                    btn.addEventListener('mousemove', (e) => {
+                        const rect = btn.getBoundingClientRect();
+                        const x = e.clientX - rect.left - rect.width / 2;
+                        const y = e.clientY - rect.top - rect.height / 2;
+
+                        btn.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px) scale(1.05)`;
+                    });
+
+                    btn.addEventListener('mouseleave', () => {
+                        btn.style.transform = 'translate(0, 0) scale(1)';
+                    });
+                });
+            }
+        }
+
+        // Particle system for river flow
+        function createParticles() {
+            const riverFlow = document.querySelector('.river-flow');
+            if (!riverFlow) return;
+
+            setInterval(() => {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = '50%';
+                particle.style.top = '0';
+                particle.style.animationDelay = Math.random() * 2 + 's';
+                riverFlow.appendChild(particle);
+
+                setTimeout(() => {
+                    particle.remove();
+                }, 4000);
+            }, 1200); // Slower on mobile
+        }
+
+        // Energy particles for portal sections
+        function createEnergyParticles() {
+            document.querySelectorAll('.energy-particles').forEach(container => {
+                const particleCount = window.innerWidth < 768 ? 10 : 20; // Fewer particles on mobile
+                
+                for (let i = 0; i < particleCount; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle-dot';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.top = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 6 + 's';
+                    particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                    container.appendChild(particle);
+                }
+            });
+        }
+
+        // Form handling
+        function openForm() {
+            document.getElementById('formModal').classList.add('active');
+            document.getElementById('formOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            // Focus management for accessibility
+            setTimeout(() => {
+                const firstInput = document.querySelector('.form-input');
+                if (firstInput) firstInput.focus();
+            }, 300);
+        }
+
+        function closeForm() {
+            document.getElementById('formModal').classList.remove('active');
+            document.getElementById('formOverlay').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Form submission with better mobile feedback
+        document.getElementById('careerForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const submitBtn = document.querySelector('.form-submit');
+            const originalText = submitBtn.textContent;
+            
+            // Show loading state
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+            
+            // Create success animation
+            const formModal = document.getElementById('formModal');
+            
+            setTimeout(() => {
+                formModal.style.background = 'linear-gradient(135deg, var(--success-green), var(--emerald))';
+                formModal.style.color = 'white';
+                
+                setTimeout(() => {
+                    closeForm();
+                    
+                    // Mobile-friendly alert
+                    if ('vibrate' in navigator) {
+                        navigator.vibrate([200, 100, 200]);
+                    }
+                    
+                    alert('🎉 Thank you! Your global career journey begins now. We\'ll contact you within 24 hours with personalized job opportunities.');
+                    
+                    // Reset form
+                    document.getElementById('careerForm').reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    formModal.style.background = '';
+                    formModal.style.color = '';
+                }, 1500);
+            }, 1000);
+        });
+
+        // Initialize all functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            addTouchSupport();
+            initMagneticEffects();
+            createParticles();
+            createEnergyParticles();
+            
+            // Trigger counter animation when hero is visible
+            observer.observe(document.getElementById('counter'));
+        });
+
+        // Close form on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeForm();
+            }
+        });
+
+        // Handle orientation changes
+        window.addEventListener('orientationchange', () => {
+            setTimeout(() => {
+                // Recalculate particle positions if needed
+                createEnergyParticles();
+            }, 500);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Performance optimization: Throttle scroll events
+        let ticking = false;
+        function updateScrollEffects() {
+            ticking = false;
+        }
+
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateScrollEffects);
+                ticking = true;
+            }
+        }, { passive: true });
+
+        // Prevent zoom on double tap for iOS
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', function (event) {
+            const now = (new Date()).getTime();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, false);
+    </script>
+</body>
+</html>
