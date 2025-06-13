@@ -3426,58 +3426,92 @@
 <script>
     // Global variables
     let activeQuestion = null;
-    let currentService = 0;
-    let isRotating = false;
+let currentService = 0;
+let isRotating = false;
 
-    // Services Data
-    const services = [
-        {
-            title: "Job Overseas",
-            description: "Launch your international career with our comprehensive job placement services. We connect talented professionals with global opportunities.",
-            features: [
-                "Professional resume optimization for international markets",
-                "Targeted job search assistance and application support",
-                "Visa guidance and documentation help",
-                "Interview preparation and salary negotiation",
-                "Post-placement support and career development"
-            ],
-            cta: "Start Your Career Journey"
-        },
-        {
-            title: "Study Abroad",
-            description: "Transform your future with world-class education opportunities. We guide you through every step of your academic journey abroad.",
-            features: [
-                "University and program selection guidance",
-                "Application assistance and essay writing support",
-                "Scholarship identification and application help",
-                "Student visa processing and documentation",
-                "Pre-departure orientation and ongoing support"
-            ],
-            cta: "Explore Study Options"
-        },
-        {
-            title: "Migration Exam Coaching",
-            description: "Expert preparation for IELTS, PTE, and other standardized tests essential for visa approval, education, and migration pathways.Discover your potential with personalized career guidance. Our experts help you navigate your professional path with confidence.",
-            features: [
-                "Personalized coaching tailored to individual skill levels and goals",
-                "Focused training in speaking, writing, reading, and listening modules",
-                "Up-to-date study materials and real exam simulation",
-            ],
-            cta: "Book Demo Session"
-        },
-        {
-            title: "Language Learning",
-            description: "Master the languages you need for global success. Comprehensive language training tailored to your goals.",
-            features: [
-                "English proficiency training and improvement",
-                "Foreign language courses for destination countries",
-                "IELTS, TOEFL, and other exam preparation",
-                "Business communication and professional language skills",
-                "Cultural communication and etiquette training"
-            ],
-            cta: "Start Learning Today"
-        }
-    ];
+// Services Data
+const services = [
+    {
+        title: "Job Overseas",
+        description: "Launch your international career with our comprehensive job placement services. We connect talented professionals with global opportunities.",
+        features: [
+            "Professional resume optimization for international markets",
+            "Targeted job search assistance and application support",
+            "Visa guidance and documentation help",
+            "Interview preparation and salary negotiation",
+            "Post-placement support and career development"
+        ],
+        cta: "Start Your Career Journey",
+        link: "/job-overseas.html"
+    },
+    {
+        title: "Study Abroad",
+        description: "Transform your future with world-class education opportunities. We guide you through every step of your academic journey abroad.",
+        features: [
+            "University and program selection guidance",
+            "Application assistance and essay writing support",
+            "Scholarship identification and application help",
+            "Student visa processing and documentation",
+            "Pre-departure orientation and ongoing support"
+        ],
+        cta: "Explore Study Options",
+        link: "/study-abroad.html"
+    },
+    {
+        title: "Migration Exam Coaching",
+        description: "Expert preparation for IELTS, PTE, and other standardized tests essential for visa approval, education, and migration pathways. Discover your potential with personalized career guidance. Our experts help you navigate your professional path with confidence.",
+        features: [
+            "Personalized coaching tailored to individual skill levels and goals",
+            "Focused training in speaking, writing, reading, and listening modules",
+            "Up-to-date study materials and real exam simulation"
+        ],
+        cta: "Book Demo Session",
+        link: "/exam-coaching.html"
+    },
+    {
+        title: "Language Learning",
+        description: "Master the languages you need for global success. Comprehensive language training tailored to your goals.",
+        features: [
+            "English proficiency training and improvement",
+            "Foreign language courses for destination countries",
+            "IELTS, TOEFL, and other exam preparation",
+            "Business communication and professional language skills",
+            "Cultural communication and etiquette training"
+        ],
+        cta: "Start Learning Today",
+        link: "/language-learning.html"
+    }
+];
+
+function updateService(index, animate = true) {
+    if (isRotating || index === currentService) return;
+
+    isRotating = true;
+    currentService = index;
+
+    const dialInner = document.getElementById('dialInner');
+    const rotation = -index * 90;
+    dialInner.style.transform = `translate(-50%, -50%) rotate(${rotation}deg)`;
+
+    // Update content
+    const titleEl = document.getElementById('serviceTitle');
+    const descEl = document.getElementById('serviceDescription');
+    const featuresEl = document.getElementById('serviceFeatures');
+    const ctaBtn = document.getElementById('ctaButton');
+
+    const service = services[index];
+
+    titleEl.textContent = service.title;
+    descEl.textContent = service.description;
+    featuresEl.innerHTML = service.features.map(f => `<li>${f}</li>`).join("");
+    ctaBtn.textContent = service.cta;
+    ctaBtn.href = service.link;
+
+    setTimeout(() => {
+        isRotating = false;
+    }, 500);
+}
+
 
     // Testimonial Data
     const testimonials = [
