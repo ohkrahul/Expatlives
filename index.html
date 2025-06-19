@@ -1792,11 +1792,23 @@
         }
     }
 
+    
+
     /* SERVICES SECTION STYLES */
     .services-section {
-        padding: 5rem 0;
-        background: linear-gradient(to bottom, #ffffff, #f1f5f9);
+    padding: 5rem 0;
+    background: linear-gradient(to bottom, #ffffff, #f1f5f9);
+    height: 170vh; /* Default for desktop and larger screens */
+}
+
+/* For phone view (max-width: 640px or adjust as needed) */
+@media (max-width: 640px) {
+    .services-section {
+        height: 220vh; /* Reduced height for phone view */
+        padding: 3rem 0; /* Optional: smaller padding for mobile */
     }
+}
+
 
     .section-header {
         text-align: center;
@@ -1982,12 +1994,13 @@
         padding: 40px;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         position: relative;
-        overflow: hidden;
+        overflow: visible;
         min-height: 400px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
     }
 
     .service-title {
@@ -2113,6 +2126,7 @@
         background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
         padding: 80px 20px;
         overflow: hidden;
+        
     }
 
     .destinations-container {
@@ -2666,6 +2680,109 @@
         border: 1px solid rgba(16, 185, 129, 0.2);
     }
 
+            .cta-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .service-cta {
+            display: inline-block;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #10B981, #0D4F3C);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .service-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
+        }
+
+        .cta-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1001;
+            margin-top: 10px;
+            overflow: hidden;
+            border: 1px solid #E5E7EB;
+            min-width: 250px;
+        }
+
+        .cta-dropdown.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .cta-dropdown-item {
+            display: block;
+            padding: 15px 20px;
+            color: #333;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            border-bottom: 1px solid #f0f0f0;
+            font-weight: 500;
+        }
+
+        .cta-dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .cta-dropdown-item:hover {
+            background-color: #f8f9fa;
+            color: #ff6b6b;
+        }
+
+        .cta-arrow {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-container.open .cta-arrow {
+            transform: rotate(180deg);
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* .control-btn {
+            padding: 12px 25px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .control-btn:hover, .control-btn.active {
+            background: rgba(255,255,255,0.9);
+            color: #667eea;
+            border-color: rgba(255,255,255,0.9);
+        } */
+
+
     .form-group {
         margin-bottom: 1.5rem;
     }
@@ -2716,6 +2833,8 @@
         cursor: pointer;
         transition: all 0.3s ease;
     }
+
+    
 
     .submit-btn:hover {
         transform: translateY(-2px);
@@ -3203,61 +3322,73 @@
     </div>
 </section>
 
-<section id="services" class="services-section">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">
-                Comprehensive solutions for your global relocation and career success journey. 
-                From finding overseas opportunities to settling in your new destination.
-            </p>
-
-            <div class="trust-badges">
-                <div class="trust-badge">15+ Years Experience</div>
-                <div class="trust-badge">1000+ Relocations</div>
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">
+                    Comprehensive solutions for your global relocation and career success journey. 
+                    From finding overseas opportunities to settling in your new destination.
+                </p>
+                
+                <div class="trust-badges">
+                    <div class="trust-badge">15+ Years Experience</div>
+                    <div class="trust-badge">1000+ Relocations</div>
+                </div>
             </div>
-        </div>
 
-        <div class="service-container">
-            <div class="dial-container">
-                <div class="dial-outer" id="dialOuter">
-                    <div class="dial-inner" id="dialInner">
-                        <div class="service-point active" data-service="0">🌍</div>
-                        <div class="service-point" data-service="1">🎓</div>
-                        <div class="service-point" data-service="2">🧭</div>
-                        <div class="service-point" data-service="3">🗣️</div>
-                        <div class="center-dot"></div>
+            <div class="service-container">
+                <div class="dial-container">
+                    <div class="dial-outer" id="dialOuter">
+                        <div class="dial-inner" id="dialInner">
+                            <div class="service-point active" data-service="0">🌍</div>
+                            <div class="service-point" data-service="1">🎓</div>
+                            <div class="service-point" data-service="2">🧭</div>
+                            <div class="service-point" data-service="3">🗣️</div>
+                            <div class="center-dot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-details" id="serviceDetails">
+                    <h3 class="service-title" id="serviceTitle">Job Overseas</h3>
+                    <p class="service-description" id="serviceDescription">
+                        Launch your international career with our comprehensive job placement services. 
+                        We connect talented professionals with global opportunities.
+                    </p>
+                    <ul class="service-features" id="serviceFeatures">
+                        <li>Professional resume optimization for international markets</li>
+                        <li>Targeted job search assistance and application support</li>
+                        <li>Visa guidance and documentation help</li>
+                        <li>Interview preparation and salary negotiation</li>
+                        <li>Post-placement support and career development</li>
+                    </ul>
+                    
+                    <!-- Multi-link CTA -->
+                    <div class="cta-container" id="ctaContainer">
+                        <a class="service-cta" id="serviceCta" href="/job-overseas.html">
+                            Start Your Career Journey
+                            <span class="cta-arrow">▼</span>
+                        </a>
+                        <div class="cta-dropdown" id="ctaDropdown">
+                            <a href="job overseas.html" class="cta-dropdown-item">🌍 Start Your Career Journey</a>
+                            <a href="study-abroad-.html" class="cta-dropdown-item">🎓 Explore Study Options</a>
+                            <a href="Coaching.html" class="cta-dropdown-item">🧭 Book Demo Session</a>
+                            <a href="Foriegn languages.html" class="cta-dropdown-item">🗣️ Start Learning Today</a>
+                            
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="service-details" id="serviceDetails">
-                <h3 class="service-title" id="serviceTitle">Job Overseas</h3>
-                <p class="service-description" id="serviceDescription">
-                    Launch your international career with our comprehensive job placement services. 
-                    We connect talented professionals with global opportunities.
-                </p>
-                <ul class="service-features" id="serviceFeatures">
-                    <li>Professional resume optimization for international markets</li>
-                    <li>Targeted job search assistance and application support</li>
-                    <li>Visa guidance and documentation help</li>
-                    <li>Interview preparation and salary negotiation</li>
-                    <li>Post-placement support and career development</li>
-                </ul>
-                <button class="service-cta" id="serviceCta">
-                    Start Your Career Journey
-                </button>
+            <div class="controls">
+                <button class="control-btn active" data-service="0">Job Overseas</button>
+                <button class="control-btn" data-service="1">Study Abroad</button>
+                <button class="control-btn" data-service="2">Migration Exams</button>
+                <button class="control-btn" data-service="3">Language Learning</button>
             </div>
         </div>
-
-        <div class="controls">
-            <button class="control-btn active" data-service="0">Job Overseas</button>
-            <button class="control-btn" data-service="1">Study Abroad</button>
-            <button class="control-btn" data-service="2">Migration Exams</button>
-            <button class="control-btn" data-service="3">Language Learning</button>
-        </div>
-    </div>
-</section>
+    </section>
 
 <section id="destinations" class="destinations-section">
     <div class="section-header">
@@ -3425,95 +3556,113 @@
 
 <script>
     // Global variables
-    let activeQuestion = null;
 let currentService = 0;
-let isRotating = false;
-
-// Services Data
-const services = [
+        let isRotating = false;
+        
+        const services = [
     {
         title: "Job Overseas",
-        description: "Launch your international career with our comprehensive job placement services. We connect talented professionals with global opportunities.",
-        features: [
-            "Professional resume optimization for international markets",
-            "Targeted job search assistance and application support",
-            "Visa guidance and documentation help",
-            "Interview preparation and salary negotiation",
-            "Post-placement support and career development"
-        ],
-        cta: "Start Your Career Journey",
+        description: "Global career placement & visa support.",
+        features: ["Resume optimization", "Visa guidance", "Interview prep"],
+        cta: "Start Now",
         link: "/job-overseas.html"
     },
     {
         title: "Study Abroad",
-        description: "Transform your future with world-class education opportunities. We guide you through every step of your academic journey abroad.",
-        features: [
-            "University and program selection guidance",
-            "Application assistance and essay writing support",
-            "Scholarship identification and application help",
-            "Student visa processing and documentation",
-            "Pre-departure orientation and ongoing support"
-        ],
-        cta: "Explore Study Options",
+        description: "University placement & education support.",
+        features: ["University selection", "Scholarship help", "Visa processing"],
+        cta: "Start Now",
         link: "/study-abroad.html"
     },
     {
-        title: "Migration Exam Coaching",
-        description: "Expert preparation for IELTS, PTE, and other standardized tests essential for visa approval, education, and migration pathways. Discover your potential with personalized career guidance. Our experts help you navigate your professional path with confidence.",
-        features: [
-            "Personalized coaching tailored to individual skill levels and goals",
-            "Focused training in speaking, writing, reading, and listening modules",
-            "Up-to-date study materials and real exam simulation"
-        ],
-        cta: "Book Demo Session",
+        title: "Exam Coaching",
+        description: "IELTS, PTE & migration test preparation.",
+        features: ["Personalized coaching", "All modules", "Real exam practice"],
+        cta: "Start Now",
         link: "/exam-coaching.html"
     },
     {
         title: "Language Learning",
-        description: "Master the languages you need for global success. Comprehensive language training tailored to your goals.",
-        features: [
-            "English proficiency training and improvement",
-            "Foreign language courses for destination countries",
-            "IELTS, TOEFL, and other exam preparation",
-            "Business communication and professional language skills",
-            "Cultural communication and etiquette training"
-        ],
-        cta: "Start Learning Today",
-        link: "/language-learning.html"
+        description: "English & foreign language training.",
+        features: ["English proficiency", "IELTS/TOEFL prep", "Business communication"],
+        cta: "Start Now",
+        link: "/language-learning"
     }
 ];
 
-function updateService(index, animate = true) {
-    if (isRotating || index === currentService) return;
+        function updateService(index) {
+            if (isRotating || index === currentService) return;
 
-    isRotating = true;
-    currentService = index;
+            isRotating = true;
+            currentService = index;
 
-    const dialInner = document.getElementById('dialInner');
-    const rotation = -index * 90;
-    dialInner.style.transform = `translate(-50%, -50%) rotate(${rotation}deg)`;
+            const dialInner = document.getElementById('dialInner');
+            dialInner.style.transform = `rotate(${-index * 90}deg)`;
 
-    // Update content
-    const titleEl = document.getElementById('serviceTitle');
-    const descEl = document.getElementById('serviceDescription');
-    const featuresEl = document.getElementById('serviceFeatures');
-    const ctaBtn = document.getElementById('ctaButton');
+            const service = services[index];
+            document.getElementById('serviceTitle').textContent = service.title;
+            document.getElementById('serviceDescription').textContent = service.description;
+            document.getElementById('serviceFeatures').innerHTML = service.features.map(f => `<li>${f}</li>`).join('');
 
-    const service = services[index];
+            const ctaBtn = document.getElementById('serviceCta');
+            ctaBtn.textContent = service.cta;
+            ctaBtn.setAttribute('href', service.link);
 
-    titleEl.textContent = service.title;
-    descEl.textContent = service.description;
-    featuresEl.innerHTML = service.features.map(f => `<li>${f}</li>`).join("");
-    ctaBtn.textContent = service.cta;
-    ctaBtn.href = service.link;
+            document.querySelectorAll('.service-point').forEach(p => p.classList.remove('active'));
+            document.querySelector(`.service-point[data-service="${index}"]`).classList.add('active');
 
-    setTimeout(() => {
-        isRotating = false;
-    }, 500);
-}
+            // Update control buttons
+            document.querySelectorAll('.control-btn').forEach((btn, i) => {
+                btn.classList.toggle('active', i === index);
+            });
 
+            setTimeout(() => {
+                isRotating = false;
+            }, 500);
+        }
 
-    // Testimonial Data
+        // Multi-link CTA functionality
+        const ctaContainer = document.getElementById('ctaContainer');
+        const serviceCta = document.getElementById('serviceCta');
+        const ctaDropdown = document.getElementById('ctaDropdown');
+
+        serviceCta.addEventListener('click', function(e) {
+            e.preventDefault();
+            ctaContainer.classList.toggle('open');
+            ctaDropdown.classList.toggle('show');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!ctaContainer.contains(e.target)) {
+                ctaContainer.classList.remove('open');
+                ctaDropdown.classList.remove('show');
+            }
+        });
+
+        // Event listeners for service switching
+        document.querySelectorAll('.service-point').forEach((point, index) => {
+            point.addEventListener('click', () => updateService(index));
+        });
+
+        document.querySelectorAll('.control-btn').forEach((btn, index) => {
+            btn.addEventListener('click', () => updateService(index));
+        });
+
+        // Initialize first service
+        updateService(0);
+
+  // Attach click events
+  document.querySelectorAll('.service-point').forEach(point => {
+    point.addEventListener('click', () => {
+      const index = parseInt(point.getAttribute('data-service'));
+      updateService(index);
+    });
+  });
+  
+  
+  
+  // Testimonial Data
     const testimonials = [
         {
             id: 1,
